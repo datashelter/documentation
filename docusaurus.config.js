@@ -31,7 +31,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr'],
   },
 
   presets: [
@@ -69,7 +69,7 @@ const config = {
         title: 'Datashelter',
         logo: {
           alt: 'Datashelter Logo',
-          src: 'img/logo_full.png',
+          src: 'img/datashelter_logo.png',
         },
         items: [
           {
@@ -86,6 +86,11 @@ const config = {
           },
         ],
       },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       footer: {
         style: 'dark',
         links: [
@@ -94,7 +99,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/quickstart',
               },
             ],
           },
@@ -121,7 +126,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Datashelter. Built with ❤️ in 🇫🇷.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Datashelter. Built with ❤️ in 🇫🇷`,
       },
       prism: {
         theme: prismThemes.github,
