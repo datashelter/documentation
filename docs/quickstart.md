@@ -11,7 +11,7 @@ Create an account on [Datashelter](https://app.datashelter.tech).
 
 ## Add you first server
 
-Add your first server on the dashboard. You will be prompted to install the snaper CLI on your server and to configure it.
+Add your first server to the dashboard. You will be prompted to install the snaper CLI on your server and configure it.
 
 ## Setup recurring backups
 
@@ -25,5 +25,4 @@ crontab -e
 ```
 
 ## Enjoy 🚀
-
-We will take care of the rest for you. You can now relax and focus on your business.We will alert you if something goes wrong and we will keep your backups safe and secure.
+Relax and focus on your business while we handle your backups. We'll alert you of any issues and keep your backups safe and secure.
