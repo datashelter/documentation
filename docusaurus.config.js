@@ -77,9 +77,8 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/datashelter/documentation',
             label: 'GitHub',
@@ -99,8 +98,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Quickstart',
                 to: '/quickstart',
+              },
+              {
+                label: 'Troubleshooting',
+                to: '/category/troubleshooting',
+              },
+              {
+                label: 'Contact us',
+                to: '/support',
               },
             ],
           },
@@ -118,11 +125,15 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                href: 'https://blog.datashelter.tech/',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/datashelter/documentation',
+                label: 'Client area',
+                href: 'https://app.datashelter.tech/',
+              },
+              {
+                label: 'Service status',
+                href: 'https://status.datashelter.tech/',
               },
             ],
           },
