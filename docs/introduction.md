@@ -8,35 +8,35 @@ import TabItem from '@theme/TabItem';
 
 # Introduction
 
-Datashelter is a SaaS platform that automate your backups with a simple and secure way. We just need you to configure your server using our CLI and we will take care of the rest for you (storage, alerting, retention policies).
+Datashelter is a SaaS platform that automates your backups in a simple and secure manner. All you need to do is configure your server using our CLI, and let us handle the rest (storage, alerting, and retention policies).
 
-For this purpose, we developed snaper which is a CLI tool that will help you to configure your server and manage your backups.
+To facilitate this, we developed snaper, a CLI tool that assists you in configuring your server and managing your backups.
 
 ## How it works
 
 <Tabs groupId="backup_type">
   <TabItem value="files" label="Files">
-    1. Make an index of your files (name, size, modification date, hash)
-    2. Generate a differential index with previous index
-    3. Send changed files on S3 (compressed & encrypted on the fly)
+    1. Creates an index of your files, including name, size, modification date, and hash
+    2. Generates a differential index compared to the previous index
+    3. Sends changed files to S3-compatible storage, compressing and encrypting them on-the-fly
   </TabItem>
   <TabItem value="databases" label="Databases">
-    1. Dump your database using your database client (mysql, postgresql, mongodb)
-    2. Send the dump on S3 (compressed & encrypted on the fly)
+    1. Use your database client (mysql, postgresql, mongodb) to create a dump of your database
+    2. Transfer the dump to an S3-compatible storage system, making sure to compress and encrypt it on-the-fly
   </TabItem>
 </Tabs>
 
 
 ### Why is snaper different ?
 
-snaper makes incremental backups with deduplication at file level. When rsync incrementals are only storing changed/added files, snaper is making an index of your files and store the whole status of your files (added, changed, deleted). So we are able to **restore your files at any point in time (even deletions)**.
+snaper creates incremental backups with file-level deduplication. Unlike traditional methods such as rsync incrementals, which only store changed or added files, snaper takes it a step further. It indexes and stores the complete state of your files, whether they have been added, changed, or deleted. This feature ensures snaper's ability to **restore your files at any point in time (including deletions)**.
 
-To be short, snaper helps you to make **storage efficient** backups (thanks to compression & deduplication).
+In short, snaper aids in creating **storage-efficient** backups, courtesy of its compression and deduplication capabilities.
 
 ### Where do you store my data ?
 
-Your files are stored in France 🇫🇷 on an S3 compatible storage (we currently rely on OVH Object storage).
+At Datashelter, we prioritize the security and sovereignty of your data. That's why we exclusively store your files in France 🇫🇷 - currently leveraging OVH Object Storage, a trusted and reliable S3-compatible solution.
 
-Our ambition is to become a sovereign European 🇪🇺 alternative for data backup. We aim to provide an interface between your servers (dedicated, VPS, on-premise) and object storage.
+Our ambition is to become a sovereign European 🇪🇺 alternative solution for data backup. We aim to provide an interface between your servers - whether they're dedicated, VPS, or on-premise - and object storage.
 
 **Just give us a try and you will see 🚀**

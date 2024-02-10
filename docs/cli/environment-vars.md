@@ -1,3 +1,7 @@
+---
+description: All the environment variables that can be used with snaper.
+---
+
 # Environment variables
 
 ### SNAPER_ENCRYPTION_KEY

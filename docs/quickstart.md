@@ -26,4 +26,4 @@ crontab -e
 
 ## Enjoy 🚀
 
-We will take care of the rest for you. You can now relax and focus on your business.We will alert you if something goes wrong and we will keep your backups safe and secure.
+We will take care of the rest for you. You can now relax and focus on your business. We’ll alert you if something goes wrong and keep your backups safe and secure.

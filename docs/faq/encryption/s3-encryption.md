@@ -1,9 +1,9 @@
 # Do you encrypt data at rest in S3 ?
 
-Data encryption is a crucial aspect for your privacy and security. We take this matter seriously recommend performing encryption with your own key.
+Data encryption is essential for privacy and security. We strongly recommend encrypting your data with a personal key.
 
-That's why snaper encrypts your data before sending it to S3 compatible Datashelter's cloud, so nobody except you can access it.
+With this in mind, Snaper encrypts your data before sending it to the S3 compatible DataShelter's cloud, ensuring only you have access.
 
-To be more specific, we generate a robust 32-bit Advanced Encryption Standard (AES) 256 key before shipping your files. This key, renowned for its strong encryption capabilities, is then used to encrypt your valuable files.
+Specifically, we generate a robust 32-bit AES 256 key before transferring your files. This key, known for its powerful encryption abilities, is used to encrypt your files.
 
-This **ensures a high level of security** and protection for **your data**.
+This approach **guarantees a high level of security** and protection for **your data**.

@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Install Snaper
 
-Snaper is a command-line tool to perform efficient snapshots for files and databases (MySQL, PostgreSQL, and MongoDB). It is written in Go so you can install it with just one command:
+Snaper is a command-line tool designed for efficient snapshot creation for files and databases (MySQL, PostgreSQL, and MongoDB). It's written in Go, allowing for easy installation with just a single command:
 
 <Tabs groupId="operating-systems">
   <TabItem value="linux" label="Linux" default>
