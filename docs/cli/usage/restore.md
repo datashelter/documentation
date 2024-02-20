@@ -16,6 +16,9 @@ import TabItem from '@theme/TabItem';
         Usage:
         snaper restore files [flags]
 
+        Aliases:
+        files, fs, filesystem
+
         Flags:
             --all                          Restore all directories configured
             --concurrent int               Desired number of concurrent workers
@@ -37,7 +40,7 @@ import TabItem from '@theme/TabItem';
         snaper restore database [flags]
 
         Aliases:
-        database, db
+        database, db, databases
 
         Flags:
             --all                          Restore all databases configured in config.yaml

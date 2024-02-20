@@ -17,6 +17,9 @@ import TabItem from '@theme/TabItem';
         Usage:
         snaper list files [flags]
 
+        Aliases:
+        files, fs, filesystem
+
         Flags:
         -h, --help          help for files
         -n, --name string   Name of the backup
@@ -31,7 +34,7 @@ import TabItem from '@theme/TabItem';
         snaper list database [flags]
 
         Aliases:
-        database, db
+        database, db, databases
 
         Flags:
         -h, --help          help for database

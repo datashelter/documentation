@@ -16,6 +16,9 @@ import TabItem from '@theme/TabItem';
         Usage:
         snaper backup files [flags]
 
+        Aliases:
+        files, fs, filesystem
+
         Flags:
             --all                          Backup all directories configured
             --concurrent int               Number of concurrent workers to use for upload
