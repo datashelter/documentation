@@ -26,8 +26,12 @@ description: All the environment variables that can be used with snaper.
 
 ### PGPASSWORD
 
-(Optional) Contains the password for the configured PostgreSQL database.
+(Optional) Contains the password for the configured PostgreSQL database. Takes precedence over configured value.
 
 ### MYSQL_PASSWORD
 
-(Optional) Contains the password for the configured MySQL database.
+(Optional) Contains the password for the configured MySQL database. Takes precedence over configured value.
+
+### MONGODB_PASSWORD
+
+(Optional) Contains the password for the configured MongoDB database. Takes precedence over configured value.
