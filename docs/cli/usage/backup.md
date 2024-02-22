@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
         snaper backup database [flags]
 
         Aliases:
-        database, db
+        database, db, databases
 
         Flags:
             --all                          Backup all databases configured in config.yaml
