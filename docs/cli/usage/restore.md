@@ -52,6 +52,7 @@ import TabItem from '@theme/TabItem';
         -n, --name string                  Database name to restore
         -p, --password string              Password to use to restore the database
         -P, --port int                     Port of the database server
+            --restore-as string            Restore database with a different name
         -s, --snapshot string              Name of the snapshot to be retrieved (ignored if --all or --latest)
         -t, --type string                  Database type (mysql, postgresql)
         -u, --username string              Username to use to restore the database
@@ -60,6 +61,14 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 ##  Examples
+### Restore a database using a different name 
+
+You can restore a database using a different name by using the `--restore-as` flag. 
+
+```
+snaper restore database --name <database_name> --snapshot <snapshot_name> --restore-as <new_database_name>
+```
+
 ### Restore only specific files
 Our indexes are CSV files, so you can edit them for a fine-grained restore. You can find your index file in the _.config/snaper/index_cache_ directory
 
@@ -68,3 +77,4 @@ Then, execute the following command to restore the index:
 ```
 snaper restore --name <backup_name> --snapshot <index_filename> --path <path_where_to_restore>
 ```
+
