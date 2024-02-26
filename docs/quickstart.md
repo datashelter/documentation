@@ -21,7 +21,7 @@ Once the snaper CLI is installed and configured, you can setup crontabs to sched
 crontab -e
 ---
 # Backup your files every day at 3am
-0 3 * * * /usr/local/bin/snaper backup files --all 2>&1 >> /var/log/snaper.log
+0 3 * * * /usr/local/bin/snaper backup --all 2>&1 >> /var/log/snaper.log
 ```
 
 ## Enjoy 🚀
