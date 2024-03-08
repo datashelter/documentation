@@ -111,6 +111,14 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/datashelter',
               },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/datasheltertech/',
+              },
+              {
+                label: 'Github',
+                href: 'https://github.com/datashelter',
+              },
             ],
           },
           {
