@@ -1,0 +1,8 @@
+{
+  "label": "Usage",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Obtenir des détails sur les commandes et options disponibles avec le CLI de Datashelter"
+  }
+}

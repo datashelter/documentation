@@ -1,0 +1,86 @@
+{
+  "version.label": {
+    "message": "Suivant",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.CLI (snaper)": {
+    "message": "CLI (snaper)",
+    "description": "The label for category CLI (snaper) in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.CLI (snaper).link.generated-index.description": {
+    "message": "Obtenir des détails sur les commandes et options disponibles avec le CLI de Datashelter",
+    "description": "The generated-index page description for category CLI (snaper) in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Pre-requisites": {
+    "message": "Pré-requis",
+    "description": "The label for category Pre-requisites in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Pre-requisites.link.generated-index.description": {
+    "message": "Voici quelques pré-requis pour commencer le tutoriel",
+    "description": "The generated-index page description for category Pre-requisites in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Usage": {
+    "message": "Usage",
+    "description": "The label for category Usage in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Usage.link.generated-index.description": {
+    "message": "Obtenir des détails sur les commandes et options disponibles avec le CLI de Datashelter",
+    "description": "The generated-index page description for category Usage in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.FAQ": {
+    "message": "FAQ",
+    "description": "The label for category FAQ in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.FAQ.link.generated-index.description": {
+    "message": "Réponses aux questions fréquemment posées",
+    "description": "The generated-index page description for category FAQ in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.General": {
+    "message": "Général",
+    "description": "The label for category General in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.General.link.generated-index.description": {
+    "message": "Réponses aux questions fréquemment posées",
+    "description": "The generated-index page description for category General in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Compression": {
+    "message": "Compression",
+    "description": "The label for category Compression in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Compression.link.generated-index.description": {
+    "message": "Réponses aux questions fréquemment posées",
+    "description": "The generated-index page description for category Compression in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Encryption": {
+    "message": "Chiffrement",
+    "description": "The label for category Encryption in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Encryption.link.generated-index.description": {
+    "message": "Réponses aux questions fréquemment posées",
+    "description": "The generated-index page description for category Encryption in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Billing": {
+    "message": "Facturation",
+    "description": "The label for category Billing in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Billing.link.generated-index.description": {
+    "message": "Réponses aux questions fréquemment posées",
+    "description": "The generated-index page description for category Billing in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Infrastructure": {
+    "message": "Infrastructure",
+    "description": "The label for category Infrastructure in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Infrastructure.link.generated-index.description": {
+    "message": "En savoir plus sur notre infrastructure sous-jacente et sur la manière dont nous pouvons garantir la sécurité de vos données.",
+    "description": "The generated-index page description for category Infrastructure in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Troubleshooting": {
+    "message": "Troubleshooting",
+    "description": "The label for category Troubleshooting in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Troubleshooting.link.generated-index.description": {
+    "message": "En savoir plus sur les problèmes courants et sur la manière de les résoudre",
+    "description": "The generated-index page description for category Troubleshooting in sidebar tutorialSidebar"
+  }
+}

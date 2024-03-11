@@ -73,6 +73,10 @@ const config = {
             label: 'Documentation',
           },
           {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/datashelter/documentation',
             label: 'GitHub',
             position: 'right',

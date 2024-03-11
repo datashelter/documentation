@@ -1,0 +1,8 @@
+{
+  "label": "Infrastructure",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "En savoir plus sur notre infrastructure sous-jacente et sur la manière dont nous pouvons garantir la sécurité de vos données."
+  }
+}
