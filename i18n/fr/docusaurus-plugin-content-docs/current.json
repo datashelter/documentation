@@ -72,7 +72,15 @@
     "description": "The label for category Infrastructure in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Infrastructure.link.generated-index.description": {
-    "message": "En savoir plus sur notre infrastructure sous-jacente et sur la manière dont nous pouvons garantir la sécurité de vos données.",
+    "message": "En savoir plus sur l'infrastructure sous-jacente et sur la manière dont nous pouvons garantir la sécurité de vos données.",
+    "description": "The generated-index page description for category Infrastructure in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Storage": {
+    "message": "Stockage",
+    "description": "The label for category Infrastructure in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Storage.link.generated-index.description": {
+    "message": "Réponses aux questions fréquemment posées",
     "description": "The generated-index page description for category Infrastructure in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Troubleshooting": {
