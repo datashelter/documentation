@@ -77,11 +77,11 @@
   },
   "sidebar.tutorialSidebar.category.Storage": {
     "message": "Stockage",
-    "description": "The label for category Infrastructure in sidebar tutorialSidebar"
+    "description": "The label for category Storage in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Storage.link.generated-index.description": {
     "message": "Réponses aux questions fréquemment posées",
-    "description": "The generated-index page description for category Infrastructure in sidebar tutorialSidebar"
+    "description": "The generated-index page description for category Storage in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Troubleshooting": {
     "message": "Troubleshooting",
