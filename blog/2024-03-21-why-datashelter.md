@@ -8,7 +8,7 @@ authors:
     url: https://github.com/mpaletou
     image_url: https://github.com/mpaletou.png
 tags: [reflexions, why]
-image: https://i.imgur.com/mErPwqL.png
+image: https://i.imgur.com/ADGdCrv.png
 hide_table_of_contents: false
 ---
 
