@@ -73,6 +73,11 @@ const config = {
             label: 'Documentation',
           },
           {
+            to: 'blog',
+            label: 'Blog',
+            position: 'left',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },
@@ -130,7 +135,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                href: 'https://blog.datashelter.tech/',
+                href: 'https://docs.datashelter.tech/blog',
               },
               {
                 label: 'Client area',

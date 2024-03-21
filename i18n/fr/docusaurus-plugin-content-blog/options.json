@@ -1,14 +1,14 @@
 {
   "title": {
-    "message": "Blog",
+    "message": "Blog Datashelter",
     "description": "The title for the blog used in SEO"
   },
   "description": {
-    "message": "Blog",
+    "message": "Découvrez en plus sur Datashelter et le monde de la sauvegarde de données en général.",
     "description": "The description for the blog used in SEO"
   },
   "sidebar.title": {
-    "message": "Recent posts",
+    "message": "Derniers articles",
     "description": "The label for the left sidebar"
   }
 }
