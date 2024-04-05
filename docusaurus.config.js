@@ -50,6 +50,13 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/blog/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
