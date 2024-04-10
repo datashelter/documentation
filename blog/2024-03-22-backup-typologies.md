@@ -19,7 +19,7 @@ The aim of this article is to present these different typologies, and to open th
 ### Traditional backup typologies
 
 Despite the emergence of numerous innovative solutions on the market, blogs mainly talk about the fact that there are three backup typologies:
-- **complete:** simply duplicates the production medium on a second storage medium
+- **full:** simply duplicates the production medium on a second storage medium
 - **incremental:** starts from a full backup. Only files modified since the last backup are added.
 - **differential:** starts from a full backup. Then, files modified since the last full backup are added.
 
@@ -49,7 +49,7 @@ To sum up, we can summarize the advantages and disadvantages of each of these ba
 
 | Storage requirements | Backup time | Ease of restoration | Consideration of deletions | Interdependence between backups |
 |----------------------|-------------|----------------------|----------------------------|---------------------------------|
-| Complete             | ++++        | ++++                 | Yes                        | None                            |
+| Full             | ++++        | ++++                 | Yes                        | None                            |
 | Incremental          | +           | ++                   | No                         | Total                           |
 | Differential         | ++          | ++                   | No                         | Partial                         |
 | Index based          | +           | ++++                 | Yes                        | None                            |
