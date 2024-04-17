@@ -80,13 +80,13 @@ const config = {
             label: 'Documentation',
           },
           {
-            to: 'blog',
-            label: 'Blog',
-            position: 'left',
-          },
-          {
             type: 'localeDropdown',
             position: 'right',
+          },
+          {
+            label: 'Visit main website',
+            position: 'right',
+            href: 'https://datashelter.tech',
           },
           {
             href: 'https://github.com/datashelter/documentation',
@@ -109,6 +109,10 @@ const config = {
               {
                 label: 'Quickstart',
                 to: '/quickstart',
+              },
+              {
+                label: 'FAQ',
+                to: 'https://docs.datashelter.tech/category/faq',
               },
               {
                 label: 'Troubleshooting',
@@ -135,6 +139,10 @@ const config = {
                 label: 'Github',
                 href: 'https://github.com/datashelter',
               },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/@datasheltertech',
+              },
             ],
           },
           {
@@ -142,7 +150,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                href: 'https://docs.datashelter.tech/blog',
+                href: 'https://blog.datashelter.tech',
               },
               {
                 label: 'Client area',
@@ -151,6 +159,10 @@ const config = {
               {
                 label: 'Service status',
                 href: 'https://status.datashelter.tech/',
+              },
+              {
+                label: 'Legal notice',
+                href: 'https://pineapple-bit-b3b.notion.site/Legal-mentions-8c75662443194bdb9ecddf739c7485bc',
               },
             ],
           },
