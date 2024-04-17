@@ -12,7 +12,7 @@
     "description": "The title of the footer links column with title=More in the footer"
   },
   "link.item.label.Quickstart": {
-    "message": "Quickstart",
+    "message": "Démarrage rapide",
     "description": "The label of footer link with label=Quickstart linking to /quickstart"
   },
   "link.item.label.Troubleshooting": {
@@ -37,7 +37,7 @@
   },
   "link.item.label.Blog": {
     "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to https://docs.datashelter.tech/blog"
+    "description": "The label of footer link with label=Blog linking to https://blog.datashelter.tech"
   },
   "link.item.label.Client area": {
     "message": "Espace client",
@@ -50,5 +50,17 @@
   "copyright": {
     "message": "Tout droits réservés © 2024 Datashelter. Fait avec ❤️ en 🇫🇷",
     "description": "The footer copyright"
+  },
+  "link.item.label.FAQ": {
+    "message": "FAQ",
+    "description": "The label of footer link with label=FAQ linking to https://docs.datashelter.tech/category/faq"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "The label of footer link with label=YouTube linking to https://www.youtube.com/@datasheltertech"
+  },
+  "link.item.label.Legal notice": {
+    "message": "Mentions légales",
+    "description": "The label of footer link with label=Legal notice linking to https://pineapple-bit-b3b.notion.site/Mentions-l-gales-eb17154343644ae399669e61a27f0aa7"
   }
 }

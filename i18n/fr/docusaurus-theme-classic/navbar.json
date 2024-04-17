@@ -15,8 +15,8 @@
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
   },
-  "item.label.Blog": {
-    "message": "Blog",
-    "description": "Navbar item with label Blog"
+  "item.label.Visit main website": {
+    "message": "Visiter notre site",
+    "description": "Navbar item with label Visit main website"
   }
 }
