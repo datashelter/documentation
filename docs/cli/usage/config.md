@@ -1,16 +1,41 @@
 ---
 sidebar_position: 2
-description: Ensure ~/.config/snaper/config.yaml file is valid
+description: Configuration related commands
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # config
-```
-Ensure ~/.config/snaper/config.yaml file is valid
 
-Usage:
-  snaper config [flags]
+<Tabs groupId="cmd_options">
+  <TabItem value="validate" label="Validate">
+        ```
+        Ensure ~/.config/snaper/config.yaml validity
 
-Flags:
-  -h, --help          help for config
-      --validate-s3   Ensure S3 credentials are valid (default true)
-```
+        Usage:
+          snaper config validate [flags]
+
+        Examples:
+        snaper config validate --validate-s3
+
+        Flags:
+          -h, --help          help for validate
+              --validate-s3   Ensure S3 credentials are valid
+        ```
+  </TabItem>
+  <TabItem value="fetch" label="Fetch">
+        ```
+        Synchronize config file with remote storage
+
+        Usage:
+          snaper config fetch [flags]
+
+        Examples:
+        snaper config fetch
+
+        Flags:
+          -h, --help   help for fetch
+        ```
+  </TabItem>
+</Tabs>
