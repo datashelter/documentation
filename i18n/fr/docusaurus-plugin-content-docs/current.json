@@ -90,5 +90,13 @@
   "sidebar.tutorialSidebar.category.Troubleshooting.link.generated-index.description": {
     "message": "En savoir plus sur les problèmes courants et sur la manière de les résoudre",
     "description": "The generated-index page description for category Troubleshooting in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Backup scheduling": {
+    "message": "Planification automatique",
+    "description": "The label for category Backup scheduling in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Backup scheduling.link.generated-index.description": {
+    "message": "Find answers to frequently asked questions",
+    "description": "The generated-index page description for category Backup scheduling in sidebar tutorialSidebar"
   }
 }

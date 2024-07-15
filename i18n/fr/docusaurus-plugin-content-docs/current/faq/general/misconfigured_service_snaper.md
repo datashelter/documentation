@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Comment supprimer un service mal configuré de Snaper ?
+# Comment supprimer un service mal configuré avec snaper ?
 
 Il se peut que vous ayez mal configuré un service et que vous souhaitiez le supprimer de Snaper (ce changement sera également reflété dans votre tableau de bord). Pour ce faire, vous pouvez utiliser la commande `snaper delete` :
 
