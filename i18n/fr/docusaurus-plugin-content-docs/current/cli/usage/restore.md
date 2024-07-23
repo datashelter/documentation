@@ -42,10 +42,14 @@ import TabItem from '@theme/TabItem';
         Aliases:
         database, db, databases
 
+        Examples:
+        snaper restore db --snapshot <snapshot_name> --name mydb --type mysql
+
         Flags:
             --all                          Restore all databases configured in config.yaml
             --encryption-key string        Encryption key to use for encrypting data
             --encryption-key-file string   Encryption key file to read for encrypting data
+            --export                       Export the database dump to a file
         -h, --help                         help for database
         -H, --host string                  Hostname of the database server (default "localhost")
             --latest                       Retrieve latest snapshot from remote
@@ -76,4 +80,11 @@ Ensuite, exécutez la commande suivante pour restaurer l'index :
 
 ```
 snaper restore --name <nom_backup> --snapshot <fichier_index> --path <chemin_où_restaurer>
+```
+
+### Exporter une sauvegarde de base de données vers un fichier
+Vous pouvez exporter un dump de base de données vers un fichier en utilisant l'option `--export`. Cela créera un fichier portant le nom de la base de données dans votre répertoire actuel.
+
+```
+snaper restore database --name <database_name> --snapshot <snapshot_name> --export
 ```

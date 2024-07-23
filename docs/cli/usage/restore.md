@@ -42,10 +42,14 @@ import TabItem from '@theme/TabItem';
         Aliases:
         database, db, databases
 
+        Examples:
+        snaper restore db --snapshot <snapshot_name> --name mydb --type mysql
+
         Flags:
             --all                          Restore all databases configured in config.yaml
             --encryption-key string        Encryption key to use for encrypting data
             --encryption-key-file string   Encryption key file to read for encrypting data
+            --export                       Export the database dump to a file
         -h, --help                         help for database
         -H, --host string                  Hostname of the database server (default "localhost")
             --latest                       Retrieve latest snapshot from remote
@@ -78,3 +82,9 @@ Then, execute the following command to restore the index:
 snaper restore --name <backup_name> --snapshot <index_filename> --path <path_where_to_restore>
 ```
 
+### Export a database dump to a file
+You can export a database dump to a file by using the `--export` flag. It will create a file with the name of the database in your current directory.
+
+```
+snaper restore database --name <database_name> --snapshot <snapshot_name> --export
+```
