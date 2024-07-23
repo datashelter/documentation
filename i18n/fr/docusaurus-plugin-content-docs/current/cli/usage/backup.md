@@ -35,23 +35,31 @@ import TabItem from '@theme/TabItem';
         Dump a database and upload it to remote
 
         Usage:
-        snaper backup database [flags]
+          snaper backup database [flags]
 
         Aliases:
-        database, db, databases
+          database, db, databases
+
+        Examples:
+        snaper backup db mydatabase --type mysql
+        snaper backup db --all
 
         Flags:
-            --all                          Backup all databases configured in config.yaml
-            --all-databases                Backup all databases existing on the server
-            --encryption-key string        Encryption key to use for encrypting data
-            --encryption-key-file string   Encryption key file to read for encrypting data
-        -h, --help                         help for database
-        -H, --host string                  Hostname of the database server (default "localhost")
-        -n, --name string                  Database name to backup
-        -p, --password string              Password to use for connecting to the database
-        -P, --port int                     Port of the database server
-        -t, --type string                  Database type (mysql, postgresql)
-        -u, --username string              Username to use for connecting to the database
+              --all                          Backup all databases configured in config.yaml
+              --all-databases                Backup all databases existing on the server
+              --encryption-key string        Encryption key to use for encrypting data
+              --encryption-key-file string   Encryption key file to read for encrypting data
+          -h, --help                         help for database
+          -H, --host string                  Hostname of the database server (default "localhost")
+          -n, --name string                  Database name to backup
+          -p, --password string              Password to use for connecting to the database
+          -P, --port int                     Port of the database server
+              --routines                     Backup database routines like functions of procedures (mysql only)
+          -t, --type string                  Database type (mysql, postgresql)
+          -u, --username string              Username to use for connecting to the database
+
+        Global Flags:
+              --concurrent   Run file and database backups concurrently
         ```
   </TabItem>
 </Tabs>
