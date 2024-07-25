@@ -19,11 +19,15 @@ import TabItem from '@theme/TabItem';
         Aliases:
         files, fs, filesystem
 
+        Examples:
+        snaper restore files --snapshot <snapshot_name> --name <backup_name> --path /where/to/restore
+
         Flags:
             --all                          Restore all directories configured
             --concurrent int               Desired number of concurrent workers
             --encryption-key string        Encryption key to use for encrypting data
             --encryption-key-file string   Encryption key file to read for encrypting data
+        -f, --force                        Ignore errors that could occur during restore
         -h, --help                         help for files
             --latest                       Select latest snapshot existing on remote
         -n, --name string                  Backup name to restore
