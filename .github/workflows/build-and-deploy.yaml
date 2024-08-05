@@ -26,7 +26,7 @@ jobs:
       run: yarn build
 
     - name: Deploy to FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ vars.FTP_HOST }}
         username: ${{ vars.FTP_USERNAME }}
