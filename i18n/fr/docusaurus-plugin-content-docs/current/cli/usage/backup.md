@@ -19,6 +19,10 @@ import TabItem from '@theme/TabItem';
         Aliases:
         files, fs, filesystem
 
+        Examples:
+        snaper backup files /path/to/backup
+        snaper backup files mybackup
+
         Flags:
             --all                          Backup all directories configured
             --concurrent int               Number of concurrent workers to use for upload
@@ -26,6 +30,7 @@ import TabItem from '@theme/TabItem';
             --encryption-key-file string   Encryption key file to read for encrypting data
             --exclude strings              Paths to exclude from backup (separated by commas)
         -h, --help                         help for files
+            --ignore-existing              Reconcile indexes by considering already existing files on S3 (default true)
         -n, --name string                  Name of the backup (optional)
         -p, --path string                  Directory path to backup (optional)
         ```

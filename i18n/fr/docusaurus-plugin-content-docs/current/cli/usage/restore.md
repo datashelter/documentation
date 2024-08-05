@@ -29,6 +29,7 @@ import TabItem from '@theme/TabItem';
             --encryption-key-file string   Encryption key file to read for encrypting data
         -f, --force                        Ignore errors that could occur during restore
         -h, --help                         help for files
+            --include string               Include only files matching the pattern, comma separated
             --latest                       Select latest snapshot existing on remote
         -n, --name string                  Backup name to restore
         -p, --path string                  Path where to restore
@@ -77,13 +78,19 @@ Vous pouvez restaurer une base de données avec un nom différent en utilisant l
 snaper restore database --name <nom_de_la_base_de_données> --snapshot <nom_de_l'instantané> --restore-as <nouveau_nom_de_la_base_de_données>
 ```
 
-### Restaurer un ensemble de fichiers spécifiques
-Nos index sont des fichiers CSV, vous pouvez donc les éditer pour une restauration plus fine. Vous pouvez trouver votre fichier d'index dans le répertoire _.config/snaper/index_cache_.
-
-Ensuite, exécutez la commande suivante pour restaurer l'index :
-
+### Restaurer seulement certains fichiers
+**Méthode 1:**
+Vous pouvez utiliser le paramètre --include pour restaurer uniquement des fichiers spécifiques. Le paramètre accepte une liste de patterns séparés par des virgules.
 ```
-snaper restore --name <nom_backup> --snapshot <fichier_index> --path <chemin_où_restaurer>
+snaper restore files --name <nom_de_la_sauvegarde> --include directory/,README* --snapshot <nom_de_l'instantané> --path <chemin_de_la_restauration>
+```
+
+**Méthode 2:**
+Vous pouvez également ré-éditer un index (format CSV) pour une restauration plus fine. Vos derniers fichiers d'index se situent dans le répertoire _.config/snaper/index_cache_.
+
+Copier un index sous un autre nom et éditez-le à votre guise, par exemple en supprimant des lignes. Restaurez-le ensuite en utilisant la commande:
+```
+snaper restore --name <nom_de_la_sauvegarde> --snapshot <fichier_index> --path <chemin_où_restaurer>
 ```
 
 ### Exporter une sauvegarde de base de données vers un fichier

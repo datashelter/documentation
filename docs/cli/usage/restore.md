@@ -29,6 +29,7 @@ import TabItem from '@theme/TabItem';
             --encryption-key-file string   Encryption key file to read for encrypting data
         -f, --force                        Ignore errors that could occur during restore
         -h, --help                         help for files
+            --include string               Include only files matching the pattern, comma separated
             --latest                       Select latest snapshot existing on remote
         -n, --name string                  Backup name to restore
         -p, --path string                  Path where to restore
@@ -78,10 +79,16 @@ snaper restore database --name <database_name> --snapshot <snapshot_name> --rest
 ```
 
 ### Restore only specific files
-Our indexes are CSV files, so you can edit them for a fine-grained restore. You can find your index file in the _.config/snaper/index_cache_ directory
+**Method 1:**
+You can use the parameter --include to restore only specific files. The parameter accepts a comma-separated list of patterns.
+```
+snaper restore files --name <backup_name> --include directory/,README* --snapshot <snapshot_name> --path <path_where_to_restore>
+```
 
-Then, execute the following command to restore the index:
+**Method 2:**
+Alternatively, you can edit CSV index files to restore only specific files. You can find your last index files in the _.config/snaper/index_cache_ directory
 
+Modify one of the index files and restore it using the following command:
 ```
 snaper restore --name <backup_name> --snapshot <index_filename> --path <path_where_to_restore>
 ```
