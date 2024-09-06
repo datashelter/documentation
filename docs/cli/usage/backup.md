@@ -14,25 +14,25 @@ import TabItem from '@theme/TabItem';
         Snapshot a directory and upload it to remote
 
         Usage:
-        snaper backup files [flags]
+          snaper backup files [flags]
 
         Aliases:
-        files, fs, filesystem
+          files, fs, filesystem
 
         Examples:
         snaper backup files /path/to/backup
         snaper backup files mybackup
 
         Flags:
-            --all                          Backup all directories configured
-            --concurrent int               Number of concurrent workers to use for upload
-            --encryption-key string        Encryption key to use for encrypting data
-            --encryption-key-file string   Encryption key file to read for encrypting data
-            --exclude strings              Paths to exclude from backup (separated by commas)
-        -h, --help                         help for files
-            --ignore-existing              Reconcile indexes by considering already existing files on S3 (default true)
-        -n, --name string                  Name of the backup (optional)
-        -p, --path string                  Directory path to backup (optional)
+              --all                          Backup all directories configured
+              --concurrent int               Number of concurrent workers to use for upload
+              --encryption-key string        Encryption key to use for encrypting data
+              --encryption-key-file string   Encryption key file to read for encrypting data
+              --exclude strings              Paths to exclude from backup (separated by commas)
+          -h, --help                         help for files
+              --ignore-existing              Check for existing files on S3 and ignore them (only for bug fixing)
+          -n, --name string                  Name of the backup (optional)
+          -p, --path string                  Directory path to backup (optional)
         ```
   </TabItem>
   <TabItem value="databases" label="Databases">
