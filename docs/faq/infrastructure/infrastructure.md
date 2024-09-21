@@ -1,6 +1,6 @@
 # Infrastructure details
 
-Your files are exclusively stored in France 🇫🇷 on an S3-compatible storage (we currently rely on [OVH Object storage](https://www.ovhcloud.com/fr/public-cloud/object-storage/)).
+Your files are exclusively stored in Europe on an S3-compatible storage (we currently rely on [OVH Object storage](https://www.ovhcloud.com/fr/public-cloud/object-storage/)).
 
 Snaper performs client-side encryption on-the-fly using AES-256-GCM algorithm, so your data always remain secured 🔒.
 

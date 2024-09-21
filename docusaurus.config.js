@@ -167,7 +167,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Datashelter. Built with ❤️ in 🇫🇷`,
+        copyright: `Copyright © ${new Date().getFullYear()} Datashelter. Built with ❤️ in 🇪🇺`,
       },
       prism: {
         theme: prismThemes.github,

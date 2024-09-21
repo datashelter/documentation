@@ -35,7 +35,7 @@ In short, snaper aids in creating **storage-efficient** backups, courtesy of its
 
 ### Where do you store my data ?
 
-At Datashelter, we prioritize the security and sovereignty of your data. That's why we exclusively store your files in France 🇫🇷 - currently leveraging OVH Object Storage, a trusted and reliable S3-compatible solution.
+At Datashelter, we prioritize the security and sovereignty of your data. That's why we exclusively store your files in Europe - currently leveraging OVH Object Storage, a trusted and reliable S3-compatible solution.
 
 Our ambition is to become a sovereign European 🇪🇺 alternative solution for data backup. We aim to provide an interface between your servers - whether they're dedicated, VPS, or on-premise - and object storage.
 

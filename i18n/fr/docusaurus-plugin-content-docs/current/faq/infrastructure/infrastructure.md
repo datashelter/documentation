@@ -1,6 +1,6 @@
 # Détails de l'infrastructure
 
-Vos fichiers sont exclusivement stockés en France 🇫🇷 sur un stockage compatible S3 (nous nous appuyons actuellement sur [OVH Object storage](https://www.ovhcloud.com/fr/public-cloud/object-storage/)).
+Vos fichiers sont exclusivement stockés en Europe 🇪🇺 sur un stockage compatible S3 (nous nous appuyons actuellement sur [OVH Object storage](https://www.ovhcloud.com/fr/public-cloud/object-storage/)).
 
 Snaper effectue un chiffrement côté client à la volée en utilisant l'algorithme AES-256-GCM, de sorte que vos données restent toujours sécurisées 🔒.
 
