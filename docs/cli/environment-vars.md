@@ -24,6 +24,10 @@ description: All the environment variables that can be used with snaper.
 
 (Optional) Contains the bucket name.
 
+### AWS_REGION
+
+(Optional) Contains the bucket S3 region.
+
 ### PGPASSWORD
 
 (Optional) Contains the password for the configured PostgreSQL database. Takes precedence over configured value.

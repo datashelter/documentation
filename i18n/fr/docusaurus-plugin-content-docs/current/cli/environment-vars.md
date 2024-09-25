@@ -14,15 +14,19 @@ description: Toutes les variables d'environnement disponibles avec snaper.
 
 ### AWS_ACCESS_KEY_ID
 
-(Facultatif) Contient la clé d'accès au seau S3.
+(Facultatif) Contient la clé d'accès au bucket S3.
 
 ### AWS_SECRET_ACCESS_KEY
 
-(Facultatif) Contient la clé secrète du seau S3.
+(Facultatif) Contient la clé secrète du bucket S3.
 
 ### DATASHELTER_BUCKET
 
-(Facultatif) Contient le nom du seau.
+(Facultatif) Contient le nom du bucket.
+
+### AWS_REGION
+
+(Facultatif) Contient la région du bucket S3.
 
 ### PGPASSWORD
 
