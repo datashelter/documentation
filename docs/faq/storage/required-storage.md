@@ -26,4 +26,4 @@ Consider backing up a large e-commerce platform with the following data:
 - **Files:** 300GB
 - **Database:** 60GB
 
-Utilizing snaper's backup mechanisms, you would need approximately 700GB of storage for daily backups over a year. With Datashelter, this translates to a cost-effective rate of €7 per month.
+Utilizing snaper's backup mechanisms, you would need approximately 700GB of storage for daily backups over a year.

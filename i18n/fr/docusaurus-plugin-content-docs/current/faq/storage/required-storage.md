@@ -22,6 +22,4 @@ Supposons que vous sauvegardiez un gros site e-commerce contenant:
 - 300Go de fichiers
 - 60Go de base de données
 
-Vous devriez utiliser environ 700Go de stockage au rythme d'une sauvegarde par jours pendant un an. Cela vous coûtera **seulement 7€/mois avec Datashelter**.
-
-
+Vous devriez utiliser environ 700Go de stockage au rythme d'une sauvegarde par jours pendant un an.
