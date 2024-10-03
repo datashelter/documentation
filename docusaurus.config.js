@@ -57,7 +57,6 @@ const config = {
           priority: 0.5,
           ignorePatterns: ['/blog/tags/**'],
           filename: 'sitemap.xml',
-          trailingSlash: true,
         },
       }),
     ],
