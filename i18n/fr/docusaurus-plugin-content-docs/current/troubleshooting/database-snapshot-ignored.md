@@ -11,8 +11,8 @@ Pour résoudre ce problème, vous pouvez mettre à jour votre crontab en ajoutan
 :::note
 Dans certains cas, ces commandes peuvent se trouver ailleurs sur votre système. Vous pouvez le vérifier en lançant
     
-``bash
+```bash
 which mongodump
 which mongorestore
 ```
-:: :
+:::
