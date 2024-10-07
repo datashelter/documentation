@@ -151,7 +151,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                href: 'https://blog.datashelter.tech',
+                href: 'https://datashelter.tech/blog/',
               },
               {
                 label: 'Client area',

@@ -37,7 +37,7 @@
   },
   "link.item.label.Blog": {
     "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to https://blog.datashelter.tech"
+    "description": "The label of footer link with label=Blog linking to https://datashelter.tech/blog/"
   },
   "link.item.label.Client area": {
     "message": "Espace client",
