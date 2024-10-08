@@ -38,4 +38,18 @@ import TabItem from '@theme/TabItem';
           -h, --help   help for fetch
         ```
   </TabItem>
+  <TabItem value="push" label="Push">
+        ```
+        Push local config file to remote storage (not recommended)
+
+        Usage:
+          snaper config push [flags]
+
+        Examples:
+        snaper config push
+
+        Flags:
+          -h, --help   help for push
+        ```
+  </TabItem>
 </Tabs>
