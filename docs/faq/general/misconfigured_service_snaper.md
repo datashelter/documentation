@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# How to delete a misconfigured service from Snaper ?
+# Delete a misconfigured service from snaper
 
 You may have misconfigured a service and want to delete it from snaper (this change will also be reflected on your dashboard). To do so, you can use the `snaper delete` command:
 

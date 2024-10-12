@@ -7,7 +7,20 @@ import TabItem from '@theme/TabItem';
 
 # Installer Snaper
 
+## Installation automatique (recommandée)
 Snaper est un outil en ligne de commande conçu pour créer efficacement des instantanés de fichiers et de bases de données (MySQL, PostgreSQL et MongoDB). Il est écrit en Go, ce qui permet de l'installer facilement à l'aide d'une seule commande :
+
+```bash
+curl -sSL https://dl.datashelter.cloud/scripts/install-snaper.sh | bash
+```
+
+## Installation manuelle
+
+Alternativement, vous pouvez installer Snaper manuellement en suivant les instructions ci-dessous :
+
+```bash
+curl -sSL https://dl.datashelter.cloud/scripts/install-snaper.sh | bash
+```
 
 <Tabs groupId="operating-systems">
   <TabItem value="linux" label="Linux" default>

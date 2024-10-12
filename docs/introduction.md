@@ -8,35 +8,34 @@ import TabItem from '@theme/TabItem';
 
 # Introduction
 
-Datashelter is a SaaS platform that automates your backups in a simple and secure manner. All you need to do is configure your server using our CLI, and let us handle the rest (storage, alerting, and retention policies).
+Datashelter is a fully integrated backup solution designed to simplify the process of backing up your Linux servers. With just a few steps, you can protect your critical data by backing up your files and databases to an S3-compatible storage system.
+Datashelter provides seamless setup, automated backup management, and powerful recovery features—all while ensuring your data is encrypted, compressed, and deduplicated.
 
-To facilitate this, we developed snaper, a CLI tool that assists you in configuring your server and managing your backups.
+### Key Features
+- **Quick Setup:** Backup your servers within minutes by using our easy-to-install CLI tool.
+- **Automated Management:** After your initial backup, Datashelter manages everything automatically. You will be notified if anything goes wrong.
+- **Comprehensive Backup:** Supports files and major databases (MySQL, PostgreSQL, MongoDB).
+- **End-to-End Security:** All backups are encrypted using AES-256 encryption.
+- **Efficient Storage:** ZSTD compression and deduplication ensure minimal storage usage.
+- **Easy Restoration:** Recover files or databases quickly and effortlessly.
 
 ## How it works
 
-<Tabs groupId="backup_type">
-  <TabItem value="files" label="Files">
-    1. Creates an index of your files, including name, size, modification date, and hash
-    2. Generates a differential index compared to the previous index
-    3. Sends changed files to S3-compatible storage, compressing and encrypting them on-the-fly
-  </TabItem>
-  <TabItem value="databases" label="Databases">
-    1. Use your database client (mysql, postgresql, mongodb) to create a dump of your database
-    2. Transfer the dump to an S3-compatible storage system, making sure to compress and encrypt it on-the-fly
-  </TabItem>
-</Tabs>
+Snaper is the command-line tool (CLI) that powers the backup process for Datashelter. Built in Golang, Snaper is a powerful, lightweight tool designed to perform backups efficiently and securely from the client side. It handles everything from file and database backup to compression, encryption, and storage transfer—all within a single, easy-to-use binary.
+
+What makes Snaper different from traditional backup solutions is its incremental backup with file-level deduplication. Unlike tools like rsync that only back up changed or added files, Snaper uses index-based backup method. Read our dedicated blogpost [What is index-based backup](https://datashelter.tech/fr/blog/sauvegarde-index-based/) to know more about it!
+
+![Snaper schema](assets/snaper_schema.png)
+
+In essence, Snaper provides storage-efficient, point-in-time restoration, ensuring that you can recover your data exactly as it was at any backup point.
 
 
-### Why is snaper different ?
+### Where does Datashelter store your data
 
-snaper creates incremental backups with file-level deduplication. Unlike traditional methods such as rsync incrementals, which only store changed or added files, snaper takes it a step further. It indexes and stores the complete state of your files, whether they have been added, changed, or deleted. This feature ensures snaper's ability to **restore your files at any point in time (including deletions)**.
+At Datashelter, we are dedicated to ensuring the security, privacy, and reliability of your data. Currently, we leverage OVHcloud infrastructure to store your backups, providing access to **five availability zones** across **France** 🇫🇷 (Gravelines), **Germany** 🇩🇪 (Frankfurt), **Poland** 🇵🇱 (Warsaw), the **UK** 🇬🇧 (London), and **Canada** 🇨🇦 (Beauharnois). This strategic partnership with OVHcloud allows us to offer reliable storage at a competitive price in regions that align with your business operations and regulatory needs.
 
-In short, snaper aids in creating **storage-efficient** backups, courtesy of its compression and deduplication capabilities.
+Additionally, as a fully S3-compatible solution, Datashelter offers you the flexibility to connect your own S3 bucket. This enables you to store your backups in the most convenient location for your needs—whether that’s within your existing cloud infrastructure, an on-premise solution, or another region of your choosing.
 
-### Where do you store my data ?
-
-At Datashelter, we prioritize the security and sovereignty of your data. That's why we exclusively store your files in Europe - currently leveraging OVH Object Storage, a trusted and reliable S3-compatible solution.
-
-Our ambition is to become a sovereign European 🇪🇺 alternative solution for data backup. We aim to provide an interface between your servers - whether they're dedicated, VPS, or on-premise - and object storage.
+By providing both flexibility and affordability, Datashelter ensures that your data remains secure, compliant, and highly accessible without compromising on cost.
 
 **Just give us a try and you will see 🚀**

@@ -168,7 +168,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Datashelter. Built with ❤️ in 🇪🇺`,
+        copyright: `Copyright © ${new Date().getFullYear()} Datashelter - Your Backups Effortlessly Automated`,
       },
       prism: {
         theme: prismThemes.github,

@@ -1,4 +1,4 @@
-# Where are the configuration files stored ?
+# Configuration files location
 
 Snaper's configuration is located in `~/.config/snaper` directory. You will find into:
 

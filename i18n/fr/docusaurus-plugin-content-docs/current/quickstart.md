@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Quickstart
+# Get started
 
 ## Créez un compte sur Datashelter
 
@@ -13,32 +13,23 @@ Créez un compte sur [app.datashelter.tech](https://app.datashelter.tech)
 
 Ajoutez votre premier serveur sur le tableau de bord. Vous serez invité à installer le CLI snaper sur votre serveur et à le configurer.
 
+### 1. Cliquez sur le bouton "Ajouter un serveur"
+![Configurer un serveur](assets/quickstart/configure_server.png)
 
-1. **Cliquez sur le bouton "Ajouter un serveur"**
-![Configure server](assets/quickstart/configure_server.png)
+### 2. Définissez un nom et une description pour votre serveur
+![Informations sur le serveur](assets/quickstart/1_server_informations.png)
 
-2. **Définissez le nom du serveur et une description**
-![Server informations](assets/quickstart/1_server_informations.png)
+### 3. Sélectionnez les types de services que vous souhaitez sauvegarder
+![Selectionnez vos services](assets/quickstart/2_select_services.png)
 
-3. **Sélectionnez les services que vous souhaitez sauvegarder**
-![Select services](assets/quickstart/2_select_services.png)
+### 4. Fournissez les détails des services
+![Informations sur les services](assets/quickstart/3_service_informations.png)
 
-4. **Remplir les informations sur les services à sauvegarder**
-![Service informations](assets/quickstart/3_service_informations.png)
+### 5. Planifier la sauvegarde automatique (optionnelle)
+![Planifier les sauvegardes](assets/quickstart/4_set_scheduling.png)
 
-1. **Lancer les commandes d'installation et de configuration retournées dans votre terminal pour effectuer votre premier instantané**
-![Final step](assets/quickstart/4_final_step.png)
-
-## Configurer les sauvegardes récurentes
-
-Une fois la CLI de snaper installée et configurée, vous pouvez configurer des crontabs pour planifier vos sauvegardes.
-
-```
-crontab -e
----
-# Sauvegarde tous vos services configurés toutes les jours à 3h00 du matin
-0 3 * * * /usr/local/bin/snaper backup --all 2>&1 >> /var/log/snaper.log
-```
+### 6. Lancer les commandes de configuration dans votre terminal
+![Lancer les commandes dans le terminal](assets/quickstart/5_final_step.png)
 
 ## Profitez ! 🚀
 

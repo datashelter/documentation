@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Quickstart
+# Get started
 
 ## Create an account on Datashelter
 
@@ -14,31 +14,23 @@ Create an account on [app.datashelter.tech](https://app.datashelter.tech)
 Add your first server on the dashboard. You will be prompted to install the snaper CLI on your server and to configure it.
 
 
-1. **Click on the "Add server" button**
+### 1. Click the "Add server" button
 ![Configure server](assets/quickstart/configure_server.png)
 
-2. **Set the server name and a description**
+### 2. Enter a server name and description
 ![Server informations](assets/quickstart/1_server_informations.png)
 
-3. **Select the services you want to backup**
+### 3. Select the types of services you want to back up
 ![Select services](assets/quickstart/2_select_services.png)
 
-4. **Fill in the services informations**
+### 4. Provide service details
 ![Service informations](assets/quickstart/3_service_informations.png)
 
-5. **Launch snaper install and configuration command on your terminal to perform your first backup**
-![Final step](assets/quickstart/4_final_step.png)
+### 5. Set a backup schedule (optional)
+![Set scheduling](assets/quickstart/4_set_scheduling.png)
 
-## Setup recurring backups
-
-Once the snaper CLI is installed and configured, you can setup crontabs to schedule your backups.
-
-```
-crontab -e
----
-# Backup your files every day at 3am
-0 3 * * * /usr/local/bin/snaper backup --all 2>&1 >> /var/log/snaper.log
-```
+### 6. Run configuration commands in your terminal
+![Final step](assets/quickstart/5_final_step.png)
 
 ## Enjoy 🚀
 

@@ -1,4 +1,4 @@
-# What is the process for calculating billing charges ?
+# What is the process for calculating billing charges?
 
 We are billing two different objects at Datashelter:
 - **Servers:** calculated based on the number of servers configured in your account at the end of the month.

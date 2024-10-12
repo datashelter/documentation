@@ -1,9 +1,5 @@
-# Do you encrypt data at rest in S3 ?
+# Comment chiffrons-nous vos données ?
 
-Data encryption is essential for privacy and security. We strongly recommend encrypting your data with a personal key.
+Snaper chiffre vos données avec une clé AES-256 dérivée sur 32 bits avant de les envoyer vers le stockage compatible S3 de Datashelter.
 
-With this in mind, Snaper encrypts your data before sending it to the S3 compatible DataShelter's cloud, ensuring only you have access.
-
-Specifically, we generate a robust 32-bit AES 256 key before transferring your files. This key, known for its powerful encryption abilities, is used to encrypt your files.
-
-This approach **guarantees a high level of security** and protection for **your data**.
+Cela garantit que vous seul pouvez accéder à vos fichiers. Le chiffrement s'effectue localement, en utilisant l'une des méthodes les plus robustes disponibles, offrant ainsi une protection solide pour vos données.

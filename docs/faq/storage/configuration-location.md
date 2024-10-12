@@ -1,4 +1,4 @@
-# Should I store logs on Datashelter ?
+# Can I store logs on Datashelter?
 
 While you can technically store your logs on Datashelter, it's not advisable for a few reasons.
 

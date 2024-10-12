@@ -1,4 +1,4 @@
-# Devrais-je stocker les logs sur Datashelter ?
+# Puis-je stocker mes logs sur Datashelter ?
 
 Bien que vous puissiez techniquement stocker vos journaux sur Datashelter, ce n'est pas conseillé pour plusieurs raisons.
 
