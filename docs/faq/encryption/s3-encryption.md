@@ -1,5 +1,7 @@
-# Comment chiffrons-nous vos données ?
+# How do we encrypt your data?
 
-Snaper chiffre vos données avec une clé AES-256 dérivée sur 32 bits avant de les envoyer vers le stockage compatible S3 de Datashelter.
+Encryption of your data is essential for maintaining confidentiality and security. That's why Snaper encrypts your data **on your server** using **your own encryption key** before sending it to our cloud.
 
-Cela garantit que vous seul pouvez accéder à vos fichiers. Le chiffrement s'effectue localement, en utilisant l'une des méthodes les plus robustes disponibles, offrant ainsi une protection solide pour vos données.
+Specifically, we derive a 256-bit AES key, which will be used to encrypt all your files. AES 256 is currently one of the most robust encryption technologies available.
+
+This approach ensures a high level of security and protection for your data.
