@@ -55,11 +55,14 @@ import TabItem from '@theme/TabItem';
               --encryption-key string        Encryption key to use for encrypting data
               --encryption-key-file string   Encryption key file to read for encrypting data
           -h, --help                         help for database
+              --hex-blob                     Dump binary columns using hexadecimal notation (mysql only)
           -H, --host string                  Hostname of the database server (default "localhost")
           -n, --name string                  Database name to backup
           -p, --password string              Password to use for connecting to the database
           -P, --port int                     Port of the database server
               --routines                     Backup database routines like functions of procedures (mysql only)
+              --single-transaction           Dump all tables in a single transaction (mysql only)
+              --triggers                     Backup database triggers (mysql only)
           -t, --type string                  Database type (mysql, postgresql)
           -u, --username string              Username to use for connecting to the database
 
