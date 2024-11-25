@@ -14,7 +14,7 @@ Create an account on [app.datashelter.tech](https://app.datashelter.tech)
 Add your first server on the dashboard. You will be prompted to install the snaper CLI on your server and to configure it.
 
 
-### 1. Click the "Add server" button
+### 1. Click the "Configure a server" button
 ![Configure server](assets/quickstart/configure_server.png)
 
 ### 2. Enter a server name and description
