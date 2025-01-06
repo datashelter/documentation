@@ -69,6 +69,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
+## Restaurer mes sauvegardes sur un nouveau serveur
+Nous vous invitons à consulter l'article que nous avons rédigé à ce sujet: "[Restaurer mes sauvegardes sur un nouveau serveur](https://datashelter.tech/fr/blog/restaurer-mes-sauvegardes-sur-un-nouveau-serveur/)".
+
 ##  Exemples d'utilisation
 ### Restaurer une base de données en utilisant un nom différent
 

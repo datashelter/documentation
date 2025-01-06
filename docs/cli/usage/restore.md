@@ -69,6 +69,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
+## Restore backups on a new server
+Please take a look on our blogpost "[How to restore your backups on a new server](https://datashelter.tech/blog/restore-my-backups-on-a-new-server/)" to know more.
+
 ##  Examples
 ### Restore a database using a different name 
 
