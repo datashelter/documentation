@@ -26,6 +26,7 @@ import TabItem from '@theme/TabItem';
         Flags:
               --all                          Backup all directories configured
               --concurrent int               Number of concurrent workers to use for upload
+              --configure                    Only configure the backup without running it
               --encryption-key string        Encryption key to use for encrypting data
               --encryption-key-file string   Encryption key file to read for encrypting data
               --exclude strings              Paths to exclude from backup (separated by commas)
@@ -52,6 +53,7 @@ import TabItem from '@theme/TabItem';
         Flags:
               --all                          Backup all databases configured in config.yaml
               --all-databases                Backup all databases existing on the server
+              --configure                    Only configure the backup without running it
               --encryption-key string        Encryption key to use for encrypting data
               --encryption-key-file string   Encryption key file to read for encrypting data
           -h, --help                         help for database
