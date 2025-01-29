@@ -30,6 +30,7 @@ import TabItem from '@theme/TabItem';
               --encryption-key string        Encryption key to use for encrypting data
               --encryption-key-file string   Encryption key file to read for encrypting data
               --exclude strings              Paths to exclude from backup (separated by commas)
+              --follow-symlinks              Follow symlinks when backing up files
           -h, --help                         help for files
               --ignore-existing              Check for existing files on S3 and ignore them (only for bug fixing)
           -n, --name string                  Name of the backup (optional)
