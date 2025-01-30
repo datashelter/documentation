@@ -20,16 +20,17 @@ import TabItem from '@theme/TabItem';
         files, fs, filesystem
 
         Examples:
-        snaper restore files --snapshot <snapshot_name> --name <backup_name> --path /where/to/restore
+        snaper restore files --name <backup_name> --path /where/to/restore --snapshot <snapshot_name>
 
         Flags:
             --all                          Restore all directories configured
             --concurrent int               Desired number of concurrent workers
             --encryption-key string        Encryption key to use for encrypting data
             --encryption-key-file string   Encryption key file to read for encrypting data
+            --exclude strings              Exclude files matching the pattern (comma separated)
         -f, --force                        Ignore errors that could occur during restore
         -h, --help                         help for files
-            --include string               Include only files matching the pattern, comma separated
+            --include strings              Include only files matching the pattern (comma separated)
             --latest                       Select latest snapshot existing on remote
         -n, --name string                  Backup name to restore
         -p, --path string                  Path where to restore

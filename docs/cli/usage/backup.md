@@ -33,6 +33,7 @@ import TabItem from '@theme/TabItem';
               --follow-symlinks              Follow symlinks when backing up files
           -h, --help                         help for files
               --ignore-existing              Check for existing files on S3 and ignore them (only for bug fixing)
+              --include strings              Paths to include in backup (separated by commas)
           -n, --name string                  Name of the backup (optional)
           -p, --path string                  Directory path to backup (optional)
         ```
