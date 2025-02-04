@@ -86,7 +86,7 @@ snaper restore database --name <database_name> --snapshot <snapshot_name> --rest
 **Method 1:**
 You can use the parameter --include to restore only specific files. The parameter accepts a comma-separated list of patterns.
 ```
-snaper restore files --name <backup_name> --include directory/,README* --snapshot <snapshot_name> --path <path_where_to_restore>
+snaper restore files --name <backup_name> --include "directory/*,README.md" --path <path_where_to_restore> --latest
 ```
 
 **Method 2:**

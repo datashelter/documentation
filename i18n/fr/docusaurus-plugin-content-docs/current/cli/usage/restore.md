@@ -86,7 +86,7 @@ snaper restore database --name <nom_de_la_base_de_données> --snapshot <nom_de_l
 **Méthode 1:**
 Vous pouvez utiliser le paramètre --include pour restaurer uniquement des fichiers spécifiques. Le paramètre accepte une liste de patterns séparés par des virgules.
 ```
-snaper restore files --name <nom_de_la_sauvegarde> --include directory/,README* --snapshot <nom_de_l'instantané> --path <chemin_de_la_restauration>
+snaper restore files --name <nom_de_la_sauvegarde> --include "directory/*,README.md" --path <répertoire_de_restauration> --latest
 ```
 
 **Méthode 2:**

@@ -75,3 +75,9 @@ import TabItem from '@theme/TabItem';
         ```
   </TabItem>
 </Tabs>
+
+##  Examples
+### Backup excluding cache and log directories
+```bash
+snaper backup files /path/to/backup --exclude "var/cache*,var/log*"
+```
