@@ -14,11 +14,11 @@ description: Toutes les variables d'environnement disponibles avec snaper.
 
 ### AWS_ACCESS_KEY_ID
 
-(Facultatif) Contient la clé d'accès au bucket S3.
+(Facultatif) Contient la clé d'accès au bucket compatible-S3. *Les données ne sont en aucun cas envoyées à AWS, il s'agit simplement d'une convention de nommage pour les buckets compatibles-S3.*
 
 ### AWS_SECRET_ACCESS_KEY
 
-(Facultatif) Contient la clé secrète du bucket S3.
+(Facultatif) Contient la clé secrète du bucket compatible-S3. *Les données ne sont en aucun cas envoyées à AWS, il s'agit simplement d'une convention de nommage pour les buckets compatibles-S3.*
 
 ### DATASHELTER_BUCKET
 
@@ -26,7 +26,7 @@ description: Toutes les variables d'environnement disponibles avec snaper.
 
 ### AWS_REGION
 
-(Facultatif) Contient la région du bucket S3.
+(Facultatif) Contient la région du bucket compatible-S3. *Les données ne sont en aucun cas envoyées à AWS, il s'agit simplement d'une convention de nommage pour les buckets compatibles-S3.*
 
 ### PGPASSWORD
 

@@ -55,14 +55,16 @@ import TabItem from '@theme/TabItem';
         Flags:
               --all                          Backup all databases configured in config.yaml
               --all-databases                Backup all databases existing on the server
+              --auth-db string               Authentication database (mongodb only)
               --configure                    Only configure the backup without running it
+              --direct-connection            Use direct connection to the database (mongodb only)
               --encryption-key string        Encryption key to use for encrypting data
               --encryption-key-file string   Encryption key file to read for encrypting data
           -h, --help                         help for database
               --hex-blob                     Dump binary columns using hexadecimal notation (mysql only)
           -H, --host string                  Hostname of the database server (default "localhost")
           -n, --name string                  Database name to backup
-          -p, --password string              Password to use for connecting to the database
+          -p, --password string              Password to use for connecting to the database (prefer using MYSQL_PASSWORD/PGPASSWORD/MONGODB_PASSWORD)
           -P, --port int                     Port of the database server
               --routines                     Backup database routines like functions of procedures (mysql only)
               --single-transaction           Dump all tables in a single transaction (mysql only)
@@ -75,6 +77,10 @@ import TabItem from '@theme/TabItem';
         ```
   </TabItem>
 </Tabs>
+
+:::note
+    MySQL et PostgreSQL supportent les connexions par socket. Cette méthode sera essayée par défaut si vous spécifiez "localhost" comme hôte (valeur par défaut). Si vous souhaitez forcer la connexion par TCP/IP, spécifier 127.0.0.1 à la place
+:::
 
 ##  Examples
 ### Backup excluding cache and log directories
