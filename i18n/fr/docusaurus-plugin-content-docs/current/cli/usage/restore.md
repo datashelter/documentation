@@ -28,6 +28,7 @@ import TabItem from '@theme/TabItem';
             --encryption-key string        Encryption key to use for encrypting data
             --encryption-key-file string   Encryption key file to read for encrypting data
             --exclude strings              Exclude files matching the pattern (comma separated)
+            --export                       Export restored files to a .tar.gz archive (specified with --path)
         -f, --force                        Ignore errors that could occur during restore
         -h, --help                         help for files
             --include strings              Include only files matching the pattern (comma separated)
