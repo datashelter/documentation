@@ -25,10 +25,11 @@ jobs:
     - name: Build Docusaurus site
       run: yarn build
 
-    - name: Deploy to FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    - name: Upload files via SSH
+      uses: appleboy/scp-action@v0.1.7
       with:
-        server: ${{ vars.FTP_HOST }}
-        username: ${{ vars.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./build/
+        host: ${{ vars.SSH_HOST }}
+        username: ${{ vars.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: "./build/*"
+        target: "/var/www/docs.datashelter.tech"
