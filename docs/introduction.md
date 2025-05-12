@@ -23,7 +23,7 @@ Datashelter provides seamless setup, automated backup management, and powerful r
 
 Snaper is the command-line tool (CLI) that powers the backup process for Datashelter. Built in Golang, Snaper is a powerful, lightweight tool designed to perform backups efficiently and securely from the client side. It handles everything from file and database backup to compression, encryption, and storage transfer—all within a single, easy-to-use binary.
 
-What makes Snaper different from traditional backup solutions is its incremental backup with file-level deduplication. Unlike tools like rsync that only back up changed or added files, Snaper uses index-based backup method. Read our dedicated blogpost [What is index-based backup](https://datashelter.tech/fr/blog/sauvegarde-index-based/) to know more about it!
+What makes Snaper different from traditional backup solutions is its incremental backup with file-level deduplication. Unlike tools like rsync that only back up changed or added files, Snaper uses index-based backup method. Read our dedicated blogpost [What is index-based backup](https://datashelter.tech/blog/index-based-backup/) to know more about it!
 
 ![Snaper schema](assets/snaper_schema.png)
 
