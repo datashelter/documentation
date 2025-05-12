@@ -24,7 +24,7 @@ Datashelter propose une configuration simple, une gestion automatisée des sauve
 
 Snaper est l'outil en ligne de commande (CLI) qui gère le processus de sauvegarde pour Datashelter. Conçu en Golang, Snaper est un outil puissant et léger, conçu pour effectuer des sauvegardes de manière efficace et sécurisée depuis le côté client. Il prend en charge tout, de la sauvegarde de fichiers et de bases de données à la compression, au chiffrement et au transfert vers le stockage—le tout dans un seul binaire facile à utiliser.
 
-Ce qui distingue Snaper des solutions de sauvegarde traditionnelles, c'est sa capacité de sauvegarde incrémentale avec déduplication au niveau des fichiers. Contrairement aux outils comme rsync, qui ne sauvegardent que les fichiers modifiés ou ajoutés, Snaper utilise une méthode de sauvegarde basée sur des index. Lisez notre article dédié [Qu'est-ce qu'une sauvegarde basée sur des index](https://datashelter.tech/fr/blog/sauvegarde-index-based/) pour en savoir plus !
+Ce qui distingue Snaper des solutions de sauvegarde traditionnelles, c'est sa capacité de sauvegarde incrémentale avec déduplication au niveau des fichiers. Contrairement aux outils comme rsync, qui ne sauvegardent que les fichiers modifiés ou ajoutés, Snaper utilise une méthode de sauvegarde basée sur des index. Lisez notre article dédié [Qu'est-ce qu'une sauvegarde basée sur l'index](https://datashelter.tech/fr/blog/sauvegarde-index-based/) pour en savoir plus !
 
 ![Snaper schema](assets/snaper_schema.png)
 
