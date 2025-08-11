@@ -12,12 +12,6 @@ Datashelter is a fully integrated backup solution designed to simplify the proce
 Datashelter provides seamless setup, automated backup management, and powerful recovery features—all while ensuring your data is encrypted, compressed, and deduplicated.
 
 ### Key Features
-- **Quick Setup:** Backup your servers within minutes by using our easy-to-install CLI tool.
-- **Automated Management:** After your initial backup, Datashelter manages everything automatically. You will be notified if anything goes wrong.
-- **Comprehensive Backup:** Supports files and major databases (MySQL, PostgreSQL, MongoDB).
-- **End-to-End Security:** All backups are encrypted using AES-256 encryption.
-- **Efficient Storage:** ZSTD compression and deduplication ensure minimal storage usage.
-- **Easy Restoration:** Recover files or databases quickly and effortlessly.
 
 ## How it works
 

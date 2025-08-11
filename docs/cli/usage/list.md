@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-description: List available snapshots for a a backup (files or databases)
+description: List available snapshots for a backup (files or databases)
 ---
 
 import Tabs from '@theme/Tabs';
@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
         Flags:
         -h, --help          help for files
         -n, --name string   Name of the backup
-        -p, --path string   Backuped path
+      -p, --path string   Backup path
         ```
   </TabItem>
   <TabItem value="databases" label="Databases">

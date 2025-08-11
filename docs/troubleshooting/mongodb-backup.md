@@ -8,10 +8,9 @@ ERRO[0010] unable to connect to the database mydb: Failed to connect to mongodb:
 
 This error typically occurs when using the default MongoDB configuration. It happens because the server is expecting to connect to a replica set, but no primary node is available or reachable.
 
-**Solution:**  
+**Solution:**
 Use the `--direct-connection` parameter to connect directly to the MongoDB instance without relying on replica set discovery.
 
----
 
 ### *Authentication error during connection handshake: unable to authenticate using mechanism "SCRAM-SHA-1"*
 
@@ -28,6 +27,6 @@ This error indicates that authentication to the MongoDB server has failed. Commo
 - Double-check the credentials used for connecting to the database.
 - If your MongoDB instance does **not** require authentication, try removing the `--auth-db` (or `authSource`) parameter.
 
-If you're certain no authentication is needed and no credentials are passed, try running the command again **without** the `--auth-db` argument.  
-If the issue persists, review the Snaper launch parameters by editing the config file located at:  
+If you're certain no authentication is needed and no credentials are passed, try running the command again **without** the `--auth-db` argument.
+If the issue persists, review the Snaper launch parameters by editing the config file located at:
 `~/.config/snaper/config.yaml`

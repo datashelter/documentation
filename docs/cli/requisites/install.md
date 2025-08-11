@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 # Install Snaper
 
 ## Automatic install (recommended)
-Snaper is a command-line tool designed for efficient snapshot creation for files and databases (MySQL, PostgreSQL, and MongoDB). It's written in Go, allowing for easy installation with just a single command:
+Snaper is a command-line tool designed for efficient snapshot creation of files and databases (MySQL, PostgreSQL, and MongoDB). It's written in Go, allowing for easy installation with just a single command:
 
 ```bash
 curl -sSL https://dl.datashelter.cloud/scripts/install-snaper.sh | bash

@@ -7,9 +7,9 @@ import TabItem from '@theme/TabItem';
 
 # Database client setup
 
-As most databases require strong coherence between the client and the server, snaper **rely on the database client installed on your server**.
+As most databases require strong compatibility between the client and the server, Snaper **relies on the database client installed on your server**.
 
-For this reason, you need to install the database client on your server before using snaper to backup and restore your databases.
+For this reason, you need to install the database client on your server before using Snaper to back up and restore your databases.
 
 <Tabs groupId="database_type">
   <TabItem value="mysql" label="MySQL">
@@ -49,7 +49,7 @@ For this reason, you need to install the database client on your server before u
 
     Follow the [official documentation](https://docs.mongodb.com/manual/installation/) to install the **MongoDB client**: 
 
-    You will find binaries for most operating systems and distributions on the [MongoDB Download Center](https://www.mongodb.com/try/download/database-tools)
+  You can find binaries for most operating systems and distributions in the [MongoDB Download Center](https://www.mongodb.com/try/download/database-tools)
 
     **Verify installation**
 

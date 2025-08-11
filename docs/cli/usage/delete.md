@@ -9,9 +9,9 @@ import TabItem from '@theme/TabItem';
 # delete
 
 :::note
-**snaper cannot delete any snapshots from remote storage.** It can only remove a backup from the list of backups (usefull to repair mistaped commands).
+**Snaper cannot delete any snapshots from remote storage.** It can only remove a backup from the list of backups (useful to repair mistyped commands).
 
-Snapshot deletion can only be performed through lifecycle rules on the remote storage. Please [contact our support](/support) to know more about this feature.
+Snapshot deletion can only be performed through lifecycle rules on the remote storage. Please [contact our support](/support) to learn more about this feature.
 :::
 
 <Tabs groupId="backup_type">

@@ -10,7 +10,7 @@ description: All the environment variables that can be used with snaper.
 
 ### SNAPER_ENCRYPTION_KEY_FILE
 
-(Optional) Contains the path to the file holding encryption key. You should define it using `snaper init` command, unless you know what you are doing
+(Optional) Contains the path to the file holding the encryption key. You should define it using the `snaper init` command, unless you know what you are doing.
 
 ### AWS_ACCESS_KEY_ID
 

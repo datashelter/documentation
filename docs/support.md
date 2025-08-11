@@ -4,7 +4,7 @@ sidebar_position: 20
 
 # Contact Us
 
-If you need personalized support, feel free to reach out directly. Whether you have feedback, a technical issue, or a billing inquiry, we're available to assist you.
+If you need personalized support, feel free to reach out directly. Whether you have feedback, a technical issue, or a billing inquiry, we are available to assist you.
 
 ### Email Support
 

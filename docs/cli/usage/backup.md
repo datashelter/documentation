@@ -83,7 +83,7 @@ import TabItem from '@theme/TabItem';
 :::
 
 ## Examples
-### Backup excluding cache and log directories
+### Backup while excluding cache and log directories
 ```bash
 snaper backup files /path/to/backup --exclude "var/cache*,var/log*"
 ```

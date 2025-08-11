@@ -1,6 +1,6 @@
 # Backup incident troubleshooting guide
 
-This guide walks you through the steps to identify and resolve backup issues reported via email. The goal is to help you fix the problem quickly, or gather the right info before reaching out to our support team.
+This guide walks you through the steps to identify and resolve backup issues reported via email. The goal is to help you fix the problem quickly, or gather the right information before reaching out to our support team.
 
 ## Step 1: Spot services with errors
 
@@ -15,8 +15,6 @@ This guide walks you through the steps to identify and resolve backup issues rep
 
 ## Step 2: Check the backup logs
 
-- Backup logs are stored locally on your server at `/tmp/snaper`.
-- To see which backup name matches which path, run:
 
   ```bash
   snaper list files
@@ -58,7 +56,7 @@ You can contact us:
 - Through the live chat on your dashboard
 - Or by email: support@datashelter.tech
 
-To help us assist you quickly, please include:
+To help us assist you quickly, please provide:
 - The name of your server
 - The name of the affected service
 - And if possible, the error message you’re seeing
