@@ -7,8 +7,11 @@ import TabItem from '@theme/TabItem';
 
 # Install Snaper
 
+## What is Snaper?
+Snaper is Datashelter’s backup and snapshot agent that runs on your servers. It creates consistent snapshots of files and popular databases (MySQL, PostgreSQL, and MongoDB). Snaper is a single, self-contained binary written in Go, making installation and updates fast and reliable.
+
 ## Automatic install (recommended)
-Snaper is a command-line tool designed for efficient snapshot creation of files and databases (MySQL, PostgreSQL, and MongoDB). It's written in Go, allowing for easy installation with just a single command:
+Install Snaper with one command:
 
 ```bash
 curl -sSL https://dl.datashelter.cloud/scripts/install-snaper.sh | bash
@@ -80,3 +83,19 @@ Alternatively, you can manually install Snaper by following the instructions bel
     </Tabs>
   </TabItem>
 </Tabs>
+
+## Update Snaper
+
+- If your current Snaper version is 3.9.0 or newer, update in place:
+
+```bash
+snaper update
+```
+
+- If your version is older than 3.9.0, update by reinstalling using the same method you used to install (either rerun the automatic installer or download the newest binary for your OS/architecture and replace the existing `snaper` binary).
+
+## Verify the installation
+
+```bash
+snaper --version
+```

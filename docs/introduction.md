@@ -11,8 +11,6 @@ import TabItem from '@theme/TabItem';
 Datashelter is a fully integrated backup solution designed to simplify the process of backing up your Linux servers. With just a few steps, you can protect your critical data by backing up your files and databases to an S3-compatible storage system.
 Datashelter provides seamless setup, automated backup management, and powerful recovery features—all while ensuring your data is encrypted, compressed, and deduplicated.
 
-### Key Features
-
 ## How it works
 
 Snaper is the command-line tool (CLI) that powers the backup process for Datashelter. Built in Golang, Snaper is a powerful, lightweight tool designed to perform backups efficiently and securely from the client side. It handles everything from file and database backup to compression, encryption, and storage transfer—all within a single, easy-to-use binary.

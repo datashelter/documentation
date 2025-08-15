@@ -5,15 +5,15 @@ sidebar_position: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Configuration du client de base de données
+# Configurer le client de base de donnée
 
-Comme la plupart des bases de données nécessitent une forte cohérence entre le client et le serveur, snaper **repose sur le client de base de données installé sur votre serveur**.
+Comme la plupart des bases de données nécessitent une forte cohérence entre le client et le serveur, snaper **utilise le client de base de données installé sur votre serveur**.
 
 Pour cette raison, vous devez installer le client de base de données sur votre serveur avant d'utiliser snaper pour sauvegarder et restaurer vos bases de données.
 
 <Tabs groupId="database_type">
   <TabItem value="mysql" label="MySQL">
-    **Installer**
+    **Installation**
 
     Installez le **client MySQL** en exécutant la commande suivante :
     ```
@@ -29,7 +29,7 @@ Pour cette raison, vous devez installer le client de base de données sur votre 
     ```
   </TabItem>
   <TabItem value="postgresql" label="PostgreSQL">
-    **Installer**
+    **Installation**
 
     Installez le **client PostgreSQL** en exécutant la commande suivante :
     ```
@@ -45,9 +45,9 @@ Pour cette raison, vous devez installer le client de base de données sur votre 
     ```
   </TabItem>
   <TabItem value="mongodb" label="MongoDB">
-    **Installer**
+    **Installation**
 
-    Suivez la [documentation officielle] (https://docs.mongodb.com/manual/installation/) pour installer le **client MongoDB** : 
+    Suivez la [documentation officielle](https://docs.mongodb.com/manual/installation/) pour installer le **client MongoDB** : 
 
     Vous trouverez des binaires pour la plupart des systèmes d'exploitation et des distributions sur le [Centre de téléchargement MongoDB](https://www.mongodb.com/try/download/database-tools).
 
