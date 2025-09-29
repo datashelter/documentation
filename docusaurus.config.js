@@ -81,25 +81,24 @@ const config = {
             label: 'Documentation',
           },
           {
+            type: 'search',
+            position: 'left',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },
           {
-            label: 'Visit main website',
+            label: 'Open dashboard',
             position: 'right',
-            href: 'https://datashelter.tech',
-          },
-          {
-            href: 'https://github.com/datashelter/documentation',
-            label: 'GitHub',
-            position: 'right',
+            href: 'https://app.datashelter.tech',
           },
         ],
       },
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       footer: {
         style: 'dark',
@@ -174,6 +173,29 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      algolia: {
+      appId: 'VAMH1T9TIM',
+      apiKey: '473258af86411b1604b4bfb511c066ce',
+
+      indexName: 'datashelter-docs',
+
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'docs\\.datashelter\\.tech',
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+
+      searchParameters: {},
+      searchPagePath: 'search',
+
+      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+      insights: true,
+    },
     }),
 };
 
