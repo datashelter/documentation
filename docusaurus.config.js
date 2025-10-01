@@ -177,7 +177,7 @@ const config = {
       appId: 'VAMH1T9TIM',
       apiKey: '473258af86411b1604b4bfb511c066ce',
 
-      indexName: 'datashelter-docs',
+      indexName: 'docs.datashelter.tech',
 
       contextualSearch: true,
 
