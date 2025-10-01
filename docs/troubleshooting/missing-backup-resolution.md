@@ -15,6 +15,14 @@ This guide walks you through the steps to identify and resolve backup issues rep
 
 ## Step 2: Check the backup logs
 
+- Backup logs are stored locally on your server in `/tmp/snaper`.
+  For example, for the `crimson-surf` backup, your logs are available in the file `/tmp/snaper/crimson-surf.log`.
+
+  ```bash
+  tail -n 100 /tmp/snaper/crimson-surf.log
+  ```
+
+- List the backups configured on your server (and their corresponding paths) with the following command :
 
   ```bash
   snaper list files
