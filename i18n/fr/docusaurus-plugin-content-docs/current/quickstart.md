@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Get started
+# Guide de démarrage
 
 ## Créez un compte sur Datashelter
 

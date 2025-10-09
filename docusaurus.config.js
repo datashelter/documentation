@@ -25,7 +25,12 @@ const config = {
   projectName: 'documentation', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+        onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -75,23 +80,42 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/quickstart',
             position: 'left',
-            label: 'Documentation',
+            label: 'Get started',
           },
           {
-            type: 'search',
+            to: '/category/cli-snaper',
             position: 'left',
+            label: 'Install/Configure',
+          },
+          {
+            to: '/category/tutorials',
+            position: 'left',
+            label: 'Tutorials',
+          },
+          {
+            to: '/category/faq',
+            position: 'left',
+            label: 'FAQ',
+          },
+          {
+            to: '/category/troubleshooting',
+            position: 'left',
+            label: 'Troubleshooting',
           },
           {
             type: 'localeDropdown',
             position: 'right',
           },
           {
-            label: 'Open dashboard',
+            label: 'Manage my backups',
             position: 'right',
             href: 'https://app.datashelter.tech',
+          },
+          {
+            type: 'search',
+            position: 'right',
           },
         ],
       },
@@ -102,13 +126,24 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'Datashelter Logo',
+          src: 'img/datashelter-white-cropped.svg',
+          href: 'https://datashelter.tech/',
+          width: 250,
+          height: 60,
+        },
         links: [
           {
-            title: 'Docs',
+            title: 'Learn',
             items: [
               {
                 label: 'Quickstart',
                 to: '/quickstart',
+              },
+              {
+                label: 'Tutorials',
+                to: '/category/tutorials',
               },
               {
                 label: 'FAQ',
@@ -118,10 +153,7 @@ const config = {
                 label: 'Troubleshooting',
                 to: '/category/troubleshooting',
               },
-              {
-                label: 'Contact us',
-                to: '/support',
-              },
+
             ],
           },
           {
@@ -136,12 +168,12 @@ const config = {
                 href: 'https://www.linkedin.com/company/datasheltertech/',
               },
               {
-                label: 'Github',
-                href: 'https://github.com/datashelter',
-              },
-              {
                 label: 'YouTube',
                 href: 'https://www.youtube.com/@datasheltertech',
+              },
+              {
+                label: 'Help',
+                to: '/support',
               },
             ],
           },
@@ -149,15 +181,15 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                href: 'https://datashelter.tech/blog/',
+                label: 'Discover Datashelter',
+                href: 'https://datashelter.tech/',
               },
               {
-                label: 'Client area',
+                label: 'Manage my backups',
                 href: 'https://app.datashelter.tech/',
               },
               {
-                label: 'Service status',
+                label: 'Datashelter status',
                 href: 'https://status.datashelter.tech/',
               },
               {
@@ -174,28 +206,25 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
       algolia: {
-      appId: 'VAMH1T9TIM',
-      apiKey: '473258af86411b1604b4bfb511c066ce',
+        appId: 'VAMH1T9TIM',
+        apiKey: '473258af86411b1604b4bfb511c066ce',
 
-      indexName: 'docs.datashelter.tech',
+        indexName: 'docs.datashelter.tech',
 
-      contextualSearch: true,
+        contextualSearch: true,
 
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      // externalUrlRegex: 'docs\\.datashelter\\.tech',
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
 
-      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      replaceSearchResultPathname: {
-        from: '/docs/', // or as RegExp: /\/docs\//
-        to: '/',
+        searchParameters: {},
+        searchPagePath: 'search',
+
+        // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        insights: true,
       },
-
-      searchParameters: {},
-      searchPagePath: 'search',
-
-      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
-      insights: true,
-    },
     }),
 };
 

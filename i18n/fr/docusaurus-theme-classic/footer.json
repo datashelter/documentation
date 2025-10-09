@@ -1,8 +1,4 @@
 {
-  "link.title.Docs": {
-    "message": "Documentation",
-    "description": "The title of the footer links column with title=Docs in the footer"
-  },
   "link.title.Community": {
     "message": "Communauté",
     "description": "The title of the footer links column with title=Community in the footer"
@@ -16,12 +12,8 @@
     "description": "The label of footer link with label=Quickstart linking to /quickstart"
   },
   "link.item.label.Troubleshooting": {
-    "message": "Troubleshooting",
+    "message": "Problèmes courants",
     "description": "The label of footer link with label=Troubleshooting linking to /category/troubleshooting"
-  },
-  "link.item.label.Contact us": {
-    "message": "Nous contacter",
-    "description": "The label of footer link with label=Contact us linking to /support"
   },
   "link.item.label.Twitter": {
     "message": "Twitter",
@@ -31,24 +23,8 @@
     "message": "LinkedIn",
     "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/company/datasheltertech/"
   },
-  "link.item.label.Github": {
-    "message": "Github",
-    "description": "The label of footer link with label=Github linking to https://github.com/datashelter"
-  },
-  "link.item.label.Blog": {
-    "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to https://datashelter.tech/blog/"
-  },
-  "link.item.label.Client area": {
-    "message": "Espace client",
-    "description": "The label of footer link with label=Client area linking to https://app.datashelter.tech/"
-  },
-  "link.item.label.Service status": {
-    "message": "Status des services",
-    "description": "The label of footer link with label=Service status linking to https://status.datashelter.tech/"
-  },
   "copyright": {
-    "message": "Tout droits réservés © 2025 Datashelter. Fait avec ❤️ en 🇫🇷",
+    "message": "Tout droits réservés © 2025 Datashelter. Développé en 🇫🇷 avec ❤️",
     "description": "The footer copyright"
   },
   "link.item.label.FAQ": {
@@ -61,6 +37,34 @@
   },
   "link.item.label.Legal notice": {
     "message": "Mentions légales",
-    "description": "The label of footer link with label=Legal notice linking to https://pineapple-bit-b3b.notion.site/Mentions-l-gales-eb17154343644ae399669e61a27f0aa7"
+    "description": "The label of footer link with label=Legal notice linking to https://pineapple-bit-b3b.notion.site/Legal-mentions-8c75662443194bdb9ecddf739c7485bc"
+  },
+  "link.title.Learn": {
+    "message": "Découvrir",
+    "description": "The title of the footer links column with title=Learn in the footer"
+  },
+  "link.item.label.Tutorials": {
+    "message": "Tutoriels",
+    "description": "The label of footer link with label=Tutorials linking to /category/tutorials"
+  },
+  "link.item.label.Help": {
+    "message": "Aide",
+    "description": "The label of footer link with label=Help linking to /support"
+  },
+  "link.item.label.Discover Datashelter": {
+    "message": "Découvrir Datashelter",
+    "description": "The label of footer link with label=Discover Datashelter linking to https://datashelter.tech/"
+  },
+  "link.item.label.Manage my backups": {
+    "message": "Gérer mes sauvegardes",
+    "description": "The label of footer link with label=Manage my backups linking to https://app.datashelter.tech/"
+  },
+  "link.item.label.Datashelter status": {
+    "message": "Statut des services",
+    "description": "The label of footer link with label=Datashelter status linking to https://status.datashelter.tech/"
+  },
+  "logo.alt": {
+    "message": "Logo de Datashelter",
+    "description": "The alt text of footer logo"
   }
 }

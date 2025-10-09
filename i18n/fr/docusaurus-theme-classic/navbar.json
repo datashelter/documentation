@@ -7,16 +7,28 @@
     "message": "Logo Datashelter",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
-    "message": "Documentation",
-    "description": "Navbar item with label Documentation"
+  "item.label.Get started": {
+    "message": "Guide de démarrage",
+    "description": "Navbar item with label Get started"
   },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label GitHub"
+  "item.label.Install/Configure": {
+    "message": "Installer/Configurer",
+    "description": "Navbar item with label Install/Configure"
   },
-  "item.label.Visit main website": {
-    "message": "Visiter notre site",
-    "description": "Navbar item with label Visit main website"
+  "item.label.Tutorials": {
+    "message": "Tutoriels",
+    "description": "Navbar item with label Tutorials"
+  },
+  "item.label.FAQ": {
+    "message": "FAQ",
+    "description": "Navbar item with label FAQ"
+  },
+  "item.label.Troubleshooting": {
+    "message": "Problèmes courants",
+    "description": "Navbar item with label Troubleshooting"
+  },
+  "item.label.Manage my backups": {
+    "message": "Gérer mes sauvegardes",
+    "description": "Navbar item with label Manage my backups"
   }
 }
