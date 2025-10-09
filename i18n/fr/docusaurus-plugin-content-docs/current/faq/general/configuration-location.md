@@ -1,8 +1,8 @@
 # Où sont stockés les fichiers de configuration ?
 
-La configuration de Snaper est située dans le répertoire `~/.config/snaper`. Vous y trouverez
+Snaper stocke sa configuration dans le répertoire `~/.config/snaper`. Vous pourrez y trouver les fichiers suivants :
 
-- `config.yaml` : votre fichier de configuration principal
-- `.encryption_key` : fichier contenant votre clé de chiffrement
-- `.xxx.lock` : verrou de votre clé de chiffrement → assurez-vous de ne pas le changer en vol
-- `index_cache` : contient vos derniers index pour une exécution plus rapide. Nous conservons généralement les 5 derniers index, les autres sont extraits de S3 lorsque cela est nécessaire.
+- `config.yaml` : votre fichier de configuration principal. Vous pouvez le modifier en lançant la commande `snaper init` ou en l'éditant directement.
+- `.encryption_key` : contient votre clé de chiffrement. Nous vous recommandons de la conserver dans un gestionnaire de mots de passe ou dans votre tête.
+- `.xxx.lock` : verrou de votre clé de chiffrement. Il permet de garantir que votre clé de chiffrement ne change pas entre deux sauvegardes, afin d'éviter toute corruption de vos sauvegardes.
+- `index_cache` : contient vos derniers index pour une exécution plus rapide. Nous conservons généralement le dernier index en cache afin d'accélérer l'étape de déduplication lors de votre prochaine sauvegarde.
