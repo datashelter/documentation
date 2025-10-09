@@ -1,6 +1,6 @@
-# Can I store logs on Datashelter?
+# Can I backup logs with Datashelter?
 
-While you can technically store your logs on Datashelter, it's not advisable for a few reasons.
+While you can technically backup your logs on Datashelter, it's not advisable for a few reasons.
 
 First, due to file deduplication, editing even a single line in your file results in storing a new file, thus increasing storage usage.
 

@@ -1,6 +1,6 @@
-# Détails de l'infrastructure
+# Notre infrastructure
 
-## Que se passe-t-il en coulisse ?
+## Découvrez les coulisses de l'infrastructure Datashelter
 
 Datashelter est basé sur le protocole S3, avec des composants personnalisés supplémentaires qui offrent des fonctionnalités telles que :
 
@@ -11,7 +11,7 @@ Datashelter est basé sur le protocole S3, avec des composants personnalisés su
 
 ![Datashelter infrastructure](../../assets/faq/datashelter_infrastructure_schema.png)
 
-## Envie d'en savoir plus ?
+## Aller plus loin
 
 Si vous souhaitez en savoir plus sur nos fonctionnalités de sécurité uniques, nous vous invitons à lire notre article de blog : [Comment Datashelter garantit la sécurité de vos sauvegardes ?](https://datashelter.tech/fr/blog/datashelter-securise-vos-sauvegardes/)
 
