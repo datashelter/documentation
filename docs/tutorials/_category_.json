@@ -1,6 +1,6 @@
 {
-  "label": "Dashboard",
-  "position": 10,
+  "label": "Tutorials",
+  "position": 9,
   "link": {
     "type": "generated-index",
     "description": "Know more about common issues and how to solve them"

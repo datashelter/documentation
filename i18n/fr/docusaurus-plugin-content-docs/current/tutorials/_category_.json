@@ -1,0 +1,8 @@
+{
+  "label": "Tutoriels",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "En savoir plus sur les problèmes courants et comment les résoudre"
+  }
+}

@@ -84,7 +84,7 @@
     "description": "The generated-index page description for category Storage in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Troubleshooting": {
-    "message": "Troubleshooting",
+    "message": "Problèmes courants",
     "description": "The label for category Troubleshooting in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Troubleshooting.link.generated-index.description": {
@@ -92,11 +92,19 @@
     "description": "The generated-index page description for category Troubleshooting in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Backup scheduling": {
-    "message": "Planification automatique",
+    "message": "Planification des sauvegardes",
     "description": "The label for category Backup scheduling in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Backup scheduling.link.generated-index.description": {
-    "message": "Find answers to frequently asked questions",
+    "message": "Trouvez des réponses aux questions fréquemment posées",
     "description": "The generated-index page description for category Backup scheduling in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials": {
+    "message": "Tutoriels",
+    "description": "The label for category Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials.link.generated-index.description": {
+    "message": "En savoir plus sur les problèmes courants et comment les résoudre",
+    "description": "The generated-index page description for category Tutorials in sidebar tutorialSidebar"
   }
 }
