@@ -1,19 +1,9 @@
-# Which path should I specify when configuring my server?
+# Which paths should I back up?
 
-When configuring your server, you should specify the path where you want your backups to be stored. This could be a local directory on your server or a path in an external storage service (like AWS S3, Google Cloud Storage, etc.) if you're using one.
+The goal of file backups is to protect application-specific data and configurations. Their location depends on your stack, but common locations include:
 
-The local path where the files to be backed up are located (e.g., /var/lib/mysql).
+- /etc — configuration files
+- /home — user data
+- /var/www — web files
 
-Explanation
-
-When setting up your server in Datashelter, you need to specify the local path(s) that the Snaper agent should back up.
-
-Examples:
-
-/etc for system configurations
-
-/var/lib/mysql for MySQL databases
-
-/home/app/data for application data
-
-👉 This field precisely determines which data is protected.
+If in doubt, our support team can help you set up your backups free of charge. Contact us at support@datashelter.tech or via the chat bubble on our website.

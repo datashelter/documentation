@@ -1,4 +1,4 @@
-# Which retention policy should I choose?
+# Quelle politique de rétention choisir ?
 
 It depends on your needs for data recovery and cost management.
 

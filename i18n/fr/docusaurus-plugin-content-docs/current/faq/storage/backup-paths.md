@@ -1,19 +1,8 @@
-# Which path should I specify when configuring my server?
+# Quels chemins dois-je sauvegarder ?
 
-When configuring your server, you should specify the path where you want your backups to be stored. This could be a local directory on your server or a path in an external storage service (like AWS S3, Google Cloud Storage, etc.) if you're using one.
+La sauvegarde des fichiers de votre serveur vise à protéger les données et configurations spécifiques à votre application. Leur localisation dépend généralement du type d'application que vous utilisez, mais les emplacements courants incluent :
+- */etc* : pour les fichiers de configuration
+- */home* : pour les données utilisateur
+- */var/www* : pour les fichiers web
 
-The local path where the files to be backed up are located (e.g., /var/lib/mysql).
-
-Explanation
-
-When setting up your server in Datashelter, you need to specify the local path(s) that the Snaper agent should back up.
-
-Examples:
-
-/etc for system configurations
-
-/var/lib/mysql for MySQL databases
-
-/home/app/data for application data
-
-👉 This field precisely determines which data is protected.
+En cas de doute, sachez que notre équipe support vous accompagne gratuitement dans la configuration de vos sauvegardes. Vous pouvez nous contacter à l'adresse support@datashelter.tech ou via le bulle de chat sur notre site web.

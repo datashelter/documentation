@@ -1,5 +1,7 @@
-# Are my backups immutable?
+# Mes sauvegardes sont-elles immuables ?
 
-Yes, Datashelter offers immutable backups to ensure that your data cannot be altered or deleted for a specified period. This feature protects your backups from ransomware attacks and accidental deletions, providing an additional layer of security for your critical data.
+Le stockage immuable de vos sauvegardes est une fonctionnalité native de Datashelter. Cela signifie que vos sauvegardes ne peuvent ni être supprimées ni modifiées, même si vos identifiants S3 sont compromis.
 
-When you enable immutability on your backups, they are locked for a defined retention period, during which they cannot be modified or removed. This ensures that you have a reliable copy of your data that can be restored in case of data loss or corruption.
+Vous aurez uniquement un accès en lecture.
+
+Il s'agit d'une protection logique au niveau du proxy `s3.datashelter.cloud` que nous utilisons pour interagir avec votre bucket S3, qu'il soit hébergé chez nous ou chez un fournisseur tiers.

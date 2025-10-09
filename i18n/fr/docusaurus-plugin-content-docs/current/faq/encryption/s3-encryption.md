@@ -1,4 +1,4 @@
-# Chiffrez-vous les données au repos dans S3 ?
+# Chiffrement de mes données au repos
 
 Le chiffrement de vos données est essentiel pour la confidentialité et la sécurité. C'est pourquoi Snaper chiffre vos données **sur votre serveur** et avec **votre propre clé de chiffrement** avant de les envoyer vers notre cloud.
 
