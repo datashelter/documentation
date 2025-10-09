@@ -40,6 +40,14 @@ const config = {
     locales: ['en', 'fr'],
   },
 
+  scripts: [
+    {
+      src: 'https://client.crisp.chat/l.js',
+      async: true,
+      onload: `window.$crisp=[];window.CRISP_WEBSITE_ID="f96c76e6-e959-46b4-b085-8ccd1f73027d";`,
+    },
+  ],
+
   presets: [
     [
       'classic',
