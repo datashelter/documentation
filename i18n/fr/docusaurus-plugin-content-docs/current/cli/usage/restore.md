@@ -31,12 +31,16 @@ import TabItem from '@theme/TabItem';
             --export                       Export restored files to a .tar.gz archive (specified with --path)
         -f, --force                        Ignore errors that could occur during restore
         -h, --help                         help for files
+            --ignore-existing              Skip files that already exist at the restore destination
             --include strings              Include only files matching the pattern (comma separated)
             --latest                       Select latest snapshot existing on remote
         -n, --name string                  Backup name to restore
         -p, --path string                  Path where to restore
         -s, --snapshot string              Index name of the snapshot to restore
         -y, --yes                          Do not ask for confirmation
+
+        Global Flags:
+            --log string   Path to log file (creates directory if needed)
         ```
   </TabItem>
   <TabItem value="databases" label="Databases">
