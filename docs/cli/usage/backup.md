@@ -82,8 +82,52 @@ import TabItem from '@theme/TabItem';
   MySQL and PostgreSQL support socket connections. This method will be attempted by default if you specify "localhost" as the host (which is the default value). If you want to force a TCP/IP connection instead, specify 127.0.0.1.
 :::
 
-## Examples
-### Backup while excluding cache and log directories
+## Usage Examples
+### Backup a directory while excluding files
 ```bash
+# Exclude cache and log directories
 snaper backup files /path/to/backup --exclude "var/cache*,var/log*"
+
+# Include only Python files, except tests
+snaper backup files /project --include "*.py" --exclude "*test*.py,*_test.py"
+
+# Exclude all node_modules at any depth
+snaper backup files ./app --exclude "**/node_modules"
+
+# Exclude all .log files except error.log at the root
+snaper backup files /app --include "error.log" --exclude "*.log"
 ```
+
+## Filtering Options (Pattern Matching)
+
+### Matching Rules
+
+* Paths are **relative to the backed-up directory**.
+  Ex: backing up `/home/user` → `Documents` corresponds to `/home/user/Documents`.
+
+* The slash (`/`) matters:
+
+  * `myfile` → all files named *myfile*
+  * `dir/myfile` → only those in `dir`
+  * `/myfile` → only at the root
+
+* Useful patterns:
+
+  * `*` → any string (`*.log`, `cache*`)
+  * `**` → recursive (`**/logs/**`)
+  * `?` → a single character (`file?.txt`)
+
+### Priority Order
+
+1. **Inclusions** are evaluated **before** exclusions.
+2. If a file matches both, **it is excluded**.
+
+Example:
+
+```bash
+snaper backup files /project \
+  --include "*.py" \
+  --exclude "*test*.py"
+```
+
+Python files are included, but test files are ignored.

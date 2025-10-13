@@ -82,8 +82,52 @@ import TabItem from '@theme/TabItem';
     MySQL et PostgreSQL supportent les connexions par socket. Cette méthode sera essayée par défaut si vous spécifiez "localhost" comme hôte (valeur par défaut). Si vous souhaitez forcer la connexion par TCP/IP, spécifier 127.0.0.1 à la place
 :::
 
-##  Examples
-### Backup excluding cache and log directories
+##  Exemples d'utilisation
+### Sauvegarde d'un répertoire en excluant des fichiers
 ```bash
+# Exclure les répertoires de cache et de logs
 snaper backup files /path/to/backup --exclude "var/cache*,var/log*"
+
+# Inclure uniquement les fichiers Python, sauf les tests
+snaper backup files /project --include "*.py" --exclude "*test*.py,*_test.py"
+
+# Exclure tous les node_modules, à n’importe quelle profondeur
+snaper backup files ./app --exclude "**/node_modules"
+
+# Exclure tous les .log sauf error.log à la racine
+snaper backup files /app --include "error.log" --exclude "*.log"
 ```
+
+## Options de filtrage (pattern matching)
+
+### Règles de correspondance
+
+* Les chemins sont **relatifs au répertoire sauvegardé**.
+  Ex : sauvegarder `/home/user` → `Documents` correspond à `/home/user/Documents`.
+
+* Le slash (`/`) a une importance :
+
+  * `myfile` → tous les fichiers nommés *myfile*
+  * `dir/myfile` → seulement ceux dans `dir`
+  * `/myfile` → uniquement à la racine
+
+* Motifs utiles :
+
+  * `*` → n’importe quelle chaîne (`*.log`, `cache*`)
+  * `**` → récursif (`**/logs/**`)
+  * `?` → un seul caractère (`file?.txt`
+
+### Ordre de priorité
+
+1. Les **inclusions** sont évaluées **avant** les exclusions.
+2. Si un fichier correspond aux deux, **il est exclu**.
+
+Exemple :
+
+```bash
+snaper backup files /project \
+  --include "*.py" \
+  --exclude "*test*.py"
+```
+
+Les fichiers Python sont inclus, mais les fichiers de test sont ignorés.
