@@ -88,14 +88,19 @@ import TabItem from '@theme/TabItem';
 # Exclude cache and log directories
 snaper backup files /path/to/backup --exclude "var/cache*,var/log*"
 
-# Include only Python files, except tests
-snaper backup files /project --include "*.py" --exclude "*test*.py,*_test.py"
+# Include only Python files, except tests (using ** for recursive matching)
+snaper backup files /project --include "**/*.py" --exclude "**/*test*.py,**/*_test.py"
 
 # Exclude all node_modules at any depth
 snaper backup files ./app --exclude "**/node_modules"
 
 # Exclude all .log files except error.log at the root
 snaper backup files /app --include "error.log" --exclude "*.log"
+
+# Advanced Python project backup: include source code but exclude generated files
+snaper backup files /python-project \
+  --include "**/*.py,**/*.yml,**/*.yaml,**/*.json,**/requirements*.txt" \
+  --exclude "**/__pycache__/**,**/*.pyc,**/venv/**,**/env/**,**/build/**,**/dist/**"
 ```
 
 ## Filtering Options (Pattern Matching)
