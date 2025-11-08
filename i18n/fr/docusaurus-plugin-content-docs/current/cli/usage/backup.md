@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-description: Prise d'instantané d'un répertoire/d'une base de données et envoi vers Datashelter
+description: Sauvegarde d'un répertoire ou d'une base de données et envoi vers Datashelter
 ---
 
 import Tabs from '@theme/Tabs';
@@ -83,56 +83,59 @@ import TabItem from '@theme/TabItem';
 :::
 
 ##  Exemples d'utilisation
-### Sauvegarde d'un répertoire en excluant des fichiers
+### Sauvegarder un répertoire en excluant des fichiers
 ```bash
-# Exclure les répertoires de cache et de logs
-snaper backup files /path/to/backup --exclude "var/cache*,var/log*"
+# Exclure les répertoires cache et log
+snaper backup files /path/to/backup --exclude "var/cache/**,var/log/**"
 
-# Inclure uniquement les fichiers Python, sauf les tests (utilisation de ** pour la correspondance récursive)
+# Inclure uniquement les fichiers Python, sauf les tests (utilise ** pour la récursivité)
 snaper backup files /project --include "**/*.py" --exclude "**/*test*.py,**/*_test.py"
 
-# Exclure tous les node_modules, à n’importe quelle profondeur
-snaper backup files ./app --exclude "**/node_modules"
+# Exclure tous les node_modules quelle que soit la profondeur
+snaper backup files ./app --exclude "**/node_modules/**"
 
-# Exclure tous les .log sauf error.log à la racine
-snaper backup files /app --include "error.log" --exclude "*.log"
+# Exclure tous les fichiers .log quelle que soit la profondeur
+snaper backup files /app --exclude "**/*.log"
 
-# Sauvegarde avancée d'un projet Python : inclure le code source mais exclure les fichiers générés
-snaper backup files /python-project \
-  --include "**/*.py,**/*.yml,**/*.yaml,**/*.json,**/requirements*.txt" \
-  --exclude "**/__pycache__/**,**/*.pyc,**/venv/**,**/env/**,**/build/**,**/dist/**"
+# Exclure les fichiers .log mais conserver error.log au niveau racine
+snaper backup files /app --include "error.log" --exclude "**/*.log"
 ```
 
-## Options de filtrage (pattern matching)
+## Options de filtrage
 
 ### Règles de correspondance
 
-* Les chemins sont **relatifs au répertoire sauvegardé**.
-  Ex : sauvegarder `/home/user` → `Documents` correspond à `/home/user/Documents`.
+* Les patterns sont appliqués sur le **chemin absolu complet** des fichiers.
+  Ex : sauvegarder `/home/user` avec le pattern `Documents/**` → correspond à `/home/user/Documents/**`.
 
-* Le slash (`/`) a une importance :
+* Les patterns relatifs sont convertis en absolus :
+  * `logs/**` devient `/path/to/backup/logs/**`
 
-  * `myfile` → tous les fichiers nommés *myfile*
-  * `dir/myfile` → seulement ceux dans `dir`
-  * `/myfile` → uniquement à la racine
+* Le slash (`/`) et les wildcards sont importants :
 
-* Motifs utiles :
+  * `myfile` → seulement `/path/to/backup/myfile` (correspondance exacte à la racine)
+  * `dir/myfile` → seulement `/path/to/backup/dir/myfile`
+  * `**/myfile` → tout fichier nommé `myfile` à n'importe quelle profondeur
+  * `*.log` → seulement les fichiers `.log` au niveau racine
+  * `**/*.log` → tous les fichiers `.log` à n'importe quelle profondeur
 
-  * `*` → n’importe quelle chaîne (`*.log`, `cache*`)
-  * `**` → récursif (`**/logs/**`)
-  * `?` → un seul caractère (`file?.txt`
+* Patterns utiles :
+
+  * `*` → n'importe quelle chaîne sauf `/` (`*.log`, `cache*`)
+  * `**` → correspond récursivement en incluant `/` (`**/logs/**`, `**/*.py`)
+  * `?` → un seul caractère (`file?.txt`)
 
 ### Ordre de priorité
 
 1. Les **inclusions** sont évaluées **avant** les exclusions.
-2. Si un fichier correspond aux deux, **il est exclu**.
+2. Si un fichier correspond à la fois, **il est exclu**.
 
 Exemple :
 
 ```bash
 snaper backup files /project \
-  --include "*.py" \
-  --exclude "*test*.py"
+  --include "**/*.py" \
+  --exclude "**/*test*.py"
 ```
 
-Les fichiers Python sont inclus, mais les fichiers de test sont ignorés.
+Tous les fichiers Python sont inclus, mais les fichiers de tests sont exclus.

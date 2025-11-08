@@ -86,40 +86,43 @@ import TabItem from '@theme/TabItem';
 ### Backup a directory while excluding files
 ```bash
 # Exclude cache and log directories
-snaper backup files /path/to/backup --exclude "var/cache*,var/log*"
+snaper backup files /path/to/backup --exclude "var/cache/**,var/log/**"
 
 # Include only Python files, except tests (using ** for recursive matching)
 snaper backup files /project --include "**/*.py" --exclude "**/*test*.py,**/*_test.py"
 
 # Exclude all node_modules at any depth
-snaper backup files ./app --exclude "**/node_modules"
+snaper backup files ./app --exclude "**/node_modules/**"
 
-# Exclude all .log files except error.log at the root
-snaper backup files /app --include "error.log" --exclude "*.log"
+# Exclude all .log files at any depth
+snaper backup files /app --exclude "**/*.log"
 
-# Advanced Python project backup: include source code but exclude generated files
-snaper backup files /python-project \
-  --include "**/*.py,**/*.yml,**/*.yaml,**/*.json,**/requirements*.txt" \
-  --exclude "**/__pycache__/**,**/*.pyc,**/venv/**,**/env/**,**/build/**,**/dist/**"
+# Exclude .log files but keep error.log at the root level
+snaper backup files /app --include "error.log" --exclude "**/*.log"
 ```
 
 ## Filtering Options (Pattern Matching)
 
 ### Matching Rules
 
-* Paths are **relative to the backed-up directory**.
-  Ex: backing up `/home/user` → `Documents` corresponds to `/home/user/Documents`.
+* Patterns match against the **full absolute path** of files.
+  Ex: backing up `/home/user` with pattern `Documents/**` → matches `/home/user/Documents/**`.
 
-* The slash (`/`) matters:
+* Relative patterns are converted to absolute:
+  * `logs/**` becomes `/path/to/backup/logs/**`
 
-  * `myfile` → all files named *myfile*
-  * `dir/myfile` → only those in `dir`
-  * `/myfile` → only at the root
+* The slash (`/`) and wildcards matter:
+
+  * `myfile` → only `/path/to/backup/myfile` (exact match at root)
+  * `dir/myfile` → only `/path/to/backup/dir/myfile`
+  * `**/myfile` → any file named `myfile` at any depth
+  * `*.log` → only `.log` files at the root level
+  * `**/*.log` → all `.log` files at any depth
 
 * Useful patterns:
 
-  * `*` → any string (`*.log`, `cache*`)
-  * `**` → recursive (`**/logs/**`)
+  * `*` → any string except `/` (`*.log`, `cache*`)
+  * `**` → matches recursively including `/` (`**/logs/**`, `**/*.py`)
   * `?` → a single character (`file?.txt`)
 
 ### Priority Order
@@ -131,8 +134,8 @@ Example:
 
 ```bash
 snaper backup files /project \
-  --include "*.py" \
-  --exclude "*test*.py"
+  --include "**/*.py" \
+  --exclude "**/*test*.py"
 ```
 
-Python files are included, but test files are ignored.
+All Python files are included, but test files are excluded.
