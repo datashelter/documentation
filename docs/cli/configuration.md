@@ -14,6 +14,8 @@
 | EnableMD5Checksum     | bool    | false                              | Enable MD5 checksum calculation for files.                                 | true, false                      |
 | ConcurrentWorkers     | int     | 10                                 | Number of concurrent workers for backup/restore operations.                | Any positive integer             |
 | ManageCrontabs        | bool    | true                               | Allow Snaper to manage system crontabs for scheduled backups.              | true, false                      |
+| SortChunkSize         | int     | 100000 (~512MB)                    | Controls the chunk size for external merge sort. This limits the maximum memory used during the sorting phase of index creation. | Any positive integer             |
+| StreamBufferSize      | int     | 1000 (~4MB)                       | Controls the size of the write buffer for the streaming indexer.           | Any positive integer             |
 
 ## S3 Parameters
 
@@ -38,6 +40,7 @@
 | IncludedPaths     | []string  | []      | List of paths to include in the backup.                     | Any valid paths |
 | ExcludedPaths     | []string  | []      | List of paths to exclude from the backup.                   | Any valid paths |
 | FollowSymlinks    | bool      | false   | Whether to follow symlinks during backup.                   | true, false     |
+| SkipIntegrityCheck| bool      | false   | Skip integrity check for this backup set.                   | true, false     |
 
 ## Backups.Databases (DatabaseBackup)
 

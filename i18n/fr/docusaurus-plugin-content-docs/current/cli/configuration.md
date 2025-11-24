@@ -14,6 +14,8 @@
 | EnableMD5Checksum      | bool    | false                               | Active le calcul de la somme de contrôle MD5 pour les fichiers.                | true, false                      |
 | ConcurrentWorkers      | int     | 10                                  | Nombre de workers concurrents pour les opérations de sauvegarde/restauration.  | Tout entier positif              |
 | ManageCrontabs         | bool    | true                                | Permet à Snaper de gérer les crontabs système pour les sauvegardes planifiées. | true, false                      |
+| SortChunkSize          | int     | 100000 (~512Mo)                              | Contrôle la taille des blocs pour le tri externe par fusion. Limite la mémoire maximale utilisée pendant la phase de tri lors de la création d'index. | Tout entier positif              |
+| StreamBufferSize       | int     | 1000 (~4Mo)                                | Contrôle la taille du tampon d'écriture pour l'indexeur en streaming. | Tout entier positif              |
 
 ## Paramètres S3
 
@@ -38,6 +40,7 @@
 | IncludedPaths     | []string  | []     | Liste des chemins à inclure dans la sauvegarde.                   | Tout chemin valide|
 | ExcludedPaths     | []string  | []     | Liste des chemins à exclure de la sauvegarde.                     | Tout chemin valide|
 | FollowSymlinks    | bool      | false  | Suivre ou non les liens symboliques lors de la sauvegarde.        | true, false       |
+| SkipIntegrityCheck| bool      | false  | Ignorer la vérification d'intégrité pour cet ensemble de sauvegarde. | true, false       |
 
 ## Backups.Databases (Sauvegarde de bases de données)
 
