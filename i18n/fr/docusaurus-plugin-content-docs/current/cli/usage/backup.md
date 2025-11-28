@@ -82,60 +82,64 @@ import TabItem from '@theme/TabItem';
     MySQL et PostgreSQL supportent les connexions par socket. Cette méthode sera essayée par défaut si vous spécifiez "localhost" comme hôte (valeur par défaut). Si vous souhaitez forcer la connexion par TCP/IP, spécifier 127.0.0.1 à la place
 :::
 
-##  Exemples d'utilisation
+## Exemples d'utilisation
 ### Sauvegarder un répertoire en excluant des fichiers
 ```bash
-# Exclure les répertoires cache et log
-snaper backup files /path/to/backup --exclude "var/cache/**,var/log/**"
+# Exclure un répertoire spécifique et tout son contenu
+# Lors de la sauvegarde de /var, exclure /var/cache et tout ce qu'il contient
+snaper backup files /var --exclude "/var/cache/**"
 
-# Inclure uniquement les fichiers Python, sauf les tests (utilise ** pour la récursivité)
-snaper backup files /project --include "**/*.py" --exclude "**/*test*.py,**/*_test.py"
+# Exclure plusieurs sous-répertoires (cache et log)
+snaper backup files /chemin/vers/sauvegarde --exclude "var/cache/**,var/log/**"
 
-# Exclure tous les node_modules quelle que soit la profondeur
+# Exclure tous les répertoires node_modules à n'importe quelle profondeur
 snaper backup files ./app --exclude "**/node_modules/**"
 
-# Exclure tous les fichiers .log quelle que soit la profondeur
+# Exclure tous les fichiers .log à n'importe quelle profondeur
 snaper backup files /app --exclude "**/*.log"
 
-# Exclure les fichiers .log mais conserver error.log au niveau racine
+# Inclure uniquement les fichiers Python, sauf les tests (utilisation de ** pour la correspondance récursive)
+snaper backup files /projet --include "**/*.py" --exclude "**/*test*.py,**/*_test.py"
+
+# Exclure les fichiers .log mais conserver error.log à la racine
 snaper backup files /app --include "error.log" --exclude "**/*.log"
 ```
 
-## Options de filtrage
+## Options de filtrage (correspondance de motifs)
 
 ### Règles de correspondance
 
-* Les patterns sont appliqués sur le **chemin absolu complet** des fichiers.
-  Ex : sauvegarder `/home/user` avec le pattern `Documents/**` → correspond à `/home/user/Documents/**`.
+* Les patterns correspondent au **chemin absolu complet** des fichiers.
+  Ex : sauvegarder `/home/user` avec le motif `Documents/**` → correspond à `/home/user/Documents/**`.
 
 * Les patterns relatifs sont convertis en absolus :
-  * `logs/**` devient `/path/to/backup/logs/**`
+  * `logs/**` devient `/chemin/vers/sauvegarde/logs/**`
 
-* Le slash (`/`) et les wildcards sont importants :
+* Le slash (`/`) et les wildcard sont importants :
 
-  * `myfile` → seulement `/path/to/backup/myfile` (correspondance exacte à la racine)
-  * `dir/myfile` → seulement `/path/to/backup/dir/myfile`
-  * `**/myfile` → tout fichier nommé `myfile` à n'importe quelle profondeur
-  * `*.log` → seulement les fichiers `.log` au niveau racine
+  * `monfichier` → seulement `/chemin/vers/sauvegarde/monfichier` (correspondance exacte à la racine)
+  * `rep/monfichier` → seulement `/chemin/vers/sauvegarde/rep/monfichier`
+  * `**/monfichier` → tout fichier nommé `monfichier` à n'importe quelle profondeur
+  * `*.log` → seulement les fichiers `.log` à la racine
   * `**/*.log` → tous les fichiers `.log` à n'importe quelle profondeur
 
 * Patterns utiles :
 
   * `*` → n'importe quelle chaîne sauf `/` (`*.log`, `cache*`)
-  * `**` → correspond récursivement en incluant `/` (`**/logs/**`, `**/*.py`)
-  * `?` → un seul caractère (`file?.txt`)
+  * `**` → correspond récursivement incluant `/` (`**/logs/**`, `**/*.py`)
+  * `?` → un seul caractère (`fichier?.txt`)
 
 ### Ordre de priorité
 
 1. Les **inclusions** sont évaluées **avant** les exclusions.
-2. Si un fichier correspond à la fois, **il est exclu**.
+2. Si un fichier correspond aux deux, **il est exclu**.
 
 Exemple :
 
 ```bash
-snaper backup files /project \
+snaper backup files /projet \
   --include "**/*.py" \
   --exclude "**/*test*.py"
 ```
 
-Tous les fichiers Python sont inclus, mais les fichiers de tests sont exclus.
+Tous les fichiers Python sont inclus, mais les fichiers de test sont exclus.

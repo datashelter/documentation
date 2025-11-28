@@ -85,17 +85,21 @@ import TabItem from '@theme/TabItem';
 ## Usage Examples
 ### Backup a directory while excluding files
 ```bash
-# Exclude cache and log directories
+# Exclude a specific directory and all its contents
+# When backing up /var, exclude /var/cache and everything inside it
+snaper backup files /var --exclude "/var/cache/**"
+
+# Exclude multiple subdirectories (cache and log)
 snaper backup files /path/to/backup --exclude "var/cache/**,var/log/**"
 
-# Include only Python files, except tests (using ** for recursive matching)
-snaper backup files /project --include "**/*.py" --exclude "**/*test*.py,**/*_test.py"
-
-# Exclude all node_modules at any depth
+# Exclude all node_modules directories at any depth
 snaper backup files ./app --exclude "**/node_modules/**"
 
 # Exclude all .log files at any depth
 snaper backup files /app --exclude "**/*.log"
+
+# Include only Python files, except tests (using ** for recursive matching)
+snaper backup files /project --include "**/*.py" --exclude "**/*test*.py,**/*_test.py"
 
 # Exclude .log files but keep error.log at the root level
 snaper backup files /app --include "error.log" --exclude "**/*.log"
