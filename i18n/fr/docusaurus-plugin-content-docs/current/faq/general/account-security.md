@@ -16,7 +16,7 @@ Les seules actions qu'un attaquant pourrait effectuer sont :
 
 Afin de limiter les impacts, nous forçons sur tous les comptes les deux règles de sécurité suivantes :
 - Vos sauvegardes sont **conservées 14 jours après la suppression** depuis le dashboard ou via la commande `snaper delete`. Notre équipe de support est donc en capacité de restaurer vos sauvegardes supprimées par erreur ou malveillance, même après leur suppression sur le dashboard.
-- Les politiques de rétention **ne peuvent pas être réduites en dessous de 7 jours**. Vous conservez donc toujours au moins une semaine de sauvegardes, même en cas de compromission de votre compte.
+- Les politiques de rétention **conservent au minimum une sauvegarde par jour pendant les 7 derniers jours**. Cela permet de garantir la disponibilité de sauvegardes même dans le cas d'une compromissions accidentelle de votre compte, où l'attaquant tenterait de supprimer vos sauvegardes en réduisant la politique de rétention des données au maximum.
 
 ## Un attaquant accède à votre serveur et récupère ses identifiants Datashelter
 
