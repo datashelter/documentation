@@ -10,4 +10,3 @@ There are two ways to alter an object in object storage: deletion (DELETE) and o
 - Versioning on overwrite attempts: when a rewrite occurs, the proxy creates a new version of the object instead of overwriting the previous one.
 
 These mechanisms ensure the non-alteration of your data, even if your server’s S3 credentials are compromised.
-

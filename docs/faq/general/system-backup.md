@@ -29,7 +29,7 @@ for dir in /etc /root /home /usr/local /opt /var/lib /var/www /srv; do
 done
 ```
 
-:::note
+::: callout info
 This approach is generic. Adapt paths according to your specific application configuration.
 :::
 
@@ -70,7 +70,7 @@ root@restored-server:~# systemctl status nginx
 
 ## Security Requirements
 
-:::danger
+::: callout danger
 **MANDATORY**: System restoration must exclusively be performed on a fresh machine. Any restoration on a production system presents risks of irreversible corruption.
 :::
 
