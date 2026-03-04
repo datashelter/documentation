@@ -4,10 +4,10 @@ As of July 2024, we introduced a new crontab management feature on snaper. Linke
 
 ![Automatic scheduling](/assets/faq/crontab_scheduling.png)
 
-Under the hood, snaper will manage it’s own crontab list on your server by adding a new crontab for each backup you set a recurrence for:
-    
-    ```bash
+Under the hood, snaper will manage its own crontab list on your server by adding a new crontab for each backup you set a recurrence for:
+
+```bash
 # SNAPER MANAGED CRONTABS
 5 1 * * * /usr/local/bin/snaper backup files --name lingering-moon >> /tmp/snaper.log 2>&1
 # END OF SNAPER MANAGED CRONTABS
-    ```
+```
