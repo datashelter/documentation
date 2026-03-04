@@ -9,7 +9,7 @@ Datashelter is built on the S3 protocol, with additional custom components that 
 - **Data tampering protection:** With our custom S3 gateway, your backups remain secure even if your S3 credentials are compromised. Your backups are immutable, meaning they cannot be deleted or modified. You will have read-only access.
 - **Strong segmentation:** Each server created in Datashelter is isolated from the others, with a dedicated bucket and credentials. This ensures that if one server is compromised, others are not impacted.
 
-![Datashelter infrastructure](../../assets/faq/datashelter_infrastructure_schema.png)
+![Datashelter infrastructure](/assets/faq/datashelter_infrastructure_schema.png)
 
 ## Learn more
 

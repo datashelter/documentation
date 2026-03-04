@@ -1,55 +1,56 @@
 ---
-sidebar_position: 2
 description: Configuration related commands
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # config
 
-<Tabs groupId="cmd_options">
-  <TabItem value="validate" label="Validate">
-        ```
-        Ensure ~/.config/snaper/config.yaml validity
+::: tabs
 
-        Usage:
-          snaper config validate [flags]
+    == tab "Validate"
+                ```
+                Ensure ~/.config/snaper/config.yaml validity
 
-        Examples:
-        snaper config validate --validate-s3
+                Usage:
+                  snaper config validate [flags]
 
-        Flags:
-          -h, --help          help for validate
-              --validate-s3   Ensure S3 credentials are valid
-        ```
-  </TabItem>
-  <TabItem value="fetch" label="Fetch">
-        ```
-        Synchronize config file with remote storage
+                Examples:
+                snaper config validate --validate-s3
 
-        Usage:
-          snaper config fetch [flags]
+                Flags:
+                  -h, --help          help for validate
+                      --validate-s3   Ensure S3 credentials are valid
+                ```
 
-        Examples:
-        snaper config fetch
 
-        Flags:
-          -h, --help   help for fetch
-        ```
-  </TabItem>
-  <TabItem value="push" label="Push">
-        ```
-        Push local config file to remote storage (not recommended)
+    == tab "Fetch"
+                ```
+                Synchronize config file with remote storage
 
-        Usage:
-          snaper config push [flags]
+                Usage:
+                  snaper config fetch [flags]
 
-        Examples:
-        snaper config push
+                Examples:
+                snaper config fetch
 
-        Flags:
-          -h, --help   help for push
-        ```
-  </TabItem>
-</Tabs>
+                Flags:
+                  -h, --help   help for fetch
+                ```
+
+
+    == tab "Push"
+                ```
+                Push local config file to remote storage (not recommended)
+
+                Usage:
+                  snaper config push [flags]
+
+                Examples:
+                snaper config push
+
+                Flags:
+                  -h, --help   help for push
+                ```
+
+
+:::

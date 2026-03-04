@@ -8,7 +8,7 @@ To resolve this, you can update your crontab by adding `PATH=$PATH:/usr/local/bi
 0 0 * * * PATH=$PATH:/usr/local/bin /usr/local/bin/snaper backup --all >> /tmp/snaper.log
 ```
 
-:::note
+::: callout info
 In some cases, these commands may be located elsewhere on your system. You can check this by running:
 
 ```bash

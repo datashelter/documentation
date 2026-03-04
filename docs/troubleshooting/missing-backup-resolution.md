@@ -11,7 +11,7 @@ This guide walks you through the steps to identify and resolve backup issues rep
 
 > **Tip:** Keeping an eye on snapshot dates helps catch problems early.
 
-![Services list](../assets/troubleshooting/services_list.png)
+![Services list](/assets/troubleshooting/services_list.png)
 
 ## Step 2: Check the backup logs
 

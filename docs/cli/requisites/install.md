@@ -1,9 +1,3 @@
----
-sidebar_position: 1
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # Install Snaper
 
@@ -32,68 +26,57 @@ The installer will place the `snaper` binary in a system location (typically `/u
 
 If you prefer not to run the installer script, download the correct binary for your operating system and architecture, make it executable and move it to a directory on your PATH.
 
-<Tabs groupId="operating-systems">
-  <TabItem value="linux" label="Linux" default>
-    <Tabs groupId="arch" defaultValue="amd64">
-        <TabItem value="amd64" label="amd64">
-            ```bash
-            curl -LO -k https://dl.datashelter.cloud/release/latest/bin/linux/amd64/snaper \
-            && chmod +x ./snaper \
-            && sudo mv ./snaper /usr/local/bin/snaper \
-            && snaper --version
-            ```
-        </TabItem>
-        <TabItem value="arm64" label="arm64">
-            ```bash
-            curl -LO -k https://dl.datashelter.cloud/release/latest/bin/linux/arm64/snaper \
-            && chmod +x ./snaper \
-            && sudo mv ./snaper /usr/local/bin/snaper \
-            && snaper --version
-            ```
-        </TabItem>
-    </Tabs>
-  </TabItem>
-  <TabItem value="darwin" label="Darwin">
-      <Tabs groupId="arch" defaultValue="amd64">
-        <TabItem value="amd64" label="amd64">
-            ```bash
-            curl -LO -k https://dl.datashelter.cloud/release/latest/bin/darwin/amd64/snaper \
-            && chmod +x ./snaper \
-            && sudo mv ./snaper /usr/local/bin/snaper \
-            && snaper --version
-            ```
-        </TabItem>
-        <TabItem value="arm64" label="arm64">
-            ```bash
-            curl -LO -k https://dl.datashelter.cloud/release/latest/bin/darwin/arm64/snaper \
-            && chmod +x ./snaper \
-            && sudo mv ./snaper /usr/local/bin/snaper \
-            && snaper --version
-            ```
-        </TabItem>
-    </Tabs>
-  </TabItem>
-  <TabItem value="freebsd" label="FreeBSD">
-      <Tabs groupId="arch" defaultValue="amd64">
-        <TabItem value="amd64" label="amd64">
-            ```bash
-            curl -LO -k https://dl.datashelter.cloud/release/latest/bin/freebsd/amd64/snaper \
-            && chmod +x ./snaper \
-            && sudo mv ./snaper /usr/local/bin/snaper \
-            && snaper --version
-            ```
-        </TabItem>
-        <TabItem value="arm64" label="arm64">
-            ```bash
-            curl -LO -k https://dl.datashelter.cloud/release/latest/bin/freebsd/arm64/snaper \
-            && chmod +x ./snaper \
-            && sudo mv ./snaper /usr/local/bin/snaper \
-            && snaper --version
-            ```
-        </TabItem>
-    </Tabs>
-  </TabItem>
-</Tabs>
+::: tabs
+
+    == tab "Linux amd64"
+        ```bash
+        curl -LO -k https://dl.datashelter.cloud/release/latest/bin/linux/amd64/snaper \
+        && chmod +x ./snaper \
+        && sudo mv ./snaper /usr/local/bin/snaper \
+        && snaper --version
+        ```
+
+    == tab "Linux arm64"
+        ```bash
+        curl -LO -k https://dl.datashelter.cloud/release/latest/bin/linux/arm64/snaper \
+        && chmod +x ./snaper \
+        && sudo mv ./snaper /usr/local/bin/snaper \
+        && snaper --version
+        ```
+
+    == tab "Darwin amd64"
+        ```bash
+        curl -LO -k https://dl.datashelter.cloud/release/latest/bin/darwin/amd64/snaper \
+        && chmod +x ./snaper \
+        && sudo mv ./snaper /usr/local/bin/snaper \
+        && snaper --version
+        ```
+
+    == tab "Darwin arm64"
+        ```bash
+        curl -LO -k https://dl.datashelter.cloud/release/latest/bin/darwin/arm64/snaper \
+        && chmod +x ./snaper \
+        && sudo mv ./snaper /usr/local/bin/snaper \
+        && snaper --version
+        ```
+
+    == tab "FreeBSD amd64"
+        ```bash
+        curl -LO -k https://dl.datashelter.cloud/release/latest/bin/freebsd/amd64/snaper \
+        && chmod +x ./snaper \
+        && sudo mv ./snaper /usr/local/bin/snaper \
+        && snaper --version
+        ```
+
+    == tab "FreeBSD arm64"
+        ```bash
+        curl -LO -k https://dl.datashelter.cloud/release/latest/bin/freebsd/arm64/snaper \
+        && chmod +x ./snaper \
+        && sudo mv ./snaper /usr/local/bin/snaper \
+        && snaper --version
+        ```
+
+:::
 
 Notes:
 - If you do not want to use `sudo` or cannot write to `/usr/local/bin`, move the binary to another directory on your PATH (for example, `$HOME/bin`) and ensure that directory is in your PATH.

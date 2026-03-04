@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Get started
 
 ## Create an account on Datashelter
@@ -15,22 +11,22 @@ Add your first server on the dashboard. You will be prompted to install the Snap
 
 
 ### 1. Click the "Configure a server" button
-![Configure server](assets/quickstart/configure_server.png)
+![Configure server](/assets/quickstart/configure_server.png)
 
 ### 2. Enter a server name and description
-![Server information](assets/quickstart/1_server_informations.png)
+![Server information](/assets/quickstart/1_server_informations.png)
 
 ### 3. Select the types of services you want to back up
-![Select services](assets/quickstart/2_select_services.png)
+![Select services](/assets/quickstart/2_select_services.png)
 
 ### 4. Provide service details
-![Service information](assets/quickstart/3_service_informations.png)
+![Service information](/assets/quickstart/3_service_informations.png)
 
 ### 5. Set a backup schedule (optional)
-![Set a backup schedule](assets/quickstart/4_set_scheduling.png)
+![Set a backup schedule](/assets/quickstart/4_set_scheduling.png)
 
 ### 6. Run configuration commands in your terminal
-![Final step](assets/quickstart/5_final_step.png)
+![Final step](/assets/quickstart/5_final_step.png)
 
 ## Enjoy 🚀
 

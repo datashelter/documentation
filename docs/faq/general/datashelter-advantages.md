@@ -10,4 +10,3 @@ Here are some key advantages of using Datashelter for your backups:
 3. **Immutable backups**: thanks to a software layer in front of the s3.datashelter.cloud endpoint, your backups are protected against any modification or deletion. This ensures the availability of your backups even in case of compromise of your server or your Datashelter account.
 4. **Support and maintenance**: you benefit by default and unlimited from technical support from experts who speak your language and will know how to support you in case of crisis.
 5. **You only pay for what you use**: our pricing model is based on the actual usage of your backups (volume stored and backed-up servers). You therefore only pay for what you actually use.
-

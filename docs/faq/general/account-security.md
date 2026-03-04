@@ -23,4 +23,3 @@ To limit the impact, we enforce the following two security rules on all accounts
 If an attacker manages to access your server and retrieve its Datashelter credentials, they could potentially access your backups. However, it will be **impossible for them to delete or overwrite an existing backup** thanks to our native immutable storage feature.
 
 Furthermore, you have the ability to reset your server's Datashelter credentials via the dashboard by going to the "*Servers*" section and clicking on the gear icon "*Configure my server*", then "*Reset credentials*". This will invalidate the old credentials, thus preventing any unauthorized access to your backups.
-

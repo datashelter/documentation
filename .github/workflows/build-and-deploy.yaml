@@ -17,13 +17,14 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '22'
+        cache: 'npm'
 
     - name: Install dependencies
-      run: yarn install
+      run: npm ci
 
-    - name: Build Docusaurus site
-      run: yarn build
+    - name: Build docmd site
+      run: npm run build
 
     - name: Upload files via SSH
       uses: appleboy/scp-action@v0.1.7
@@ -31,6 +32,6 @@ jobs:
         host: ${{ vars.SSH_HOST }}
         username: ${{ vars.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        source: "build/**"
+        source: "site/**"
         strip_components: 1
         target: "/var/www/docs.datashelter.tech"

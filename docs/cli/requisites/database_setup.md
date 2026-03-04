@@ -1,9 +1,3 @@
----
-sidebar_position: 2
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # Database client setup
 
@@ -11,51 +5,55 @@ As most databases require strong compatibility between the client and the server
 
 For this reason, you need to install the database client on your server before using Snaper to back up and restore your databases.
 
-<Tabs groupId="database_type">
-  <TabItem value="mysql" label="MySQL">
-        **Install**
+::: tabs
 
-        Install the **MySQL client** by running the following command:
-        ```
-        sudo apt update
-        sudo apt install mariadb-client # or "mysql-client" if not available
-        ```
+    == tab "MySQL"
+                **Install**
 
-        **Verify installation**
-        
-        Ensure your client is **properly installed** by running:
-        ```
-        mysql --version
-        ```
-  </TabItem>
-  <TabItem value="postgresql" label="PostgreSQL">
-        **Install**
+                Install the **MySQL client** by running the following command:
+                ```
+                sudo apt update
+                sudo apt install mariadb-client # or "mysql-client" if not available
+                ```
 
-        Install the **PostgreSQL client** by running the following command:
-        ```
-        sudo apt update
-        sudo apt install postgres
-        ```
+                **Verify installation**
 
-        **Verify installation**
+                Ensure your client is **properly installed** by running:
+                ```
+                mysql --version
+                ```
 
-        Ensure your client is **properly installed** by running:
-        ```
-        psql --version
-        ```
-  </TabItem>
-  <TabItem value="mongodb" label="MongoDB">
-    **Install**
 
-    Follow the [official documentation](https://docs.mongodb.com/manual/installation/) to install the **MongoDB client**: 
+    == tab "PostgreSQL"
+                **Install**
 
-  You can find binaries for most operating systems and distributions in the [MongoDB Download Center](https://www.mongodb.com/try/download/database-tools)
+                Install the **PostgreSQL client** by running the following command:
+                ```
+                sudo apt update
+                sudo apt install postgres
+                ```
 
-    **Verify installation**
+                **Verify installation**
 
-    Ensure your client is **properly installed** by running:
-    ```
-    mongodump --version
-    ```
-  </TabItem>
-</Tabs>
+                Ensure your client is **properly installed** by running:
+                ```
+                psql --version
+                ```
+
+
+    == tab "MongoDB"
+            **Install**
+
+            Follow the [official documentation](https://docs.mongodb.com/manual/installation/) to install the **MongoDB client**:
+
+          You can find binaries for most operating systems and distributions in the [MongoDB Download Center](https://www.mongodb.com/try/download/database-tools)
+
+            **Verify installation**
+
+            Ensure your client is **properly installed** by running:
+            ```
+            mongodump --version
+            ```
+
+
+:::
