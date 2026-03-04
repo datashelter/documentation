@@ -6,4 +6,4 @@ You may have misconfigured a service and want to delete it from snaper (this cha
 snaper delete [files|db] --name <service_name>
 ```
 
-For further information about this command, you can refer to the [delete command documentation](cli/usage/delete.md).
+For further information about this command, you can refer to the [delete command documentation](/cli/usage/delete).
