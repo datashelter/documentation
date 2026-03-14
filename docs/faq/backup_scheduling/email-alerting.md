@@ -1,4 +1,4 @@
-# How does email alerting work? When is it triggered?
+# Which email alerts will I receive ?
 
 Now that this automatic backup scheduling feature has been introduced, we changed triggers for your email alerts.
 

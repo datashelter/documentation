@@ -8,7 +8,8 @@ This page explains how to install the Snaper CLI. It includes a quick, automatic
 - A POSIX-compatible shell (bash, zsh, etc.).
 - curl installed and network access to dl.datashelter.cloud.
 - Permission to move files into a system directory (sudo) or a writable directory on your PATH if you prefer a local install.
-- Supported platforms: Linux, macOS (Darwin), FreeBSD. Supported architectures: amd64 and arm64.
+- Supported platforms: Linux, macOS (Darwin), FreeBSD, Windows
+- Supported architectures: amd64 and arm64
 
 ## Install
 

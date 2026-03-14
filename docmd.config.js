@@ -111,7 +111,8 @@ module.exports = {
       collapsible: true,
       children: [
         { title: 'Change server name or description', path: '/tutorials/change-server-name' },
-        { title: 'Reset server credentials', path: '/tutorials/changer-server-credentials' }
+        { title: 'Reset server credentials', path: '/tutorials/changer-server-credentials' },
+        { title: 'Enable Two-Factor Authentication (2FA)', path: '/tutorials/enable-2fa' },
       ]
     },
     {
@@ -122,15 +123,20 @@ module.exports = {
           title: '🧩 General',
           collapsible: true,
           children: [
-            { title: 'Delete a misconfigured service from snaper', path: '/faq/general/misconfigured-service-snaper' },
-            { title: 'How to access backup logs?', path: '/faq/general/access-backup-logs' },
             { title: 'What if my account is compromised?', path: '/faq/general/account-security' },
-            { title: 'How to activate Two-Factor Authentication (2FA)?', path: '/faq/general/activate-2fa' },
-            { title: 'Configuration files location', path: '/faq/general/configuration-location' },
-            { title: 'Can I manage my backups by myself?', path: '/faq/general/datashelter-advantages' },
-            { title: 'Why did you choose CSV as the default format for indexes?', path: '/faq/general/indexes-format' },
-            { title: 'What is manage_crontab parameter?', path: '/faq/general/manage-crontabs-parameter' },
-            { title: 'Can I backup my entire system with Datashelter?', path: '/faq/general/system-backup' }
+            { title: 'Where is my config located?', path: '/faq/general/configuration-location' },
+            { title: 'Why should I use Datashelter', path: '/faq/general/datashelter-advantages' },
+            { title: 'Why are my indexes CSV files?', path: '/faq/general/indexes-format' },
+            { title: 'Can I backup my entire system with Datashelter?', path: '/faq/general/full-system-backup' },
+            { title: 'Which OS are supported?', path: '/faq/general/supported-os' }
+          ]
+        },
+        {
+          title: '💳 Billing',
+          collapsible: true,
+          children: [
+            { title: 'How is my billing calculated?', path: '/faq/billing/billing-calculation' },
+            { title: 'How do you calculate storage usage?', path: '/faq/billing/storage-usage-calculation' },
           ]
         },
         {
@@ -147,7 +153,6 @@ module.exports = {
           title: '🗄️ Storage',
           collapsible: true,
           children: [
-            { title: 'Storage usage calculation', path: '/faq/storage/storage-usage-calculation' },
             { title: 'Which paths should I back up?', path: '/faq/storage/backup-paths' },
             { title: 'Can I backup logs with Datashelter?', path: '/faq/storage/configuration-location' },
             { title: 'What are downsampling policies?', path: '/faq/storage/downsampling-policies' },
@@ -158,18 +163,17 @@ module.exports = {
           ]
         },
         {
-          title: '💳 Billing',
-          collapsible: true,
-          children: [{ title: 'What is the process for calculating billing charges?', path: '/faq/billing/billing-calculation' }]
-        },
-        {
-          title: '🏗️ Infrastructure',
+          title: '✉️ Email alerting',
           collapsible: true,
           children: [
-            { title: 'How Datashelter keeps your data secure', path: '/faq/infrastructure/data-security' },
-            { title: 'Where are my backups stored?', path: '/faq/infrastructure/hosting-locations' },
-            { title: 'Our infrastructure', path: '/faq/infrastructure/infrastructure' },
-            { title: 'Why does my server communicate with s3.datashelter.cloud?', path: '/faq/infrastructure/s3-endpoint' }
+            { title: 'Which alerts will I receive for my backups?', path: '/faq/email_alerting/email-alerting' }
+          ]
+        },
+        {
+          title: '📄 Backup logs',
+          collapsible: true,
+          children: [
+            { title: 'How to access backup logs?', path: '/faq/backup_logs/access-backup-logs' }
           ]
         },
         {
@@ -177,8 +181,27 @@ module.exports = {
           collapsible: true,
           children: [
             { title: 'How to migrate from manual crontabs to automatic scheduling?', path: '/faq/backup_scheduling/migrate-to-automatic-scheduling' },
-            { title: 'How does email alerting work? When is it triggered?', path: '/faq/backup_scheduling/email-alerting' },
-            { title: 'Can I continue using manual scheduling for my backups?', path: '/faq/backup_scheduling/stay-with-manual-scheduling' }
+            { title: 'Can I continue using manual scheduling for my backups?', path: '/faq/backup_scheduling/stay-with-manual-scheduling' },
+            { title: 'What is manage_crontab parameter?', path: '/faq/backup_scheduling/manage-crontabs-parameter' }
+
+          ]
+        },
+        {
+          title: '🔄 Retention policies',
+          collapsible: true,
+          children: [
+            { title: 'Which retention policy should I choose?', path: '/faq/retention_policies/choose-retention-policy' },
+            { title: 'What are degressive retention policies?', path: '/faq/retention_policies/degressive-retention-policies' }
+          ]
+        },
+                {
+          title: '🏗️ Infrastructure',
+          collapsible: true,
+          children: [
+            { title: 'How Datashelter keeps my data secure', path: '/faq/infrastructure/data-security' },
+            { title: 'Where are my backups stored?', path: '/faq/infrastructure/hosting-locations' },
+            { title: 'Our infrastructure', path: '/faq/infrastructure/infrastructure' },
+            { title: 'Why does my server communicate with s3.datashelter.cloud?', path: '/faq/infrastructure/s3-endpoint' }
           ]
         }
       ]

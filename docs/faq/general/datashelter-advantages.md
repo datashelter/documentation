@@ -1,12 +1,22 @@
-# Can I manage my backups by myself?
+# Why should I use Datashelter instead of managing my backups by myself?
 
-It's legitimate to question the value of a Backup as a Service (BaaS) solution like Datashelter, especially if you already have system administration skills.
+It's legitimate to question the value of a Backup as a Service (BaaS) solution like Datashelter, especially if you already have system administration skills. Datashelter main value proposition is to provide you with a reliable, secure, and easy-to-use backup solution that takes care of all the complexities and challenges associated with managing backups on your own.
 
-However, you should keep in mind that integrating the various features necessary for reliable backups is time-consuming and requires going beyond simple backups using tools like `rsync` or `restic`.
+While setting up your own backup system using tools like `rsync`, `restic` would require you to maintain scripts, ensure your backups integrity over time, and set up monitoring and alerting for backup failures, Datashelter takes care of all these aspects for you so you are ready to go in 5 minutes.
 
-Here are some key advantages of using Datashelter for your backups:
-1. **Simplicity of installation and use**: you won't have to test different backup tools to find one that covers the basic features (client-side encryption, deduplication, compression, scheduling, retention, etc.)
-2. **Alerting in case of backup incidents**: we alert you in case of failure, size anomaly, or integrity issues with your backups through an external system, guaranteeing the reliability of alerts. Nothing worse than discovering your backups are corrupted or incomplete the day you need them, right?
-3. **Immutable backups**: thanks to a software layer in front of the s3.datashelter.cloud endpoint, your backups are protected against any modification or deletion. This ensures the availability of your backups even in case of compromise of your server or your Datashelter account.
-4. **Support and maintenance**: you benefit by default and unlimited from technical support from experts who speak your language and will know how to support you in case of crisis.
-5. **You only pay for what you use**: our pricing model is based on the actual usage of your backups (volume stored and backed-up servers). You therefore only pay for what you actually use.
+Said otherwise, Datashelter is an easy answer to the following questions:
+### Which backup tool should I use ?
+  Datashelter uses Snaper, a backup agent built from the ground up to be efficient, secure, and easy to use. It natively encrypts your data wiht AES-256 with your key before leaving your serve, compresses & deduplicates it to optimize your storage costs, and uploads it to your S3 storage (yours or ours) from a single binary.
+
+### Where should I store my backups ?
+  Store your backups in one of our 5 managed storage locations (France, United-kingdom, Germany, Poland, Canada) or connect your own S3-compatible storage (AWS S3, Backblaze B2, Wasabi, etc.). With Datashelter, you can easily switch between storage locations without changing your backup configuration.
+
+### How do I setup retention policies to optimize my storage costs ?
+  Configure your retention policies in a human-friendly way with Datashelter, and benefits from our smart pruning system that automatically applies your retention policies to keep only the backups you need while optimizing your storage costs.
+
+### How do I make my backups immutable ?
+  With Datashelter, your backups are immutable by design. Even if your S3 credentials are compromised, your data cannot be altered or deleted thanks to our dedicated S3 proxy that applies specific logic to ensure the non-alteration of your data.
+
+### How do I make sure I'll receive an alert if something goes wrong with my backups ?
+  Making sure you'll indeed receive an alert if something goes wrong is harder than just adding an email command to your backup crontabs. Without an external system monitoring your backups, you'll face the Dead man's switch problem: how do you know if you didn't receive an alert because your backup succeeded or because your alerting system is broken ?
+  With Datashelter, you can be sure you'll receive an alert in case of backup failure, and that you'll be notified if the alerting system itself is not working properly.

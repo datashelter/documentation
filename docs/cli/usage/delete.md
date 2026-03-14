@@ -47,3 +47,10 @@ Snapshot deletion can only be performed through lifecycle rules on the remote st
 
 
 :::
+
+## Delete a misconfigured service from snaper
+You may have misconfigured a service and want to delete it from snaper (this change will also be reflected on your dashboard). To do so, just launch the following command in your terminal, replacing `<service_name>` with the name of the backup you want to delete:
+
+```bash
+snaper delete [files|db] --name <service_name>
+```

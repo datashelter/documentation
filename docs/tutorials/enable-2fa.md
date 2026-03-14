@@ -1,4 +1,4 @@
-# How to activate Two-Factor Authentication (2FA)?
+# How to enable 2FA on my account?
 
 ### 1. Go to your account settings by clicking on the gear icon in the top right corner
     

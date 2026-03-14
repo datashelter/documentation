@@ -83,4 +83,14 @@
     ensureAnnouncementBar();
     patchFooterLogoLink();
   });
+
+  // Crisp chat bubble
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = 'f96c76e6-e959-46b4-b085-8ccd1f73027d';
+  (function () {
+    var s = document.createElement('script');
+    s.src = 'https://client.crisp.chat/l.js';
+    s.async = 1;
+    document.getElementsByTagName('head')[0].appendChild(s);
+  })();
 })();

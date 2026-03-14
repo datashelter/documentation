@@ -1,9 +1,22 @@
 # Which paths should I back up?
 
-The goal of file backups is to protect application-specific data and configurations. Their location depends on your stack, but common locations include:
+Datashelter performs **file-level backups**, meaning you choose exactly which directories and files should be protected. The goal is typically to back up **application data and system configurations** that would be required to restore your services after an incident.
 
-- /etc — configuration files
-- /home — user data
-- /var/www — web files
+The exact paths depend on your operating system and application stack, but some common locations include:
 
-If in doubt, our support team can help you set up your backups free of charge. Contact us at support@datashelter.tech or via the chat bubble on our website.
+* **`/etc`** — System and application configuration files
+* **`/home`** — User data and personal files
+* **`/var/www`** — Website files and web application code
+
+Depending on your setup, you may also want to back up directories containing **application data**, such as `/var/lib`.
+
+### What should not usually be backed up
+
+With file-level backups, it is generally unnecessary to back up **temporary or reproducible data**, such as:
+
+* cache directories
+* temporary files
+* system logs
+* application dependencies that can be reinstalled
+
+Excluding these paths helps **reduce backup size and improve efficiency**.

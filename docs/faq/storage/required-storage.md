@@ -1,32 +1,53 @@
-# Estimating required storage for your backups
+# Estimating storage for your backups
 
-The required storage space for backups varies significantly depending on the application. Below, we provide guidelines to help you estimate the necessary storage capacity for your backups using snaper.
+The storage required for backups depends mainly on **how much data you have, how often it changes, and your retention policy**.
 
-## File backup
+Snaper minimizes storage usage through **deduplication, compression, and incremental snapshots**, meaning only new or modified data is stored between backups.
 
-Snaper offers efficient mechanisms to minimize backup size:
+## File Backups
 
-- **File deduplication:** identical files are stored only once, avoiding redundant storage.
-- **Compression:** files are compressed before storage, significantly reducing their size. For example, text files can experience up to a 95% reduction in size.
+For file-level backups, two mechanisms significantly reduce storage usage:
 
-## Database backup
+* **File deduplication** – identical files are stored only once.
+* **Compression** – files are compressed before being stored. Text-based files (configs, code, etc.) can sometimes shrink by **up to 95%**.
 
-For database backups, snaper performs a dump followed by compression, typically achieving an 80% reduction in size. For instance, a 100MB database would require approximately 600MB for a month's backups (30 days x 0.80 x 100MB).
-Downsampling Strategy
+As a result, storage growth mostly depends on **how much data changes between backups**, not the total size of your filesystem.
 
-Implementing a **downsampling strategy** can further reduce storage needs:
+## Database Backups
 
-- Daily backups for the first week (7 days)
-- Three backups weekly for the next four weeks
-- Four monthly backups for the remainder of the year
+For databases, Snaper performs a **dump followed by compression**.
 
-With this approach, a month's backup for a 100MB database would require around 320MB.
+On average, database dumps compress by **about 80%**.
 
-## Practical example: E-commerce site backup
+Example:
 
-Consider backing up a large e-commerce platform with the following data:
+* Database size: **100 MB**
+* Compressed backup: **~20 MB**
 
-- **Files:** 300GB
-- **Database:** 60GB
+With **daily backups for 30 days**, the required storage would normally be approximately:
 
-Utilizing snaper's backup mechanisms, you would need approximately 700GB of storage for daily backups over a year.
+**30 × 20 MB ≈ 600 MB**
+
+However, we apply by default a **degressive retention policy** that keeps fewer backups as they get older, which further reduces long-term storage needs (see below).
+
+## Retention Policies
+
+Snaper uses **retention policies** to control how long backups are kept.
+
+By default, it uses a **degressive retention policy**, which keeps recent backups more frequently and older ones less frequently:
+
+* **Daily backups** for 7 days
+* **3 backups per week** for the next 4 weeks
+* **1 backup per week** for 3 months
+* **1 backup per month** afterward
+
+This approach significantly reduces long-term storage requirements while keeping enough restore points.
+
+## Example: E-commerce Website
+
+For an infrastructure with:
+
+* **200 GB of files**
+* **60 GB database**
+
+Using Snaper’s **compression, deduplication, and degressive retention policy**, a full year of backups would typically require **around 600 GB of storage**.

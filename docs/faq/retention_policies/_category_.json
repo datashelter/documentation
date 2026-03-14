@@ -1,0 +1,8 @@
+{
+  "label": "Retention policy",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn what retention policies are and how to use them to manage your backup lifecycle"
+  }
+}

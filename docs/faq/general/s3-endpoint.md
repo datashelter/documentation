@@ -1,8 +1,10 @@
-# Why does my server communicate with s3.datashelter.cloud?
+# Why is my S3 endpoint `s3.datashelter.cloud`?
 
-Snaper communicates exclusively via HTTPS calls to S3-compatible endpoints, signed with the S3 Signature v4 authentication algorithm.
+Snaper communicates with Datashelter exclusively using S3-compatible calls (built on top of HTTPS).
 
-To provide immutable storage (WORM) features, your data transits through a dedicated S3 proxy hosted at `s3.datashelter.cloud`.
+To provide immutable storage (WORM) features, your data transits through a dedicated S3 proxy hosted at `s3.datashelter.cloud` exposing only the routes snaper needs to perform its operations. This proxy applies specific logic to ensure that your data cannot be altered or deleted, even if your S3 credentials are compromised.
+
+## Backup immutability
 
 There are two ways to alter an object in object storage: deletion (DELETE) and overwrite (PUT that replaces an existing key). The proxy applies different rules to prevent irreversible alteration:
 
