@@ -1,4 +1,4 @@
-## What happens if my account is compromised?
+# What happens if my account is compromised?
 
 Datashelter is designed with **security by design** to protect your backups even in the event of a compromised account. Two main scenarios are possible:
 
