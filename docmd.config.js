@@ -98,7 +98,9 @@ module.exports = {
             { title: 'backup', path: '/cli/usage/backup' },
             { title: 'list', path: '/cli/usage/list' },
             { title: 'restore', path: '/cli/usage/restore' },
-            { title: 'delete', path: '/cli/usage/delete' }
+            { title: 'delete', path: '/cli/usage/delete' },
+            { title: 'agent', path: '/cli/usage/agent' },
+            { title: 'update', path: '/cli/usage/update' }
           ]
         },
         { title: 'Automatic Configuration via Environment Variables', path: '/cli/autoinit-env' },
@@ -128,7 +130,17 @@ module.exports = {
             { title: 'Why should I use Datashelter', path: '/faq/general/datashelter-advantages' },
             { title: 'Why are my indexes CSV files?', path: '/faq/general/indexes-format' },
             { title: 'Can I backup my entire system with Datashelter?', path: '/faq/general/full-system-backup' },
-            { title: 'Which OS are supported?', path: '/faq/general/supported-os' }
+            { title: 'Which OS are supported?', path: '/faq/general/supported-os' },
+            { title: 'Which database access is needed for autodiscovery?', path: '/faq/general/database-autodiscovery' }
+          ]
+        },
+        {
+          title: '🤖 Agent',
+          collapsible: true,
+          children: [
+            { title: 'Can the Snaper agent run arbitrary commands?', path: '/faq/agent/agent-security' },
+            { title: 'How to migrate from legacy mode to agent mode?', path: '/faq/agent/migrate-to-agent' },
+            { title: 'How does the agent manage my crontabs?', path: '/faq/agent/agent-crontab-management' }
           ]
         },
         {
@@ -173,7 +185,8 @@ module.exports = {
           title: '📄 Backup logs',
           collapsible: true,
           children: [
-            { title: 'How to access backup logs?', path: '/faq/backup_logs/access-backup-logs' }
+            { title: 'How to access backup logs?', path: '/faq/backup_logs/access-backup-logs' },
+            { title: 'How long are my backup logs kept?', path: '/faq/backup_logs/log-retention' }
           ]
         },
         {
@@ -182,7 +195,8 @@ module.exports = {
           children: [
             { title: 'How to migrate from manual crontabs to automatic scheduling?', path: '/faq/backup_scheduling/migrate-to-automatic-scheduling' },
             { title: 'Can I continue using manual scheduling for my backups?', path: '/faq/backup_scheduling/stay-with-manual-scheduling' },
-            { title: 'What is manage_crontab parameter?', path: '/faq/backup_scheduling/manage-crontabs-parameter' }
+            { title: 'What is manage_crontab parameter?', path: '/faq/backup_scheduling/manage-crontabs-parameter' },
+            { title: 'How are my daily backups scheduled?', path: '/faq/backup_scheduling/daily-backup-schedule' }
 
           ]
         },

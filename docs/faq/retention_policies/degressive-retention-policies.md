@@ -5,7 +5,7 @@ You can define simple retention policies (90 days or 365 days) or degressive ret
 We typically recommend going for degressive retention policies for your database backups. Even though database dumps have good compression ratio (80% on average), they can still take up a lot of storage space as deduplication is not effective on them.
 
 ## Standard degressive retention policy
-We recomend a standard degressive retention policy for databases, which is the default downsampling policy when you choose the "degressive" option in your retention policy settings.
+We recommend a standard degressive retention policy for databases. It is the default downsampling policy applied when you pick the "degressive" option in your retention settings.
 
 Here’s how this standard degressive retention policy works:
 * Keep all backups from the last 7 days (7 backups, 7 day retention period)

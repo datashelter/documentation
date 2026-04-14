@@ -1,13 +1,17 @@
-# What is manage_crontab parameter?
+# What is the `manage_crontab` parameter?
 
-As of July 2024, we introduced a new crontab management feature on snaper. Linked to the panel, it allows you to set a recurrence for your backups (eg: dump my database everyday at 2 PM)
+`manage_crontab` lets Snaper write and update its own block of crontab entries based on the schedules you set from your dashboard. It was the original way to automate backups before [agent mode](/faq/agent/migrate-to-agent) was introduced.
 
-![Automatic scheduling](/assets/faq/crontab_scheduling.png)
-
-Under the hood, snaper will manage its own crontab list on your server by adding a new crontab for each backup you set a recurrence for:
+When enabled, Snaper maintains a dedicated block in your crontab:
 
 ```bash
 # SNAPER MANAGED CRONTABS
 5 1 * * * /usr/local/bin/snaper backup files --name lingering-moon >> /tmp/snaper.log 2>&1
 # END OF SNAPER MANAGED CRONTABS
 ```
+
+Anything outside this block is never touched.
+
+::: callout info
+Agent mode is now the recommended way to schedule backups. The agent runs as a daemon, removes this crontab block on startup, and triggers backups itself. `manage_crontab` still exists for legacy setups and is restored automatically if you ever switch the agent scheduler off. See [How does the agent manage my crontabs?](/faq/agent/agent-crontab-management).
+:::

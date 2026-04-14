@@ -1,11 +1,11 @@
 # Which OS are supported by Datashelter?
-Our backup agent is compatible with almost all operating systems on the market (Linux, MacOS, Windows, FreeBSD). By extension, this means that it can also be installed on your NAS, your PC or your server.
 
-## Where can I find snaper binaries for my OS?
+Snaper is compatible with almost every operating system on the market — Linux, macOS, Windows, and FreeBSD. In practice, this means it runs just as well on a NAS, a personal computer, or a production server.
 
-We provide both amd64 & arm64 binaries on https://dl.datashelter.cloud such as docker images (https://hub.docker.com/datashelter/snaper) so that you can easily install it on your server, whatever its architecture is.
+## Where can I find Snaper binaries for my OS?
 
-## Install snaper on my machine
-You can install snaper on your machine by following this tutorial: https://docs.datashelter.tech/cli/requisites/install. It will guide you through the installation process step by step, and you will be able to start backing up your data in no time!
+We publish both `amd64` and `arm64` binaries at [dl.datashelter.cloud](https://dl.datashelter.cloud), as well as Docker images on [Docker Hub](https://hub.docker.com/r/datashelter/snaper), so you can install Snaper on any machine regardless of its architecture.
 
-cli/requisites/install/
+## Installing Snaper
+
+Follow the [installation guide](/cli/requisites/install) — it walks you through every step and gets you ready to back up your data in minutes.

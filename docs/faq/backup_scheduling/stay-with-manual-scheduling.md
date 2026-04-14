@@ -1,5 +1,14 @@
-# Can I continue using manual scheduling for my backups?
+# Can I keep running my backups on manual crontabs?
 
-You’re free to choose not to let snaper manage it’s own crontabs. Your server, your choices 😄
+Yes. Agent mode is the recommended setup, but nothing forces you to use it — if you prefer to keep Snaper out of your crontab and run backups from your own cron entries, that is entirely supported.
 
-Just keep in mind that we won’t be able to send your alerts in case we don’t receive your backups anymore. To know more about that, feel free to contact our support team at [support@datashelter.tech](mailto:support@datashelter.tech)
+::: callout warning
+If Snaper does not manage your scheduling (neither through the agent nor through `manage_crontab`), Datashelter cannot know *when* a backup was supposed to run. You will **not** receive email alerts when an expected backup is missing, only when one actively fails. This is a meaningful downgrade of your monitoring — make sure it is what you want.
+:::
+
+If you are on the fence, see:
+
+- [How to migrate from manual crontabs to automatic scheduling](/faq/backup_scheduling/migrate-to-automatic-scheduling)
+- [How to migrate from legacy mode to agent mode](/faq/agent/migrate-to-agent)
+
+Still unsure? Reach out to [support@datashelter.tech](mailto:support@datashelter.tech) and we'll help you pick the right setup for your server.

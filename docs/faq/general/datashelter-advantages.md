@@ -6,7 +6,7 @@ While setting up your own backup system using tools like `rsync`, `restic` would
 
 Said otherwise, Datashelter is an easy answer to the following questions:
 ### Which backup tool should I use ?
-  Datashelter uses Snaper, a backup agent built from the ground up to be efficient, secure, and easy to use. It natively encrypts your data wiht AES-256 with your key before leaving your serve, compresses & deduplicates it to optimize your storage costs, and uploads it to your S3 storage (yours or ours) from a single binary.
+  Datashelter uses Snaper, a backup agent built from the ground up to be efficient, secure, and easy to use. It encrypts your data with AES-256 using your own key before it ever leaves your server, compresses and deduplicates it to cut storage costs, and ships it to your S3 storage (yours or ours) — all from a single binary.
 
 ### Where should I store my backups ?
   Store your backups in one of our 5 managed storage locations (France, United-kingdom, Germany, Poland, Canada) or connect your own S3-compatible storage (AWS S3, Backblaze B2, Wasabi, etc.). With Datashelter, you can easily switch between storage locations without changing your backup configuration.

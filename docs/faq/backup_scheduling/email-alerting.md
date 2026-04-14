@@ -1,7 +1,14 @@
-# Which email alerts will I receive ?
+# Which email alerts will I receive?
 
-Now that this automatic backup scheduling feature has been introduced, we changed triggers for your email alerts.
+You will receive email alerts for every backup that is **scheduled from your dashboard** — whether scheduling is handled by [agent mode](/faq/agent/migrate-to-agent) or by a [managed crontab](/faq/backup_scheduling/manage-crontabs-parameter).
 
-You will now receive alerts for your automatic backups **only if a scheduling rule is set**. This prevents you from receiving alerts for snapshots you may have ran manually for testing purpose.
+Two situations trigger an alert:
 
-We will ensure that your receive a backup in the period of time you were supposed to receive it. Else you'll receive an email alerts !
+- **A scheduled backup fails** — the job ran but did not complete successfully.
+- **A scheduled backup is missing** — Datashelter did not receive the backup within the time window it was supposed to run in.
+
+Ad-hoc backups you launch manually (for example, `snaper backup files` for testing) never trigger alerts, so you don't get paged for one-off runs.
+
+::: callout info
+With agent mode, you can also review the full log of each backup run directly from the dashboard — no SSH required. See [How to access backup logs](/faq/backup_logs/access-backup-logs).
+:::
