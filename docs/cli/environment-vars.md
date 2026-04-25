@@ -1,5 +1,5 @@
 ---
-description: All the environment variables that can be used with snaper.
+description: "All the environment variables that can be used with snaper."
 ---
 
 # Environment variables

@@ -1,3 +1,7 @@
+---
+description: "Configure Snaper automatically from environment variables without manual initialization. Perfect for Docker, Kubernetes, CI/CD pipelines, and ephemeral containers using AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and DATASHELTER_BUCKET."
+---
+
 # Automatic Configuration via Environment Variables
 
 Since version v3.12.0, Snaper can start without requiring manual initialization (`snaper init`) or a pre-existing configuration file. If no configuration file is found, Snaper will automatically attempt to generate one based on a set of environment variables.

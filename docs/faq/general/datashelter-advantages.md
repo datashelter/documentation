@@ -1,3 +1,7 @@
+---
+description: "Datashelter replaces DIY backup scripts (rsync, restic) with managed encryption, retention, immutable storage, and reliable alerting—no scripts to maintain."
+---
+
 # Why should I use Datashelter instead of managing my backups by myself?
 
 It's legitimate to question the value of a Backup as a Service (BaaS) solution like Datashelter, especially if you already have system administration skills. Datashelter main value proposition is to provide you with a reliable, secure, and easy-to-use backup solution that takes care of all the complexities and challenges associated with managing backups on your own.

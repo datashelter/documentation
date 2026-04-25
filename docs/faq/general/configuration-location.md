@@ -1,3 +1,7 @@
+---
+description: "Snaper config lives in ~/.config/snaper/. Main files: config.yaml (configuration), .encryption_key (your key), index_cache/ (local indexes), and lock files for process safety and key integrity tracking."
+---
+
 # Where is my config located?
 
 Snaper's configuration lives in the `~/.config/snaper` directory. You will typically find the following files there:

@@ -1,3 +1,7 @@
+---
+description: "Backup logs follow the same retention rules as their backups—kept together, pruned together. No extra configuration needed; logs add negligible storage cost and provide audit trails for every restore point."
+---
+
 # How long are my backup logs kept?
 
 Backup logs follow the exact same retention rules as the backups they describe. A log is kept for as long as its corresponding backup is kept, and is pruned at the same time.

@@ -1,3 +1,7 @@
+---
+description: "Install and verify database clients required for Snaper backups. Choose from MySQL/MariaDB, PostgreSQL, or MongoDB client installation instructions and verification commands for your operating system."
+---
+
 
 # Database client setup
 

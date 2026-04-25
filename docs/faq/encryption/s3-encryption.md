@@ -1,3 +1,7 @@
+---
+description: "All data is encrypted on your server using AES-256 before leaving your infrastructure, using your own encryption key. Snaper never stores an unencrypted copy—Datashelter cannot access your backup contents."
+---
+
 # How do we encrypt your data?
 
 Encryption of your data is essential for maintaining confidentiality and security. That's why Snaper encrypts your data **on your server** using **your own encryption key** before sending it to our cloud.

@@ -1,3 +1,7 @@
+---
+description: "Datashelter sends alerts for missing or failed backups, suspicious 80%+ data changes between backups (ransomware indicator), and monthly integrity checks on external S3 buckets for backup authenticity."
+---
+
 # Which email alerts may I receive for my backups?
 
 We currently have three different scenarios in which you will receive email alerts:

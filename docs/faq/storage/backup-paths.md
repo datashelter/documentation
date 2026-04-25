@@ -1,3 +1,7 @@
+---
+description: "Back up application data and system configs: /etc, /home, /var/www, /var/lib. Skip temporary data, cache, logs, and dependencies. File-level backups let you choose exactly what to protect."
+---
+
 # Which paths should I back up?
 
 Datashelter performs **file-level backups**, meaning you choose exactly which directories and files should be protected. The goal is typically to back up **application data and system configurations** that would be required to restore your services after an incident.

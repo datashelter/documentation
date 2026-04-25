@@ -1,3 +1,7 @@
+---
+description: "View backup logs directly from the Datashelter dashboard with agent mode, or access locally in /tmp/snaper/ for each configured backup. Use 'snaper list files' to find backup names and their associated paths."
+---
+
 # How to access backup logs?
 
 ## From the dashboard (recommended)

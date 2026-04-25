@@ -1,3 +1,7 @@
+---
+description: "Fix common MongoDB backup errors with Snaper: ReplicaSetNoPrimary connection issues solved with --direct-connection, and SCRAM-SHA-1 authentication errors."
+---
+
 # Common MongoDB Issues
 
 ### *Server selection error: context deadline exceeded, current topology: Type: ReplicaSetNoPrimary*

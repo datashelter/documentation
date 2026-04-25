@@ -1,3 +1,7 @@
+---
+description: "The manage_crontab parameter lets Snaper write its own crontab block based on dashboard schedules. Agent mode is now recommended, but this legacy option still works for systems preferring cron-based automation."
+---
+
 # What is the `manage_crontab` parameter?
 
 `manage_crontab` lets Snaper write and update its own block of crontab entries based on the schedules you set from your dashboard. It was the original way to automate backups before [agent mode](/faq/agent/migrate-to-agent) was introduced.

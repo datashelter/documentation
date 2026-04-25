@@ -1,3 +1,7 @@
+---
+description: "Migrate from cron-based to agent mode in three commands. The agent replaces crontab scheduling, enables remote backup browsing, and keeps Snaper automatically updated without manual intervention required."
+---
+
 # How do I migrate from legacy mode to agent mode?
 
 Agent mode replaces the previous "cron + one-shot `snaper backup`" model with a long-running service that handles scheduling, browsing, and updates for you.

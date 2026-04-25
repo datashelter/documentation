@@ -1,3 +1,7 @@
+---
+description: "Full system backup script available for Datashelter. Requires precise exclusions for /proc, /sys, /dev, /tmp, and hardware-specific configs. Only restore to fresh machines—incompatibilities risk irreversible corruption."
+---
+
 # Can I backup my entire system with Datashelter?
 
 Datashelter supports complete system backup. This functionality requires precise configuration and understanding of technical constraints.

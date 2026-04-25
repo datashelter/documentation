@@ -1,5 +1,5 @@
 ---
-description: Initialize ~/.config/snaper/config.yaml file
+description: "Initialize ~/.config/snaper/config.yaml file"
 ---
 
 # init

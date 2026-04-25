@@ -1,3 +1,7 @@
+---
+description: "Keep Snaper out of your crontab and run backups manually if you prefer. Warning: you'll miss alerts when expected backups are missing—you only receive alerts for active backup failures without automatic scheduling."
+---
+
 # Can I keep running my backups on manual crontabs?
 
 Yes. Agent mode is the recommended setup, but nothing forces you to use it — if you prefer to keep Snaper out of your crontab and run backups from your own cron entries, that is entirely supported.

@@ -1,3 +1,7 @@
+---
+description: "Receive email alerts when scheduled backups fail or go missing. Ad-hoc manual backups don't trigger alerts. Datashelter monitors backups scheduled through agent mode or managed crontabs for you."
+---
+
 # Which email alerts will I receive?
 
 You will receive email alerts for every backup that is **scheduled from your dashboard** — whether scheduling is handled by [agent mode](/faq/agent/migrate-to-agent) or by a [managed crontab](/faq/backup_scheduling/manage-crontabs-parameter).

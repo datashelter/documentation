@@ -1,3 +1,7 @@
+---
+description: "The Snaper agent cannot run arbitrary commands on your machine. It only executes hard-coded actions: backup, list, delete, browse, db_discover, configure_db, and update—all signed and scoped to your server."
+---
+
 # Can the Snaper agent run arbitrary commands on my machine?
 
 No. The agent does not expose a shell, an SSH session, or any generic "run command" endpoint. It only reads instructions from your private Datashelter S3 bucket and executes a fixed, hard-coded set of actions.

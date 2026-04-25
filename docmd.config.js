@@ -166,7 +166,7 @@ module.exports = {
           collapsible: true,
           children: [
             { title: 'Which paths should I back up?', path: '/faq/storage/backup-paths' },
-            { title: 'Can I backup logs with Datashelter?', path: '/faq/storage/configuration-location' },
+            { title: 'Can I backup logs with Datashelter?', path: '/faq/storage/backup-logs' },
             { title: 'What are downsampling policies?', path: '/faq/storage/downsampling-policies' },
             { title: 'Are my backups immutable?', path: '/faq/storage/immutable-backups' },
             { title: 'Estimating required storage for your backups', path: '/faq/storage/required-storage' },

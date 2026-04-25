@@ -1,3 +1,7 @@
+---
+description: "Logs aren't ideal candidates for Datashelter backups—deduplication can't compress files that change every line. Exclude /var/log and use dedicated log tools."
+---
+
 # Can I backup logs with Datashelter?
 
 While it is technically possible to back up logs with Datashelter, it is generally **not recommended** for several reasons.

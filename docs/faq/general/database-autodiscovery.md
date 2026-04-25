@@ -1,3 +1,7 @@
+---
+description: "Database autodiscovery probes MySQL, PostgreSQL, and MongoDB via Unix sockets (preferred for local) or TCP/IP (remote). Requires minimal privileges: connect and list databases. Timeouts keep autodiscovery fast."
+---
+
 # Which database access is needed for autodiscovery?
 
 When the agent runs database autodiscovery, it tries to reach each supported engine (MySQL/MariaDB, PostgreSQL, MongoDB) using two connection methods, in this order:

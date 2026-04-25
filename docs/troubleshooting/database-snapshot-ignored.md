@@ -1,3 +1,7 @@
+---
+description: "MongoDB snapshots ignored in crontab? Add PATH=$PATH:/usr/local/bin to crontab entry. Use 'which mongodump' to verify command location if mongodump/mongorestore commands aren't found by Snaper."
+---
+
 # My database snapshots are ignored with crontab
 
 Some users have reported that their database snapshots are not properly executed when using crontab. This issue is often caused by the `mongodump` or `mongorestore` command not being found by Snaper in the PATH environment variable.

@@ -1,5 +1,5 @@
 ---
-description: Delete a backup from backups list (files or databases)
+description: "Delete a backup from backups list (files or databases)"
 ---
 
 

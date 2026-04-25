@@ -1,3 +1,7 @@
+---
+description: "Backup incident troubleshooting: Check dashboard service list for outdated snapshot dates, review logs in /tmp/snaper or dashboard, retry manual backup, then contact support with server name, service name, and error details."
+---
+
 # Backup incident troubleshooting guide
 
 This guide walks you through the steps to identify and resolve backup issues reported via email. The goal is to help you fix the problem quickly, or gather the right information before reaching out to our support team.

@@ -1,3 +1,7 @@
+---
+description: "Datashelter pricing: Free plan covers 10GB storage and 2 services. Pro plan charges 5€/server/month plus 7€/TB/month for managed storage beyond 10GB, prorated daily. Use your own S3 to avoid storage fees."
+---
+
 # How is my billing calculated?
 
 ## Available subscriptions

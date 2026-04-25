@@ -1,3 +1,7 @@
+---
+description: "Datashelter indexes are CSV files for easy parsing by external tools. CSV's simplicity and universal support make it ideal for backup metadata—no complex SQL queries or relational logic needed."
+---
+
 # Why are my indexes CSV files?
 
 We sought a familiar format for creating our indexes, one that would be easily readable/editable by external applications. Given that we aren't performing any complex operations or relational queries, the use of SQLite seemed unnecessary.

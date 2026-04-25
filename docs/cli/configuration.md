@@ -1,3 +1,7 @@
+---
+description: "Complete reference for Snaper configuration parameters. Control logging, compression, S3 bucket settings, encryption, concurrent workers, database backup options, and file backup inclusion/exclusion rules."
+---
+
 # Configuration parameters
 ## General Parameters
 

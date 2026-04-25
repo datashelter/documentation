@@ -1,3 +1,7 @@
+---
+description: "Snaper runs on Linux, macOS, Windows, and FreeBSD across amd64 and arm64 architectures. Binaries available at dl.datashelter.cloud and Docker images on Docker Hub for any platform."
+---
+
 # Which OS are supported by Datashelter?
 
 Snaper is compatible with almost every operating system on the market — Linux, macOS, Windows, and FreeBSD. In practice, this means it runs just as well on a NAS, a personal computer, or a production server.

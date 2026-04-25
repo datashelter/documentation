@@ -1,3 +1,7 @@
+---
+description: "Get started with Datashelter in minutes. Create an account, add your first server, configure Snaper, and set up automatic backups to your S3 storage with step-by-step dashboard guidance."
+---
+
 # Get started
 
 ## Create an account on Datashelter

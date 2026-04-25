@@ -1,3 +1,7 @@
+---
+description: "Degressive retention keeps recent backups frequently and old ones less often—e.g., 7 daily, 3/week for 4 weeks, 1/week for 8 weeks, 1/month. Saves 90% storage vs flat retention for typical database backups."
+---
+
 # What are degressive retention policies?
 
 You can define simple retention policies (90 days or 365 days) or degressive retention policies (also called downsampling). Degressive retention policies reduce the number of stored backup versions over time, keeping more recent versions and fewer older ones. This helps optimize storage costs while ensuring that you have access to recent backups when needed

@@ -1,3 +1,7 @@
+---
+description: "Choose a retention policy based on your recovery and cost needs. Standard policy recommended for most cases; it balances cost with keeping recent backups accessible. Contact support for RTO/RPO guidance."
+---
+
 # Which retention policy should I choose?
 
 Retention policy have to be chosen based on your specific needs for data recovery and cost management. However, we usually recommend **staying with the standard retention policy** if you don't have any regulatory requirements or specific needs for data recovery.

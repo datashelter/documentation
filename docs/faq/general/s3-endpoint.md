@@ -1,3 +1,7 @@
+---
+description: "Datashelter S3 endpoint at s3.datashelter.cloud routes all backups through a custom proxy. The proxy enforces immutable storage (WORM) by blocking deletions and versioning overwrites to protect your data from compromise."
+---
+
 # Why is my S3 endpoint `s3.datashelter.cloud`?
 
 Snaper communicates with Datashelter exclusively using S3-compatible calls (built on top of HTTPS).

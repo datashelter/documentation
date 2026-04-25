@@ -1,5 +1,5 @@
 ---
-description: Restore a snapshot (directory or database) to specified path
+description: "Restore a snapshot (directory or database) to specified path"
 ---
 
 

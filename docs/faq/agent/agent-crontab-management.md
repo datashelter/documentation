@@ -1,3 +1,7 @@
+---
+description: "The Snaper agent automatically manages crontabs when installed. It removes the SNAPER MANAGED CRONTABS block on startup and restores it if you disable agent mode, preventing duplicate backup runs."
+---
+
 # How does the agent manage my crontabs?
 
 Agent mode and crontab-based scheduling both want to be in charge of running your backups. To avoid running every backup twice (once from cron, once from the agent), the Snaper agent actively manages the `SNAPER MANAGED CRONTABS` block for you.

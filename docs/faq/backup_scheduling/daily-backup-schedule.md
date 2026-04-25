@@ -1,3 +1,7 @@
+---
+description: "Pick a one-hour backup window on the Datashelter dashboard; the agent assigns the exact minute inside that window to spread load evenly. Your backups run consistently daily at the same time automatically."
+---
+
 # How are my daily backups scheduled?
 
 With the agent, you no longer pick an exact time for your backups. Instead, you select a **one-hour window** on the dashboard during which you want the backup to run.

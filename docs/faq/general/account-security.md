@@ -1,3 +1,7 @@
+---
+description: "Account compromise protection: attackers can't access encrypted backups without your server encryption keys. Soft deletion protection and 7-day backup retention minimum prevent data loss from account takeovers."
+---
+
 # What happens if my account is compromised?
 
 Datashelter is designed with **security by design** to protect your backups even in the event of a compromised account. Two main scenarios are possible:

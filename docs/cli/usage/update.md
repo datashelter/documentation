@@ -1,5 +1,5 @@
 ---
-description: Update Snaper to the latest version
+description: "Update Snaper to the latest version"
 ---
 
 # update

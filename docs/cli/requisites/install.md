@@ -1,3 +1,7 @@
+---
+description: "Install Snaper on Linux, macOS, FreeBSD, or Windows with quick one-command installer or manual binary downloads for amd64 and arm64 architectures. Includes verification, updates, and troubleshooting."
+---
+
 
 # Install Snaper
 

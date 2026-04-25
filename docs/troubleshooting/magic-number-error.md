@@ -1,3 +1,7 @@
+---
+description: "Decompression magic number mismatch error? Update the encryption key in ~/.config/snaper/.encryption_key and retry restore. Set log_level to debug in config.yaml and contact support with logs if issue persists."
+---
+
 # failed to decompress stream: invalid input: magic number mismatch
 
 This error arises when Snaper **fails to decompress data properly**. This issue often occurs when trying to restore data on another system with an incorrect encryption key.
