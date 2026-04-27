@@ -1,5 +1,5 @@
 ---
-description: "Back up application data and system configs: /etc, /home, /var/www, /var/lib. Skip temporary data, cache, logs, and dependencies. File-level backups let you choose exactly what to protect."
+description: "Back up application data and system configs: /etc, /home, /var/www, /var/lib. Skip temp data, caches, logs, and dependencies—pick exactly what to protect."
 ---
 
 # Which paths should I back up?

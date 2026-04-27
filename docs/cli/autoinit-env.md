@@ -1,5 +1,5 @@
 ---
-description: "Configure Snaper automatically from environment variables without manual initialization. Perfect for Docker, Kubernetes, CI/CD pipelines, and ephemeral containers using AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and DATASHELTER_BUCKET."
+description: "Configure Snaper automatically from environment variables—perfect for Docker, Kubernetes, CI/CD pipelines, and ephemeral containers. No manual init required."
 ---
 
 # Automatic Configuration via Environment Variables

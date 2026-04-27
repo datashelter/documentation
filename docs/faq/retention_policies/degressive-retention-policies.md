@@ -1,5 +1,5 @@
 ---
-description: "Degressive retention keeps recent backups frequently and old ones less often—e.g., 7 daily, 3/week for 4 weeks, 1/week for 8 weeks, 1/month. Saves 90% storage vs flat retention for typical database backups."
+description: "Degressive retention keeps recent backups frequently and old ones less often—e.g., daily for a week, weekly for a month, then monthly. Saves up to 90% storage."
 ---
 
 # What are degressive retention policies?

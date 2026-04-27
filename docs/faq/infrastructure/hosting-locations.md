@@ -1,5 +1,5 @@
 ---
-description: "Choose Datashelter managed storage in France, Germany, Poland, UK, or Canada on OVHcloud. Or connect your own S3 bucket (AWS, Backblaze B2, Wasabi) for full control over data location and infrastructure."
+description: "Choose Datashelter managed storage in France, Germany, Poland, UK, or Canada on OVHcloud—or connect your own S3 bucket (AWS, Backblaze B2, Wasabi)."
 ---
 
 # Where are my backups stored?

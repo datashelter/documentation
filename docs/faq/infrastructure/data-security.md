@@ -1,5 +1,5 @@
 ---
-description: "Datashelter security: client-side AES-256 encryption, S3-only communication, push-only model with no SSH access, per-server credentials, immutable backups, 14-day safe deletion delay, and OVHcloud ISO 27001 certified hosting."
+description: "Datashelter security: client-side AES-256 encryption, push-only S3 communication, per-server credentials, immutable backups, and ISO 27001 OVHcloud hosting."
 ---
 
 # How Datashelter keeps your data secure

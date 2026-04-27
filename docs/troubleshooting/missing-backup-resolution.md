@@ -1,5 +1,5 @@
 ---
-description: "Backup incident troubleshooting: Check dashboard service list for outdated snapshot dates, review logs in /tmp/snaper or dashboard, retry manual backup, then contact support with server name, service name, and error details."
+description: "Backup incident troubleshooting: check the dashboard for outdated snapshots, review logs in /tmp/snaper, retry a manual backup, then contact support."
 ---
 
 # Backup incident troubleshooting guide

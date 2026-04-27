@@ -1,5 +1,5 @@
 ---
-description: "Snaper runs on Linux, macOS, Windows, and FreeBSD across amd64 and arm64 architectures. Binaries available at dl.datashelter.cloud and Docker images on Docker Hub for any platform."
+description: "Snaper runs on Linux, macOS, Windows, and FreeBSD across amd64 and arm64. Binaries available at dl.datashelter.cloud and Docker images on Docker Hub."
 ---
 
 # Which OS are supported by Datashelter?

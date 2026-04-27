@@ -1,5 +1,5 @@
 ---
-description: "Datashelter platform built on S3 with custom components: continuous backup monitoring and alerts, configurable retention policies, immutable storage via S3 proxy, and per-server credential isolation with audit logging."
+description: "Datashelter is built on S3 with custom components: continuous backup monitoring, configurable retention, immutable storage, and per-server credential isolation."
 ---
 
 # Our infrastructure

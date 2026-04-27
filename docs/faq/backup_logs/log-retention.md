@@ -1,5 +1,5 @@
 ---
-description: "Backup logs follow the same retention rules as their backups—kept together, pruned together. No extra configuration needed; logs add negligible storage cost and provide audit trails for every restore point."
+description: "Backup logs follow the same retention rules as their backups—kept and pruned together. No extra config; logs add negligible cost and provide audit trails."
 ---
 
 # How long are my backup logs kept?

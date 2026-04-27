@@ -1,5 +1,5 @@
 ---
-description: "Enable two-factor authentication on your Datashelter account in settings. Scan QR code with Google Authenticator or Proton Authenticator, enter verification code, and save recovery codes to regain access if you lose your device."
+description: "Enable two-factor authentication on your Datashelter account. Scan the QR code with an authenticator app, enter the code, and save your recovery codes."
 ---
 
 # How to enable 2FA on my account?

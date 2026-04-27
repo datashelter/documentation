@@ -1,5 +1,5 @@
 ---
-description: "Snaper stores temporary files for compression/encryption in your /tmp partition. Files smaller than 10MB process in RAM; larger ones use disk. Adjust general.tmp_file_threshold in config.yaml to change this threshold."
+description: "Snaper stores temp files for compression and encryption in /tmp. Files under 10MB use RAM; larger ones use disk. Tune general.tmp_file_threshold to adjust."
 ---
 
 # Why is my temporary partition full of Snaper files?

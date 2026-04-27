@@ -1,5 +1,5 @@
 ---
-description: "Snaper config lives in ~/.config/snaper/. Main files: config.yaml (configuration), .encryption_key (your key), index_cache/ (local indexes), and lock files for process safety and key integrity tracking."
+description: "Snaper config lives in ~/.config/snaper/. Main files: config.yaml, .encryption_key, index_cache/, and lock files for process safety and key integrity."
 ---
 
 # Where is my config located?

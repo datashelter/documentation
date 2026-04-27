@@ -1,5 +1,5 @@
 ---
-description: "Database autodiscovery probes MySQL, PostgreSQL, and MongoDB via Unix sockets (preferred for local) or TCP/IP (remote). Requires minimal privileges: connect and list databases. Timeouts keep autodiscovery fast."
+description: "Database autodiscovery probes MySQL, PostgreSQL, and MongoDB via Unix sockets (preferred local) or TCP/IP. Requires only connect and list databases privileges."
 ---
 
 # Which database access is needed for autodiscovery?

@@ -1,5 +1,5 @@
 ---
-description: "MongoDB snapshots ignored in crontab? Add PATH=$PATH:/usr/local/bin to crontab entry. Use 'which mongodump' to verify command location if mongodump/mongorestore commands aren't found by Snaper."
+description: "MongoDB snapshots ignored in crontab? Add PATH=$PATH:/usr/local/bin to your crontab entry. Use 'which mongodump' to verify the command location."
 ---
 
 # My database snapshots are ignored with crontab

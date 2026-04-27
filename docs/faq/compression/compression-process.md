@@ -1,5 +1,5 @@
 ---
-description: "Snaper automatically compresses files with ZSTD before encryption and upload to S3. You can disable compression in config.yaml but not retroactively—all previous backups expect compression during restore."
+description: "Snaper automatically compresses files with ZSTD before encryption and upload to S3. You can disable compression in config.yaml, but not retroactively."
 ---
 
 # How is compression handled?

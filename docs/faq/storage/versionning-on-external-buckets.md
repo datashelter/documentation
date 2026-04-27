@@ -1,5 +1,5 @@
 ---
-description: "S3 versioning must be enabled on external buckets to support immutable backups. The s3.datashelter.cloud proxy ignores DELETE requests and creates versions on overwrites—versioning preserves backup integrity."
+description: "S3 versioning must be enabled on external buckets to support immutable backups. The s3.datashelter.cloud proxy ignores DELETE and versions overwrites."
 ---
 
 # Why do I need to enable versioning on my external buckets?

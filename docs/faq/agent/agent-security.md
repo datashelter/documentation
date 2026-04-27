@@ -1,5 +1,5 @@
 ---
-description: "The Snaper agent cannot run arbitrary commands on your machine. It only executes hard-coded actions: backup, list, delete, browse, db_discover, configure_db, and update—all signed and scoped to your server."
+description: "The Snaper agent cannot run arbitrary commands on your machine—only hard-coded actions like backup, list, delete, browse, and update, all signed and scoped."
 ---
 
 # Can the Snaper agent run arbitrary commands on my machine?

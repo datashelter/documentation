@@ -1,5 +1,5 @@
 ---
-description: "Full system backup script available for Datashelter. Requires precise exclusions for /proc, /sys, /dev, /tmp, and hardware-specific configs. Only restore to fresh machines—incompatibilities risk irreversible corruption."
+description: "Full system backup script for Datashelter. Requires precise exclusions for /proc, /sys, /dev, /tmp. Only restore to fresh machines to avoid corruption."
 ---
 
 # Can I backup my entire system with Datashelter?

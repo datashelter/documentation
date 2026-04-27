@@ -1,5 +1,5 @@
 ---
-description: "The manage_crontab parameter lets Snaper write its own crontab block based on dashboard schedules. Agent mode is now recommended, but this legacy option still works for systems preferring cron-based automation."
+description: "The manage_crontab parameter lets Snaper write its own crontab block based on dashboard schedules. Agent mode is now recommended, but this still works."
 ---
 
 # What is the `manage_crontab` parameter?

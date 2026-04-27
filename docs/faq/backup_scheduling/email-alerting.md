@@ -1,5 +1,5 @@
 ---
-description: "Receive email alerts when scheduled backups fail or go missing. Ad-hoc manual backups don't trigger alerts. Datashelter monitors backups scheduled through agent mode or managed crontabs for you."
+description: "Receive email alerts when scheduled backups fail or go missing. Datashelter monitors backups scheduled via agent mode or managed crontabs—not ad-hoc runs."
 ---
 
 # Which email alerts will I receive?

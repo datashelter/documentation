@@ -1,5 +1,5 @@
 ---
-description: "Keep Snaper out of your crontab and run backups manually if you prefer. Warning: you'll miss alerts when expected backups are missing—you only receive alerts for active backup failures without automatic scheduling."
+description: "Keep Snaper out of your crontab and run backups manually. Warning: you'll miss alerts when expected backups go missing—only failed active backups alert you."
 ---
 
 # Can I keep running my backups on manual crontabs?

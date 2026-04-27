@@ -1,5 +1,5 @@
 ---
-description: "All data is encrypted on your server using AES-256 before leaving your infrastructure, using your own encryption key. Snaper never stores an unencrypted copy—Datashelter cannot access your backup contents."
+description: "All data is encrypted on your server with AES-256 before leaving your infrastructure, using your own key. Datashelter never sees unencrypted backup contents."
 ---
 
 # How do we encrypt your data?

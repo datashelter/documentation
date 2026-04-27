@@ -1,5 +1,5 @@
 ---
-description: "Change your server name or description anytime from the Datashelter dashboard. Click Servers, select your server, then click the gear icon in the top right to access server settings."
+description: "Change your server name or description anytime from the Datashelter dashboard. Click Servers, select your server, then click the gear icon."
 ---
 
 # Change server name or description

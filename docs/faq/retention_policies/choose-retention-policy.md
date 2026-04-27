@@ -1,5 +1,5 @@
 ---
-description: "Choose a retention policy based on your recovery and cost needs. Standard policy recommended for most cases; it balances cost with keeping recent backups accessible. Contact support for RTO/RPO guidance."
+description: "Choose a retention policy based on your recovery and cost needs. The standard policy fits most cases. Contact support for RTO/RPO guidance."
 ---
 
 # Which retention policy should I choose?

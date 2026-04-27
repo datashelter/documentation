@@ -1,5 +1,5 @@
 ---
-description: "Contact Datashelter support for technical issues, billing inquiries, or feedback. Our team responds to all inquiries within 24 hours via email at support@datashelter.tech."
+description: "Contact Datashelter support for technical issues, billing questions, or feedback. Our team responds within 24 hours at support@datashelter.tech."
 ---
 
 # Contact Us

@@ -1,5 +1,5 @@
 ---
-description: "Datashelter S3 endpoint at s3.datashelter.cloud routes all backups through a custom proxy. The proxy enforces immutable storage (WORM) by blocking deletions and versioning overwrites to protect your data from compromise."
+description: "Datashelter routes backups through s3.datashelter.cloud, a custom proxy that enforces immutable storage (WORM) by blocking deletions and versioning overwrites."
 ---
 
 # Why is my S3 endpoint `s3.datashelter.cloud`?

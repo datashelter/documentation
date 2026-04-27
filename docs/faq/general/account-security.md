@@ -1,5 +1,5 @@
 ---
-description: "Account compromise protection: attackers can't access encrypted backups without your server encryption keys. Soft deletion protection and 7-day backup retention minimum prevent data loss from account takeovers."
+description: "Account compromise protection: attackers can't access encrypted backups without your server keys. Soft deletion and 7-day retention prevent data loss."
 ---
 
 # What happens if my account is compromised?

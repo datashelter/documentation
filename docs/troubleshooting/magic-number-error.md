@@ -1,5 +1,5 @@
 ---
-description: "Decompression magic number mismatch error? Update the encryption key in ~/.config/snaper/.encryption_key and retry restore. Set log_level to debug in config.yaml and contact support with logs if issue persists."
+description: "Decompression magic number mismatch? Update the encryption key in ~/.config/snaper/.encryption_key and retry restore. Enable debug logs and contact support."
 ---
 
 # failed to decompress stream: invalid input: magic number mismatch

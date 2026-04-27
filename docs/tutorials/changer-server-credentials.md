@@ -1,5 +1,5 @@
 ---
-description: "Reset server credentials from the Datashelter dashboard for security or after unauthorized access. Go to Servers, gear icon, click Reset credentials. Update ~/.config/snaper/config.yaml with the new credentials on your server."
+description: "Reset server credentials from the Datashelter dashboard for security. Go to Servers, click the gear icon, then Reset credentials, and update your config.yaml."
 ---
 
 # Reset server credentials

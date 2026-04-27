@@ -1,5 +1,5 @@
 ---
-description: "Migrate from cron-based to agent mode in three commands. The agent replaces crontab scheduling, enables remote backup browsing, and keeps Snaper automatically updated without manual intervention required."
+description: "Migrate from cron-based to agent mode in three commands. The agent replaces crontab scheduling, enables remote browsing, and keeps Snaper auto-updated."
 ---
 
 # How do I migrate from legacy mode to agent mode?

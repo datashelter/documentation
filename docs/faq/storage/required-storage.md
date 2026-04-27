@@ -1,5 +1,5 @@
 ---
-description: "Storage needed depends on data volume, change frequency, and retention policy. Deduplication and ZSTD compression reduce costs: text files shrink 95%, databases compress 80% on average. Degressive retention cuts long-term storage further."
+description: "Storage need depends on data volume, change frequency, and retention. Deduplication and ZSTD compression cut costs—text shrinks 95%, databases ~80% on average."
 ---
 
 # Estimating storage for your backups

@@ -1,5 +1,5 @@
 ---
-description: "Your Datashelter backups are immutable by default—cannot be deleted or modified even with compromised S3 credentials. Read-only access enforced logically at the s3.datashelter.cloud proxy for both managed and external buckets."
+description: "Datashelter backups are immutable by default. They cannot be deleted or modified, even with compromised S3 credentials—read-only is enforced at the proxy."
 ---
 
 # Are my backups immutable?

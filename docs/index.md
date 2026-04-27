@@ -1,5 +1,5 @@
 ---
-description: "Datashelter is a lightweight backup automation platform for Linux servers. Snaper, its CLI, encrypts, compresses, and deduplicates your data before uploading to any S3-compatible storage securely."
+description: "Datashelter is a lightweight backup platform for Linux servers. Snaper, its CLI, encrypts, compresses, and deduplicates data to any S3-compatible storage."
 ---
 
 # Introduction

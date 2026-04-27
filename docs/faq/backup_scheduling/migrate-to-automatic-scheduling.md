@@ -1,5 +1,5 @@
 ---
-description: "Migrate from manual crontabs to automatic Datashelter scheduling. Recommended: use agent mode to manage schedules from dashboard. Legacy: let Snaper manage a dedicated crontab block for monitored backups."
+description: "Migrate from manual crontabs to automatic Datashelter scheduling. Recommended: agent mode managed from the dashboard. Legacy: a Snaper-managed crontab block."
 ---
 
 # How to migrate from manual crontabs to automatic scheduling?
