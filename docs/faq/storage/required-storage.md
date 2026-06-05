@@ -8,6 +8,8 @@ The storage required for backups depends mainly on **how much data you have, how
 
 Snaper minimizes storage usage through **deduplication, compression, and incremental snapshots**, meaning only new or modified data is stored between backups.
 
+If you want a quick estimate with your own data size, change rate, retention, and cloud storage price assumptions, use the [Datashelter backup storage calculator](https://datashelter.tech/tools/backup-calculator).
+
 ## File Backups
 
 For file-level backups, two mechanisms significantly reduce storage usage:
@@ -55,3 +57,5 @@ For an infrastructure with:
 * **60 GB database**
 
 Using Snaper’s **compression, deduplication, and degressive retention policy**, a full year of backups would typically require **around 600 GB of storage**.
+
+You can model this kind of scenario in the [backup storage calculator](https://datashelter.tech/tools/backup-calculator) before choosing a retention policy or storage provider.
