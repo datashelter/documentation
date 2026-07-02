@@ -9,8 +9,8 @@ description: "Complete reference for Snaper configuration: logging, compression,
 |-----------------------|---------|------------------------------------|----------------------------------------------------------------------------|----------------------------------|
 | LogLevel              | string  | "info"                            | Logging verbosity. Controls log output level.                              | debug, info, warn, error         |
 | IndexCacheDir         | string  | "$CONFIG_DIR/index_cache"         | Directory for storing index cache files.                                   | Any valid path                   |
-| TmpFileLocation       | string  | OS temp dir                        | Directory for temporary files.                                             | Any valid path                   |
-| TmpFileThreshold      | int64   | 10485760 (10 MB)                   | Threshold (in bytes) for using temp files.                                 | Any positive integer             |
+| TmpFileLocation       | string  | OS temp dir                        | Base directory for temporary files. Snaper stores its files in a `snaper` subdirectory under this path. | Any valid path                   |
+| TmpFileThreshold      | int64   | 10485760 (10 MB)                   | Threshold (in bytes) for buffering compression/encryption data in memory before spilling to temp files. | Any positive integer             |
 | BlockFileThreshold    | int64   | 4194304 (4 MB)                     | Threshold (in bytes) for splitting files into blocks.                      | Any positive integer             |
 | EncryptionKeyFile     | string  | "$CONFIG_DIR/.encryption_key"     | Path to file containing the encryption key.                                | Any valid path                   |
 | EncryptionKey         | string  | ""                                | The encryption key itself (read from file).                                | Any string                       |
@@ -62,6 +62,9 @@ description: "Complete reference for Snaper configuration: logging, compression,
   Some S3 config parameters (AccessKey, SecretKey, Bucket, Region) can be overridden by environment variables.
 - **Config File Location:**
   The config file is typically located in `~/.config/snaper/config.yaml`.
+- **Temporary File Location:**
+  If `general.tmp_file_location` is set to `/data/tmp`, Snaper writes temporary files under `/data/tmp/snaper`.
+  Database backups may temporarily require space for the dump file and, when compression or encryption is enabled, an additional processed copy during upload.
 - **Encryption:**
   If encryption is enabled, the key is stored in a file and referenced by EncryptionKeyFile.
 - **Backups Section:**

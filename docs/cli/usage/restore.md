@@ -57,6 +57,7 @@ description: "Restore a snapshot (directory or database) to specified path"
 
                 Flags:
                     --all                          Restore all databases configured in config.yaml
+                    --clean                        Drop and recreate the target database before restoring when it is not empty
                     --encryption-key string        Encryption key to use for encrypting data
                     --encryption-key-file string   Encryption key file to read for encrypting data
                     --export                       Export the database dump to a file
@@ -70,6 +71,7 @@ description: "Restore a snapshot (directory or database) to specified path"
                 -s, --snapshot string              Name of the snapshot to be retrieved (ignored if --all or --latest)
                 -t, --type string                  Database type (mysql, postgresql)
                 -u, --username string              Username to use to restore the database
+                -y, --yes                          Do not ask for confirmation before restoring
                 ```
 
 
@@ -86,6 +88,18 @@ You can restore a database using a different name by using the `--restore-as` fl
 ```
 snaper restore database --name <database_name> --snapshot <snapshot_name> --restore-as <new_database_name>
 ```
+
+### Restore into a non-empty database
+
+When the destination database is not empty, Snaper asks whether you want to clean the database before restoring, restore anyway, or abort.
+
+Use `--clean` to drop and recreate the target database before restoring:
+
+```
+snaper restore database --name <database_name> --snapshot <snapshot_name> --clean
+```
+
+Use `--yes` only when you want to skip interactive prompts and continue restoring into the existing database.
 
 ### Restore only specific files
 **Method 1:**
