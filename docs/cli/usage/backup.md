@@ -87,13 +87,13 @@ description: "Snapshot a directory/database and upload it to remote"
 ```bash
 # Exclude a specific directory and all its contents
 # When backing up /var, exclude /var/cache and everything inside it
-snaper backup files /var --exclude "/var/cache/**"
+snaper backup files /var --exclude "/var/cache/"
 
 # Exclude multiple subdirectories (cache and log)
-snaper backup files /path/to/backup --exclude "var/cache/**,var/log/**"
+snaper backup files /path/to/backup --exclude "var/cache/,var/log/"
 
 # Exclude all node_modules directories at any depth
-snaper backup files ./app --exclude "**/node_modules/**"
+snaper backup files ./app --exclude "**/node_modules/"
 
 # Exclude all .log files at any depth
 snaper backup files /app --exclude "**/*.log"
@@ -109,24 +109,30 @@ snaper backup files /app --include "error.log" --exclude "**/*.log"
 
 ### Matching Rules
 
-* Patterns match against the **full absolute path** of files.
+* Patterns match against the **full absolute path** of files and directories.
   Ex: backing up `/home/user` with pattern `Documents/**` → matches `/home/user/Documents/**`.
 
 * Relative patterns are converted to absolute:
   * `logs/**` becomes `/path/to/backup/logs/**`
+
+* Directory exclusions:
+
+  * `/var/cache` → only the `/var/cache` path itself
+  * `/var/cache/` → `/var/cache` and everything inside it
+  * `/var/cache/**` → everything inside `/var/cache`, but not necessarily `/var/cache` itself
 
 * The slash (`/`) and wildcards matter:
 
   * `myfile` → only `/path/to/backup/myfile` (exact match at root)
   * `dir/myfile` → only `/path/to/backup/dir/myfile`
   * `**/myfile` → any file named `myfile` at any depth
-  * `*.log` → only `.log` files at the root level
-  * `**/*.log` → all `.log` files at any depth
+  * `**/node_modules/` → any `node_modules` directory and everything below it
+  * `**/*.log` → `.log` files at any depth
 
 * Useful patterns:
 
-  * `*` → any string except `/` (`*.log`, `cache*`)
-  * `**` → matches recursively including `/` (`**/logs/**`, `**/*.py`)
+  * `*` → any string (`*.log`, `cache*`)
+  * `**` → recursive wildcard (`**/logs/`, `**/*.py`)
   * `?` → a single character (`file?.txt`)
 
 ### Priority Order
