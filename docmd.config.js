@@ -96,6 +96,7 @@ module.exports = {
             { title: 'init', path: '/cli/usage/init' },
             { title: 'config', path: '/cli/usage/config' },
             { title: 'backup', path: '/cli/usage/backup' },
+            { title: 'file-filter builder', path: '/cli/usage/file-filter-builder' },
             { title: 'list', path: '/cli/usage/list' },
             { title: 'restore', path: '/cli/usage/restore' },
             { title: 'delete', path: '/cli/usage/delete' },
