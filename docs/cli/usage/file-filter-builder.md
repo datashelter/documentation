@@ -6,7 +6,7 @@ description: "Build and preview Snaper file-backup include and exclude filters b
 
 Edit a backup command and paste a small sample of your directory tree. The builder shows which paths will be backed up, ignored by an exclusion, or left out by an inclusion rule.
 
-The preview runs only in your browser. It does not read files from your server and it does not run the command.
+The preview runs only in your browser. It does not read files from your server and it does not run the command. It models `backup files` filters; restore filters use snapshot-relative paths, described in [restore](/cli/usage/restore).
 
 <div id="snaper-filter-builder" class="snaper-filter-builder" aria-label="Snaper include and exclude filter builder"></div>
 

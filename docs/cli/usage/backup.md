@@ -129,10 +129,12 @@ Use the [file-filter builder](/cli/usage/file-filter-builder) to edit a backup c
 
   * `**/myfile` → any file named `myfile` at any depth
   * `*.log` or `**/*.log` → `.log` files at any depth
-  * `**/node_modules` → any `node_modules` directory and all of its contents
+  * `--exclude "**/node_modules"` → excludes any matching `node_modules` directory and skips its contents
   * `?` → a single-character wildcard (`file?.txt`)
 
 The same rules apply to the `included_paths` and `excluded_paths` values in the backup configuration.
+
+For an inclusion with a wildcard directory name, include the descendants explicitly. For example, use `--include "**/node_modules/**"`; a literal `node_modules` directory already includes its descendants automatically.
 
 ### Priority Order
 

@@ -63,7 +63,7 @@ module.exports = {
     name: 'default',
     defaultMode: 'dark',
     codeHighlight: true,
-    customCss: ['assets/css/custom.css']
+    customCss: ['assets/css/custom.css', 'assets/css/filter-builder.css']
   },
   plugins: {
     sitemap: {
@@ -73,7 +73,7 @@ module.exports = {
       enabled: true
     }
   },
-  customJs: ['assets/js/custom.js'],
+  customJs: ['assets/js/custom.js', 'assets/js/filter-builder.js'],
   navigation: [
     { title: '🏠 Introduction', path: '/' },
     { title: '🚀 Get started', path: '/quickstart' },
