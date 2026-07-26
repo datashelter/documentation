@@ -44,7 +44,8 @@ To force the selection prompt from an otherwise non-interactive shell, use `snap
 Snaper reads the standard variables used by official images, including Docker secret variants ending in `_FILE`:
 
 - PostgreSQL: `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_PASSWORD_FILE`, `POSTGRES_DB`
-- MySQL/MariaDB: `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_PASSWORD_FILE`, `MYSQL_ROOT_PASSWORD`, `MYSQL_ROOT_PASSWORD_FILE`
+- MySQL: `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_PASSWORD_FILE`, `MYSQL_ROOT_PASSWORD`, `MYSQL_ROOT_PASSWORD_FILE`, `MYSQL_DATABASE`
+- MariaDB: `MARIADB_USER`, `MARIADB_PASSWORD`, `MARIADB_PASSWORD_FILE`, `MARIADB_ROOT_PASSWORD`, `MARIADB_ROOT_PASSWORD_FILE`, `MARIADB_DATABASE` (the compatible `MYSQL_*` variables are also supported)
 - MongoDB: `MONGO_INITDB_ROOT_USERNAME`, `MONGO_INITDB_ROOT_PASSWORD`, `MONGO_INITDB_ROOT_PASSWORD_FILE`
 
 Passwords are read only inside the target container command environment. Agent command objects do not accept passwords, so they are never used as a remote queue secret transport or uploaded in `backups.yaml`.
