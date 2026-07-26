@@ -28,7 +28,9 @@ snaper compose discover --json
 
 Discovery uses Docker Compose labels, so it does not depend on a fixed Compose file location. It reports projects, services, replicas, detected databases, mounts, and named volumes. The dashboard exposes the same discovery from the server setup wizard and the **Docker Compose** action on an existing server.
 
-When run from a terminal, `snaper compose discover` offers an interactive selection of each discovered database and named volume. Confirm only the resources you want to protect; Snaper creates their Compose-aware backup configuration but does not run a first backup implicitly. It then prints the exact `snaper backup db` and `snaper backup volume` commands to run next.
+When run from a Linux terminal, `snaper compose discover` opens an interactive checklist of each discovered database and named volume. Use **Up/Down** to move, **Space** to toggle a resource, and **Enter** to configure the checked resources; press **q** to cancel. Snaper creates their Compose-aware backup configuration but does not run a first backup implicitly. It then prints the exact `snaper backup db` and `snaper backup volume` commands to run next.
+
+Docker anonymous volumes (the long 64-character hashes created for an unspecified container path) are intentionally excluded: they have no stable Compose identity. Declare a named volume in the Compose file before protecting it.
 
 For scripts or the existing manual workflow, discovery never prompts when its output is piped. You can also force that behaviour explicitly:
 
