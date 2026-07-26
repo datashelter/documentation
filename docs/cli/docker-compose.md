@@ -28,6 +28,17 @@ snaper compose discover --json
 
 Discovery uses Docker Compose labels, so it does not depend on a fixed Compose file location. It reports projects, services, replicas, detected databases, mounts, and named volumes. The dashboard exposes the same discovery from the server setup wizard and the **Docker Compose** action on an existing server.
 
+When run from a terminal, `snaper compose discover` offers an interactive selection of each discovered database and named volume. Confirm only the resources you want to protect; Snaper creates their Compose-aware backup configuration but does not run a first backup implicitly. It then prints the exact `snaper backup db` and `snaper backup volume` commands to run next.
+
+For scripts or the existing manual workflow, discovery never prompts when its output is piped. You can also force that behaviour explicitly:
+
+```bash
+snaper compose discover --non-interactive
+snaper compose discover --json
+```
+
+To force the selection prompt from an otherwise non-interactive shell, use `snaper compose discover --interactive`.
+
 Snaper reads the standard variables used by official images, including Docker secret variants ending in `_FILE`:
 
 - PostgreSQL: `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_PASSWORD_FILE`, `POSTGRES_DB`
