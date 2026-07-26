@@ -10,10 +10,11 @@ Use a disposable Compose project with PostgreSQL, MySQL or MariaDB, and MongoDB.
 
 1. Run `snaper compose discover --json` and confirm the project, services, database names, replica number, and named volumes are present.
 2. Configure one database using `--compose-project` and `--compose-service`, then run `snaper backup db <name> --type <type>`.
-3. Modify the source data, restore the snapshot with `--clean --yes`, and verify the original data returns.
-4. Configure a named volume, back it up, create an extra file in the volume, then confirm restore refuses while a container mounts it. Stop every container using the volume, restore with `--clear --yes`, and verify the extra file is gone.
-5. Recreate the database container with `docker compose up -d --force-recreate`; run the configured backup again to prove container IDs are resolved dynamically.
-6. Repeat credential discovery with a standard password environment variable and with its `_FILE` Docker secret variant.
+3. Modify the source data, restore the snapshot with `--clean --yes`, and verify the original data returns. For MySQL/MariaDB, include an InnoDB write workload; for MongoDB, test under the topology and write-consistency policy used in production.
+4. Configure an accessible `local` named volume, back it up, and confirm the listed snapshot is `index_*.csv` rather than a tar archive. Create an extra file in the volume, then confirm restore refuses while a container mounts it. Stop every container using the volume, restore with `--clear --yes`, and verify the extra file is gone.
+5. Configure a plugin-backed volume (or force `--snapshot-mode archive`) and verify the fallback snapshot is `.tar` without compression or `.tar.zst` with compression. Repeat the mutate/restore test.
+6. Recreate the database container with `docker compose up -d --force-recreate`; run the configured backup again to prove container IDs are resolved dynamically.
+7. Repeat credential discovery with a standard password environment variable and with its `_FILE` Docker secret variant.
 
 ## Agent and dashboard smoke test
 

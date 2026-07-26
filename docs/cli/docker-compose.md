@@ -71,6 +71,8 @@ snaper backup db appdb --type postgresql
 
 Snaper resolves the current container from Compose labels for every operation. Recreating the container does not require updating a stored container ID.
 
+PostgreSQL dumps are transactionally consistent. MySQL/MariaDB dumps use `--single-transaction` by default, which protects transactional tables such as InnoDB but not non-transactional tables. MongoDB standalone dumps are not a point-in-time snapshot while writes continue; for replica sets, plan a second batch to expose and validate an oplog-aware backup mode. Use a maintenance window or stop writers when consistency is mandatory.
+
 Restore a snapshot into the configured Compose database:
 
 ```bash
@@ -95,11 +97,18 @@ snaper backup volume --name production-postgres-data
 snaper list volume --name production-postgres-data
 ```
 
-Volume backups are live filesystem snapshots. Containers remain running and the helper mounts the volume read-only with networking disabled. This avoids downtime, but it does not create an application-consistent database snapshot. Prefer the database backup for database recovery; select its data volume only when you also need a filesystem-level copy.
+Volume backups are live filesystem snapshots. This avoids downtime, but it does not create an application-consistent database snapshot. Prefer the database backup for database recovery; select its data volume only when you also need a filesystem-level copy.
+
+Snaper chooses the most capable safe representation for each run:
+
+- An accessible `local`-driver volume is backed up with the normal Snaper file/index snapshot engine. This keeps deduplication, fine-grained restore, encryption, compression, integrity handling, and the normal file-snapshot storage layout. Its snapshot names are `index_<timestamp>.csv`.
+- A Docker plugin volume, remote Docker daemon, or inaccessible host mountpoint falls back to a portable Docker helper archive. Archive names are `snapshot_<timestamp>.<random>.tar` or `.tar.zst` when compression is enabled. The helper has no network access; archive staging requires temporary disk space for at least the uncompressed volume contents, plus compression/encryption working space, in `general.tmp_file_location`.
+
+Use `--snapshot-mode files` to require the indexed mode (and fail rather than fall back), `--snapshot-mode archive` to always use the portable helper, or leave the default `auto` to prefer indexed snapshots.
 
 ### Volume drivers and plugins
 
-Snaper asks Docker to mount the same named volume in a short-lived helper container, then archives its contents. This is the standard Docker backup pattern and can work with the built-in `local` driver and with a volume plugin that supports a second helper-container mount. Docker volume plugins expose a mount operation per consuming container, so the driver decides the attachment and locking behavior.
+For an accessible built-in `local` volume, Snaper reads the Docker mountpoint with its normal file engine. Docker plugin volumes are not accessed through a driver-specific host path. Instead, the fallback asks Docker to mount the same volume in a short-lived helper container and archives its contents. Docker volume plugins expose a mount operation per consuming container, so the driver decides the attachment and locking behavior.
 
 The built-in `local` driver is covered by the automated end-to-end backup/restore test. NFS, CIFS, block-storage, CSI, and vendor Docker plugins are **not yet certified**: they are not categorically blocked, but operators must validate backup and restore on their specific driver before production use. In particular, verify that the driver permits the additional helper mount, respects the read-only backup mount, and has a documented behavior for concurrent mounts and application consistency.
 
@@ -116,10 +125,12 @@ Use `--clear` to remove current contents first:
 ```bash
 snaper restore volume \
   --name production-postgres-data \
-  --snapshot snapshot_20260718120000.tar.zst \
+  --snapshot index_20260718120000.csv \
   --clear \
   --yes
 ```
+
+The restore command recognizes both formats. An indexed `index_*.csv` snapshot needs an accessible `local`-driver mountpoint on the restoring host; a portable `snapshot_*.tar[.zst]` archive is restored through Docker and is the appropriate choice for supported plugin drivers.
 
 Stop every container using the volume before restoring. Snaper refuses to restore a mounted volume by default; `--allow-live-volume` is an explicit break-glass override for an operator who understands the consistency and data-loss risk.
 
@@ -127,10 +138,10 @@ Stop every container using the volume before restoring. Snaper refuses to restor
 
 Use this runbook when the new host must recover the Docker volumes and database dumps held in the same Datashelter bucket. Test it with the exact Compose project and volume driver before using it for an incident.
 
-1. Install Docker Engine, Compose v2, and Snaper on the new host. Configure Snaper with the same object-storage bucket, credentials, compression setting, and encryption key or key file as the original host. Without the original encryption material, encrypted snapshots cannot be restored.
+1. Install Docker Engine, Compose v2, and Snaper on the new host. Configure Snaper with the same object-storage bucket, credentials, and encryption key or key file as the original host. Without the original encryption material, encrypted snapshots cannot be restored.
 2. Copy the Compose files, `.env` files, Docker secrets, and the relevant Snaper backup configuration. Keep the same Compose project name and named-volume names. For plugin-backed volumes, install and configure the same volume driver first.
-3. Create the target named volumes but do **not** start application containers. For a Compose-managed volume, `docker volume create <project>_<volume>` is sufficient; use the driver-specific creation command/options when applicable.
-4. Restore every named-volume service while no container mounts it:
+3. Create the target named volumes but do **not** start application containers. Use the physical Docker volume name saved in the Snaper volume backup configuration (the `volume` field), not an assumed `<project>_<volume>` name: Compose `name:` and `external: true` declarations can use another physical name. Use the driver-specific creation command/options when applicable.
+4. Restore every named-volume service while no container mounts it. An indexed `index_*.csv` snapshot requires the `local` Docker driver and a host-accessible mountpoint. Select a portable archive snapshot for a plugin-backed volume:
 
    ```bash
    snaper restore volume --name <backup-service-name> --latest --clear --yes
