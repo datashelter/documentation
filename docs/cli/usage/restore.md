@@ -101,20 +101,28 @@ snaper restore database --name <database_name> --snapshot <snapshot_name> --clea
 
 Use `--yes` only when you want to skip interactive prompts and continue restoring into the existing database.
 
-### Restore only specific files
-**Method 1:**
-You can use the parameter --include to restore only specific files. The parameter accepts a comma-separated list of patterns.
+### Restore only selected paths
+
+Use `--include` and `--exclude` to select paths from a snapshot. Patterns are evaluated against paths stored in the snapshot, so they are relative to the backup root—not to the original absolute backup path or the restore destination.
+
+Literal paths select the path and all of its descendants. A trailing slash is optional:
+
+* `config` and `config/` both select `config/**`.
+* `public/uploads` excludes that directory and everything below it.
+
+For example, restore only configuration files:
+
 ```
-snaper restore files --name <backup_name> --include "directory/*,README.md" --path <path_where_to_restore> --latest
+snaper restore files --name <backup_name> --include "config" --path <path_where_to_restore> --latest
 ```
 
-**Method 2:**
-Alternatively, you can edit CSV index files to restore only specific files. You can find your last index files in the _.config/snaper/index_cache_ directory
+To preserve existing uploads while restoring the rest of an application:
 
-Modify one of the index files and restore it using the following command:
 ```
-snaper restore --name <backup_name> --snapshot <index_filename> --path <path_where_to_restore>
+snaper restore files --name <backup_name> --exclude "public/uploads" --path <path_where_to_restore> --latest
 ```
+
+Glob patterns retain their normal glob behavior. Use `**/*.log` to match log files at any depth. For a wildcard directory inclusion, include descendants explicitly, for example `--include "**/config/**"`.
 
 ### Export a database dump to a file
 You can export a database dump to a file by using the `--export` flag. It will create a file with the name of the database in your current directory.

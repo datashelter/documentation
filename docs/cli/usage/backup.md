@@ -87,52 +87,59 @@ description: "Snapshot a directory/database and upload it to remote"
 ```bash
 # Exclude a specific directory and all its contents
 # When backing up /var, exclude /var/cache and everything inside it
-snaper backup files /var --exclude "/var/cache/**"
+snaper backup files /var --exclude "/var/cache"
 
 # Exclude multiple subdirectories (cache and log)
-snaper backup files /path/to/backup --exclude "var/cache/**,var/log/**"
+snaper backup files /path/to/backup --exclude "var/cache,var/log"
 
 # Exclude all node_modules directories at any depth
-snaper backup files ./app --exclude "**/node_modules/**"
+snaper backup files ./app --exclude "**/node_modules"
 
 # Exclude all .log files at any depth
-snaper backup files /app --exclude "**/*.log"
+snaper backup files /app --exclude "*.log"
+
+# Include one directory and all of its contents
+snaper backup files /project --include "src"
 
 # Include only Python files, except tests (using ** for recursive matching)
 snaper backup files /project --include "**/*.py" --exclude "**/*test*.py,**/*_test.py"
-
-# Exclude .log files but keep error.log at the root level
-snaper backup files /app --include "error.log" --exclude "**/*.log"
 ```
 
 ## Filtering Options (Pattern Matching)
 
+### Try a filter before running it
+
+Use the [file-filter builder](/cli/usage/file-filter-builder) to edit a backup command, test it against sample paths, and generate the matching configuration values.
+
 ### Matching Rules
 
-* Patterns match against the **full absolute path** of files.
-  Ex: backing up `/home/user` with pattern `Documents/**` → matches `/home/user/Documents/**`.
+* Patterns match against the **full absolute path** of files and directories.
+  Ex: backing up `/home/user` with pattern `Documents` → matches `/home/user/Documents`.
 
 * Relative patterns are converted to absolute:
-  * `logs/**` becomes `/path/to/backup/logs/**`
+  * `logs` becomes `/path/to/backup/logs`
 
-* The slash (`/`) and wildcards matter:
+* A literal path (one without wildcard characters) selects that path. If it is a directory, it selects the directory and all of its contents. A trailing slash is optional:
 
-  * `myfile` → only `/path/to/backup/myfile` (exact match at root)
-  * `dir/myfile` → only `/path/to/backup/dir/myfile`
+  * `myfile` → `/path/to/backup/myfile`
+  * `dir` or `dir/` → `/path/to/backup/dir` and everything below it
+  * `/path/to/backup/cache` or `/path/to/backup/cache/` → the same cache subtree
+
+* Patterns containing wildcard characters are glob patterns. Snaper currently evaluates them against the whole path, so `*` and `**` can both span directory separators. Use `**` when you want to make recursive intent explicit:
+
   * `**/myfile` → any file named `myfile` at any depth
-  * `*.log` → only `.log` files at the root level
-  * `**/*.log` → all `.log` files at any depth
+  * `*.log` or `**/*.log` → `.log` files at any depth
+  * `--exclude "**/node_modules"` → excludes any matching `node_modules` directory and skips its contents
+  * `?` → a single-character wildcard (`file?.txt`)
 
-* Useful patterns:
+The same rules apply to the `included_paths` and `excluded_paths` values in the backup configuration.
 
-  * `*` → any string except `/` (`*.log`, `cache*`)
-  * `**` → matches recursively including `/` (`**/logs/**`, `**/*.py`)
-  * `?` → a single character (`file?.txt`)
+For an inclusion with a wildcard directory name, include the descendants explicitly. For example, use `--include "**/node_modules/**"`; a literal `node_modules` directory already includes its descendants automatically.
 
 ### Priority Order
 
-1. **Inclusions** are evaluated **before** exclusions.
-2. If a file matches both, **it is excluded**.
+1. **Inclusions** select the paths eligible for backup.
+2. **Exclusions** are then applied. If a path matches both, **it is excluded**.
 
 Example:
 

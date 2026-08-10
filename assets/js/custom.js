@@ -33,9 +33,7 @@
     }
 
     document.body.classList.remove('ds-announcement-hidden');
-
-    var existing = document.getElementById('ds-announcement-bar');
-    if (existing) {
+    if (document.getElementById('ds-announcement-bar')) {
       return;
     }
 
@@ -46,51 +44,37 @@
       '<span class="ds-announcement-text">🎉 You can now back up one server and enjoy 10GB storage for free, forever.</span>' +
       '<a class="ds-announcement-cta" href="https://app.datashelter.tech/auth/register">Create free account</a>' +
       '<button class="ds-announcement-close" type="button" aria-label="Close announcement">✕</button>';
-
-    var closeButton = bar.querySelector('.ds-announcement-close');
-    if (closeButton) {
-      closeButton.addEventListener('click', dismissAnnouncement);
-    }
+    bar.querySelector('.ds-announcement-close').addEventListener('click', dismissAnnouncement);
 
     var wrapper = document.querySelector('.main-content-wrapper');
-    if (wrapper) {
-      wrapper.insertBefore(bar, wrapper.firstChild);
-      return;
-    }
-
-    document.body.insertBefore(bar, document.body.firstChild);
+    (wrapper || document.body).insertBefore(bar, wrapper ? wrapper.firstChild : document.body.firstChild);
   }
 
   function patchFooterLogoLink() {
     var footerLogoLink = document.querySelector('.footer-brand .logo-link');
-    if (!footerLogoLink) {
-      return;
+    if (footerLogoLink) {
+      footerLogoLink.setAttribute('href', 'https://datashelter.tech');
     }
-    footerLogoLink.setAttribute('href', 'https://datashelter.tech');
+  }
+
+  function initialiseSiteChrome() {
+    ensureAnnouncementBar();
+    patchFooterLogoLink();
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () {
-      ensureAnnouncementBar();
-      patchFooterLogoLink();
-    });
+    document.addEventListener('DOMContentLoaded', initialiseSiteChrome);
   } else {
-    ensureAnnouncementBar();
-    patchFooterLogoLink();
+    initialiseSiteChrome();
   }
+  document.addEventListener('docmd:page-mounted', initialiseSiteChrome);
 
-  document.addEventListener('docmd:page-mounted', function () {
-    ensureAnnouncementBar();
-    patchFooterLogoLink();
-  });
-
-  // Crisp chat bubble
   window.$crisp = [];
   window.CRISP_WEBSITE_ID = 'f96c76e6-e959-46b4-b085-8ccd1f73027d';
   (function () {
-    var s = document.createElement('script');
-    s.src = 'https://client.crisp.chat/l.js';
-    s.async = 1;
-    document.getElementsByTagName('head')[0].appendChild(s);
+    var script = document.createElement('script');
+    script.src = 'https://client.crisp.chat/l.js';
+    script.async = 1;
+    document.getElementsByTagName('head')[0].appendChild(script);
   })();
 })();

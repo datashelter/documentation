@@ -63,7 +63,7 @@ module.exports = {
     name: 'default',
     defaultMode: 'dark',
     codeHighlight: true,
-    customCss: ['assets/css/custom.css']
+    customCss: ['assets/css/custom.css', 'assets/css/filter-builder.css']
   },
   plugins: {
     sitemap: {
@@ -73,7 +73,7 @@ module.exports = {
       enabled: true
     }
   },
-  customJs: ['assets/js/custom.js'],
+  customJs: ['assets/js/custom.js', 'assets/js/filter-builder.js'],
   navigation: [
     { title: '🏠 Introduction', path: '/' },
     { title: '🚀 Get started', path: '/quickstart' },
@@ -96,6 +96,7 @@ module.exports = {
             { title: 'init', path: '/cli/usage/init' },
             { title: 'config', path: '/cli/usage/config' },
             { title: 'backup', path: '/cli/usage/backup' },
+            { title: 'file-filter builder', path: '/cli/usage/file-filter-builder' },
             { title: 'list', path: '/cli/usage/list' },
             { title: 'restore', path: '/cli/usage/restore' },
             { title: 'delete', path: '/cli/usage/delete' },
