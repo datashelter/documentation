@@ -106,7 +106,10 @@ module.exports = {
         },
         { title: 'Automatic Configuration via Environment Variables', path: '/cli/autoinit-env' },
         { title: 'Configuration parameters', path: '/cli/configuration' },
-        { title: 'Environment variables', path: '/cli/environment-vars' }
+        { title: 'Environment variables', path: '/cli/environment-vars' },
+        { title: 'Docker Compose backups', path: '/cli/docker-compose' },
+        { title: 'Docker Compose validation', path: '/cli/docker-compose-testing' },
+        { title: 'Docker Compose delivery report', path: '/cli/docker-compose-report' }
       ]
     },
     {
